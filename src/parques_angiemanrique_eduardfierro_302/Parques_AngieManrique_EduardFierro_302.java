@@ -14,6 +14,9 @@ public class Parques_AngieManrique_EduardFierro_302 {
     /**
      * @param args the command line arguments
      */
+    public int jaja(int lol){
+        return lol;
+    }
     public static void main(String[] args) {
         // TODO code application logic here
     }
