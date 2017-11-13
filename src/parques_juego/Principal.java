@@ -61,16 +61,16 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(27, 27, 27))
             .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addGap(94, 94, 94)
+                .addGap(219, 219, 219)
                 .addComponent(jLabel1)
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addContainerGap(231, Short.MAX_VALUE))
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addContainerGap(119, Short.MAX_VALUE)
+                .addContainerGap(233, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(89, 89, 89)
+                .addGap(191, 191, 191)
                 .addComponent(jButton1)
                 .addGap(33, 33, 33))
         );
@@ -79,11 +79,15 @@ public class Principal extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(panelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 808, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(panelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 605, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -104,6 +108,9 @@ public class Principal extends javax.swing.JFrame {
         AgregarUsuario agr = new AgregarUsuario();
         agr.setSize(430, 320);
         agr.setLocation(0, 0);
+        /*Parques par = new Parques();
+        par.setSize(800,600);
+        par.setLocation(0, 0);*/
         panelPrincipal.removeAll();
         panelPrincipal.add(agr, BorderLayout.CENTER);
         panelPrincipal.revalidate();

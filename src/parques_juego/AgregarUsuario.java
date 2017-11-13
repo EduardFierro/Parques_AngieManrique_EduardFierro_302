@@ -42,12 +42,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
         nombretext = new javax.swing.JTextField();
         apellidotext = new javax.swing.JTextField();
         edadtext = new javax.swing.JTextField();
-        aniotext = new javax.swing.JTextField();
-        mestext = new javax.swing.JTextField();
-        diatext = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        fechanactext = new javax.swing.JTextField();
         agrfoto = new javax.swing.JButton();
         agrusuario = new javax.swing.JButton();
 
@@ -70,12 +65,6 @@ public class AgregarUsuario extends javax.swing.JPanel {
         jLabel6.setText("EDAD:");
 
         jLabel7.setText("FECHA DE NACIMIENTO:");
-
-        jLabel8.setText("Año");
-
-        jLabel9.setText("Mes");
-
-        jLabel10.setText("Día");
 
         agrfoto.setBackground(new java.awt.Color(153, 153, 255));
         agrfoto.setText("AGREGAR FOTO");
@@ -121,22 +110,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel7)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(aniotext, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(mestext, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(10, 10, 10)
-                                                .addComponent(jLabel8)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jLabel9)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(10, 10, 10)
-                                                .addComponent(jLabel10))
-                                            .addComponent(diatext, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(fechanactext, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE))))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(138, 138, 138)
@@ -174,15 +148,9 @@ public class AgregarUsuario extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
-                            .addComponent(aniotext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(mestext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(diatext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(fechanactext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel10))
+                .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(agrfoto)
@@ -200,7 +168,11 @@ public class AgregarUsuario extends javax.swing.JPanel {
         } else {
             
                 
+<<<<<<< Updated upstream
                     jugador = Jugador.crear(0,"",Integer.parseInt(cedulatext.getText()), nombretext.getText(),apellidotext.getText(),Integer.parseInt(edadtext.getText()), diatext.getText(),Jugador.aho);
+=======
+                    jugador = Jugador.crear("",Integer.parseInt(cedulatext.getText()), nombretext.getText(),apellidotext.getText(),Integer.parseInt(edadtext.getText()), fechanactext.getText(),Jugador.aho);
+>>>>>>> Stashed changes
                     Insertar.crear(jugador);
                     JOptionPane.showMessageDialog(this, "Persona creada satisfactoriamente", "Bien", JOptionPane.INFORMATION_MESSAGE);
                
@@ -214,23 +186,18 @@ public class AgregarUsuario extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton agrfoto;
     private javax.swing.JButton agrusuario;
-    private javax.swing.JTextField aniotext;
     private javax.swing.JTextField apellidotext;
     private javax.swing.JTextField cedulatext;
-    private javax.swing.JTextField diatext;
     private javax.swing.JTextField edadtext;
+    private javax.swing.JTextField fechanactext;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jl_foto;
-    private javax.swing.JTextField mestext;
     private javax.swing.JTextField nombretext;
     // End of variables declaration//GEN-END:variables
 }
