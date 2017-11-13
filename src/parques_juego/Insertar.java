@@ -17,7 +17,7 @@ public class Insertar {
     private static BaseC database = new BaseC();
     public static void crear (Jugador jugador) {
         try {
-            String query = "INSERT INTO usuarios (foto, cedula, nombre, apellido, edad, fechaNacimiento,fechaRegistro) VALUES (?, ?, ?, ?, ?, ?,?);";
+            String query = "INSERT INTO personas (foto, documento, nombre, apellido, edad, fechaNacimiento, fechaRegistro) VALUES (?, ?, ?, ?, ?, ?,?);";
             PreparedStatement sentenciaP = database.open().prepareStatement(query);
             sentenciaP.setString(1, jugador.getFoto());
             sentenciaP.setString(2, String.valueOf(jugador.getCedula()));

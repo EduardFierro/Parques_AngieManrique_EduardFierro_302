@@ -200,7 +200,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
         } else {
             
                 
-                    jugador = Jugador.crear("",Integer.parseInt(cedulatext.getText()), nombretext.getText(),apellidotext.getText(),Integer.parseInt(edadtext.getText()), diatext.getText(),Jugador.aho);
+                    jugador = Jugador.crear(0,"",Integer.parseInt(cedulatext.getText()), nombretext.getText(),apellidotext.getText(),Integer.parseInt(edadtext.getText()), diatext.getText(),Jugador.aho);
                     Insertar.crear(jugador);
                     JOptionPane.showMessageDialog(this, "Persona creada satisfactoriamente", "Bien", JOptionPane.INFORMATION_MESSAGE);
                

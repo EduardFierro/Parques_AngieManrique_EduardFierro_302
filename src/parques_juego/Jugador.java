@@ -16,8 +16,9 @@ public class Jugador {
     
     public static String  foto,nombre,apellido, fechan,aho=String.valueOf(registro);           
                     
-    private int cedula,edad;
-    public Jugador(String foto,int cedula, String nombre, String apellido,int edad, String fechan, String aho ){
+    private int id=0, cedula,edad;
+    public Jugador(int id,String foto,int cedula, String nombre, String apellido,int edad, String fechan, String aho ){
+        this.id = id;
         this.foto =foto;
         this.cedula = cedula;
         this.nombre = nombre;
@@ -26,8 +27,8 @@ public class Jugador {
         this.fechan = fechan;
         this.aho = aho;
     }
-     public static Jugador crear(String foto,int cedula, String nombre,String apellido,int edad,String fechan, String aho ) {
-        return new Jugador(foto, cedula, nombre, apellido,edad,fechan,aho);
+     public static Jugador crear(int id,String foto,int cedula, String nombre,String apellido,int edad,String fechan, String aho ) {
+        return new Jugador(id,foto, cedula, nombre, apellido,edad,fechan,aho);
     }
 
     public static LocalDateTime getRegistro() {
@@ -37,7 +38,12 @@ public class Jugador {
     public static void setRegistro(LocalDateTime registro) {
         Jugador.registro = registro;
     }
-
+    public void setId(int id) {
+        this.id = id;
+    }
+      public int getId() {
+        return this.id;
+    }
     public static String getFoto() {
         return foto;
     }
