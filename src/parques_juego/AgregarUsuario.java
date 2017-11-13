@@ -5,6 +5,8 @@
  */
 package parques_juego;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Angie
@@ -14,6 +16,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
     /**
      * Creates new form AgregarUsuario
      */
+    private Jugador jugador;
     public AgregarUsuario() {
         initComponents();
     }
@@ -79,6 +82,11 @@ public class AgregarUsuario extends javax.swing.JPanel {
 
         agrusuario.setBackground(new java.awt.Color(102, 255, 204));
         agrusuario.setText("AGREGAR USUARIO");
+        agrusuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agrusuarioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -182,6 +190,25 @@ public class AgregarUsuario extends javax.swing.JPanel {
                 .addContainerGap(25, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void agrusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agrusuarioActionPerformed
+        try {
+           if( nombretext.getText().isEmpty()
+         
+        ){
+            JOptionPane.showMessageDialog(this, "Por favor diligencie todo el formulario", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            
+                
+                    jugador = Jugador.crear("",Integer.parseInt(cedulatext.getText()), nombretext.getText(),apellidotext.getText(),Integer.parseInt(edadtext.getText()), diatext.getText(),Jugador.aho);
+                    Insertar.crear(jugador);
+                    JOptionPane.showMessageDialog(this, "Persona creada satisfactoriamente", "Bien", JOptionPane.INFORMATION_MESSAGE);
+               
+        }      
+        } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Datos mal ingresados", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_agrusuarioActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
