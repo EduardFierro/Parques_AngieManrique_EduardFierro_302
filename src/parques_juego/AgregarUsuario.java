@@ -186,18 +186,30 @@ public class AgregarUsuario extends javax.swing.JPanel {
                 Insertar.crear(jugador);
                 JOptionPane.showMessageDialog(this, "Persona creada satisfactoriamente", "Bien", JOptionPane.INFORMATION_MESSAGE);
                 
+<<<<<<< Updated upstream
             }
+=======
+                    jugador = Jugador.crear(0,"",Integer.parseInt(cedulatext.getText()), nombretext.getText(),apellidotext.getText(),Integer.parseInt(edadtext.getText()), fechanactext.getText(),Jugador.aho);
+
+                    Insertar.crear(jugador);
+                    JOptionPane.showMessageDialog(this, "Persona creada satisfactoriamente", "Bien", JOptionPane.INFORMATION_MESSAGE);
+               
+        }      
+>>>>>>> Stashed changes
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Datos mal ingresados", "Error", JOptionPane.ERROR_MESSAGE);
         }
         
     }//GEN-LAST:event_agrusuarioActionPerformed
 
+<<<<<<< Updated upstream
     private void jugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jugarActionPerformed
         pr.parques();
     }//GEN-LAST:event_jugarActionPerformed
 
 
+=======
+>>>>>>> Stashed changes
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton agrfoto;
     private javax.swing.JButton agrusuario;
