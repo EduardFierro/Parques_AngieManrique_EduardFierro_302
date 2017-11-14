@@ -5,6 +5,7 @@
  */
 package parques_juego;
 
+import java.awt.BorderLayout;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,6 +18,8 @@ public class AgregarUsuario extends javax.swing.JPanel {
      * Creates new form AgregarUsuario
      */
     private Jugador jugador;
+    Principal pr = new Principal();
+
     public AgregarUsuario() {
         initComponents();
     }
@@ -45,8 +48,10 @@ public class AgregarUsuario extends javax.swing.JPanel {
         fechanactext = new javax.swing.JTextField();
         agrfoto = new javax.swing.JButton();
         agrusuario = new javax.swing.JButton();
+        jugar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 153, 255));
+        setName("panelAgregar"); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 204));
@@ -77,6 +82,13 @@ public class AgregarUsuario extends javax.swing.JPanel {
             }
         });
 
+        jugar.setText("JUGAR");
+        jugar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jugarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -92,6 +104,9 @@ public class AgregarUsuario extends javax.swing.JPanel {
                             .addComponent(agrfoto, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
                             .addComponent(jl_foto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(138, 138, 138)
+                                .addComponent(agrusuario))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(27, 27, 27)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,13 +123,13 @@ public class AgregarUsuario extends javax.swing.JPanel {
                                             .addComponent(apellidotext)
                                             .addComponent(edadtext)))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(fechanactext, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(138, 138, 138)
-                                .addComponent(agrusuario)))))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jugar)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel7)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(fechanactext, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(0, 0, Short.MAX_VALUE)))))))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -155,32 +170,32 @@ public class AgregarUsuario extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(agrfoto)
                     .addComponent(agrusuario))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jugar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void agrusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agrusuarioActionPerformed
         try {
-           if( nombretext.getText().isEmpty()
-         
-        ){
-            JOptionPane.showMessageDialog(this, "Por favor diligencie todo el formulario", "Error", JOptionPane.ERROR_MESSAGE);
-        } else {
-            
+            if (nombretext.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Por favor diligencie todo el formulario", "Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+
+                jugador = Jugador.crear(0, "", Integer.parseInt(cedulatext.getText()), nombretext.getText(), apellidotext.getText(), Integer.parseInt(edadtext.getText()), fechanactext.getText(), Jugador.aho);
+                Insertar.crear(jugador);
+                JOptionPane.showMessageDialog(this, "Persona creada satisfactoriamente", "Bien", JOptionPane.INFORMATION_MESSAGE);
                 
-<<<<<<< Updated upstream
-                    jugador = Jugador.crear(0,"",Integer.parseInt(cedulatext.getText()), nombretext.getText(),apellidotext.getText(),Integer.parseInt(edadtext.getText()), diatext.getText(),Jugador.aho);
-=======
-                    jugador = Jugador.crear("",Integer.parseInt(cedulatext.getText()), nombretext.getText(),apellidotext.getText(),Integer.parseInt(edadtext.getText()), fechanactext.getText(),Jugador.aho);
->>>>>>> Stashed changes
-                    Insertar.crear(jugador);
-                    JOptionPane.showMessageDialog(this, "Persona creada satisfactoriamente", "Bien", JOptionPane.INFORMATION_MESSAGE);
-               
-        }      
+            }
         } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "Datos mal ingresados", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Datos mal ingresados", "Error", JOptionPane.ERROR_MESSAGE);
         }
+        
     }//GEN-LAST:event_agrusuarioActionPerformed
+
+    private void jugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jugarActionPerformed
+        pr.parques();
+    }//GEN-LAST:event_jugarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -198,6 +213,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jl_foto;
+    private javax.swing.JButton jugar;
     private javax.swing.JTextField nombretext;
     // End of variables declaration//GEN-END:variables
 }
