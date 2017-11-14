@@ -48,7 +48,6 @@ public class AgregarUsuario extends javax.swing.JPanel {
         fechanactext = new javax.swing.JTextField();
         agrfoto = new javax.swing.JButton();
         agrusuario = new javax.swing.JButton();
-        jugar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 153, 255));
         setName("panelAgregar"); // NOI18N
@@ -79,13 +78,6 @@ public class AgregarUsuario extends javax.swing.JPanel {
         agrusuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 agrusuarioActionPerformed(evt);
-            }
-        });
-
-        jugar.setText("JUGAR");
-        jugar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jugarActionPerformed(evt);
             }
         });
 
@@ -123,12 +115,9 @@ public class AgregarUsuario extends javax.swing.JPanel {
                                             .addComponent(apellidotext)
                                             .addComponent(edadtext)))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jugar)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel7)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(fechanactext, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jLabel7)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(fechanactext, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE)))))))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -170,9 +159,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(agrfoto)
                     .addComponent(agrusuario))
-                .addGap(18, 18, 18)
-                .addComponent(jugar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -194,10 +181,6 @@ public class AgregarUsuario extends javax.swing.JPanel {
         
     }//GEN-LAST:event_agrusuarioActionPerformed
 
-    private void jugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jugarActionPerformed
-        pr.parques();
-    }//GEN-LAST:event_jugarActionPerformed
-
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -215,7 +198,6 @@ public class AgregarUsuario extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jl_foto;
-    private javax.swing.JButton jugar;
     private javax.swing.JTextField nombretext;
     // End of variables declaration//GEN-END:variables
 }

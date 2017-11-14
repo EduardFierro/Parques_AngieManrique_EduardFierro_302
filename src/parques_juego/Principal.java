@@ -20,15 +20,6 @@ public class Principal extends javax.swing.JFrame {
         initComponents();
     }
     
-    public void parques(){
-        Parques par = new Parques();
-        par.setSize(600,660);
-        par.setLocation(0, 0);
-        panelPrincipal.removeAll();
-        panelPrincipal.add(par, BorderLayout.CENTER);
-        panelPrincipal.revalidate();
-        panelPrincipal.repaint(); 
-    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -42,7 +33,6 @@ public class Principal extends javax.swing.JFrame {
         panelPrincipal = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,13 +52,6 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("jButton2");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
         panelPrincipal.setLayout(panelPrincipalLayout);
         panelPrincipalLayout.setHorizontalGroup(
@@ -80,21 +63,14 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(panelPrincipalLayout.createSequentialGroup()
                 .addGap(156, 156, 156)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addContainerGap())
+                .addContainerGap(186, Short.MAX_VALUE))
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPrincipalLayout.createSequentialGroup()
                 .addContainerGap(247, Short.MAX_VALUE)
-                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincipalLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(228, 228, 228))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincipalLayout.createSequentialGroup()
-                        .addComponent(jButton2)
-                        .addGap(283, 283, 283)))
+                .addComponent(jLabel1)
+                .addGap(228, 228, 228)
                 .addComponent(jButton1)
                 .addGap(46, 46, 46))
         );
@@ -128,22 +104,12 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Parques par = new Parques();
-        par.setSize(600,660);
-        par.setLocation(0, 0);
-        panelPrincipal.removeAll();
-        panelPrincipal.add(par, BorderLayout.CENTER);
-        panelPrincipal.revalidate();
-        panelPrincipal.repaint();
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        AgregarUsuario agr = new AgregarUsuario();
-        agr.setSize(430, 370);
-        agr.setLocation(0, 0);
+        Menu menu = new Menu();
+        menu.setSize(600, 660);
+        menu.setLocation(0, 0);
         panelPrincipal.removeAll();
-        panelPrincipal.add(agr, BorderLayout.CENTER);
+        panelPrincipal.add(menu, BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -186,9 +152,8 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel panelPrincipal;
+    public static javax.swing.JPanel panelPrincipal;
     // End of variables declaration//GEN-END:variables
 }
