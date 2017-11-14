@@ -43,7 +43,7 @@ public class Parques extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(204, 153, 255));
 
-        fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Angie Paola\\Pictures\\Saved Pictures\\parques.JPG")); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/parques.JPG"))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(102, 0, 102));
