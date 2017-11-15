@@ -157,7 +157,7 @@ public class Menu extends javax.swing.JPanel {
 
     private void opcion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcion1ActionPerformed
         AgregarUsuario agr = new AgregarUsuario();
-        agr.setSize(430, 370);
+        agr.setSize(470, 390);
         agr.setLocation(0, 0);
         Menu.this.removeAll();
         Menu.this.add(agr, BorderLayout.CENTER);
