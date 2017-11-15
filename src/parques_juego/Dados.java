@@ -15,8 +15,7 @@ import static parques_juego.Parques.fondo;
  * @author Angie
  */
 public class Dados extends javax.swing.JFrame {
-
-    public ImageIcon icoImagen;
+    public static int val1, val2;
     int contLanza=1, valorRandom;
 
     /**
@@ -27,8 +26,8 @@ public class Dados extends javax.swing.JFrame {
     }
 
     public int generarRandom() {
-        Random rGenerador = new Random();
-        valorRandom = rGenerador.nextInt(6) + 1;
+        Random objRandom = new Random();
+        valorRandom = objRandom.nextInt(6)+1;
         return valorRandom;
 
     }
@@ -165,6 +164,11 @@ public class Dados extends javax.swing.JFrame {
 
         mover.setBackground(new java.awt.Color(102, 255, 102));
         mover.setText("MOVER FICHAS");
+        mover.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moverActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -270,6 +274,12 @@ public class Dados extends javax.swing.JFrame {
         imagenDado2(num2);
         contLanza++;
     }//GEN-LAST:event_lanzarActionPerformed
+
+    private void moverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moverActionPerformed
+        val1=Integer.parseInt(mover1.getText());
+        val2=Integer.parseInt(mover2.getText());
+        dispose();
+    }//GEN-LAST:event_moverActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
