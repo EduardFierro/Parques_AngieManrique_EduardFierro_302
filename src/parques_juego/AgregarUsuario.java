@@ -194,7 +194,8 @@ public class AgregarUsuario extends javax.swing.JPanel {
 
     private void agrusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agrusuarioActionPerformed
         try {
-            if (nombretext.getText().isEmpty()) {
+            if (nombretext.getText().isEmpty() || rutatext.getText().isEmpty() ||cedulatext.getText().isEmpty()
+                || apellidotext.getText().isEmpty() || edadtext.getText().isEmpty() || fechanactext.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Por favor diligencie todo el formulario", "Error", JOptionPane.ERROR_MESSAGE);
             } else {
 
