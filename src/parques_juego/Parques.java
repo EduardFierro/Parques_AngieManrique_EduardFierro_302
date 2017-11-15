@@ -5,19 +5,24 @@
  */
 package parques_juego;
 
+import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 /**
  *
  * @author Angie
  */
 public class Parques extends javax.swing.JPanel {
-
+    JLabel fichaamarilla, fichaazul, ficharoja, fichaverde;
     /**
      * Creates new form Parques
      */
     public Parques() {
+        
         initComponents();
         configComponents();
     }
@@ -26,8 +31,12 @@ public class Parques extends javax.swing.JPanel {
         ImageIcon parques = new ImageIcon(getClass().getResource("/images/parques.JPG"));
         ImageIcon icon = new ImageIcon(parques.getImage().getScaledInstance(580, 580, Image.SCALE_DEFAULT));
         fondo.setIcon(icon);
+        ImageIcon fichayellow = new ImageIcon(getClass().getResource("/images/fichaamarilla.png"));
+        ImageIcon iconyellow = new ImageIcon(fichayellow.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
+        //fichaamarilla.setIcon(iconyellow);
+        
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -44,12 +53,18 @@ public class Parques extends javax.swing.JPanel {
         setBackground(new java.awt.Color(204, 153, 255));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/parques.JPG"))); // NOI18N
+        fondo.setDisabledIcon(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(102, 0, 102));
         jLabel1.setText("PARQUÉS");
 
         botondados.setText("LANZAR DADOS");
+        botondados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botondadosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -79,6 +94,10 @@ public class Parques extends javax.swing.JPanel {
                 .addComponent(botondados))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botondadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botondadosActionPerformed
+        new Dados().setVisible(true);
+    }//GEN-LAST:event_botondadosActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
