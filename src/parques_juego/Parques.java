@@ -5,6 +5,7 @@
  */
 package parques_juego;
 
+import java.awt.Image;
 import javax.swing.ImageIcon;
 
 /**
@@ -22,10 +23,9 @@ public class Parques extends javax.swing.JPanel {
     }
 
     public void configComponents() {
-        fondo.setBounds(10, 50, 316, 316);
-        ImageIcon icon = new ImageIcon("images/parchis.jpg");
+        ImageIcon parques = new ImageIcon(getClass().getResource("/images/parques.JPG"));
+        ImageIcon icon = new ImageIcon(parques.getImage().getScaledInstance(580, 580, Image.SCALE_DEFAULT));
         fondo.setIcon(icon);
-        add(fondo);
     }
 
     /**
@@ -82,7 +82,7 @@ public class Parques extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botondados;
-    private javax.swing.JLabel fondo;
+    public static javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
