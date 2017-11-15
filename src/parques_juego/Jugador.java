@@ -5,6 +5,7 @@
  */
 package parques_juego;
 
+import java.io.FileInputStream;
 import java.time.LocalDateTime;
 
 /**
@@ -15,6 +16,8 @@ public class Jugador {
     public static LocalDateTime registro = LocalDateTime.now();
     
     public static String  foto,nombre,apellido, fechan,aho=String.valueOf(registro);           
+
+    
                     
     private int id=0, cedula,edad;
     public Jugador(int id,String foto,int cedula, String nombre, String apellido,int edad, String fechan, String aho ){

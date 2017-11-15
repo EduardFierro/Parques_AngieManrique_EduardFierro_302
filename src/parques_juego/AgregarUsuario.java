@@ -6,7 +6,12 @@
 package parques_juego;
 
 import java.awt.BorderLayout;
+import java.awt.Image;
+import java.io.File;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -48,6 +53,8 @@ public class AgregarUsuario extends javax.swing.JPanel {
         fechanactext = new javax.swing.JTextField();
         agrfoto = new javax.swing.JButton();
         agrusuario = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        rutatext = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(204, 153, 255));
         setName("panelAgregar"); // NOI18N
@@ -72,6 +79,11 @@ public class AgregarUsuario extends javax.swing.JPanel {
 
         agrfoto.setBackground(new java.awt.Color(153, 153, 255));
         agrfoto.setText("AGREGAR FOTO");
+        agrfoto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agrfotoActionPerformed(evt);
+            }
+        });
 
         agrusuario.setBackground(new java.awt.Color(102, 255, 204));
         agrusuario.setText("AGREGAR USUARIO");
@@ -89,41 +101,51 @@ public class AgregarUsuario extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(67, 67, 67)
-                        .addComponent(jLabel2))
+                        .addComponent(jLabel2)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(25, 25, 25)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(agrfoto, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
-                            .addComponent(jl_foto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(138, 138, 138)
-                                .addComponent(agrusuario))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
+                                .addComponent(rutatext, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(agrfoto, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                                    .addComponent(jl_foto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addGap(138, 138, 138)
+                                        .addComponent(agrusuario))
                                     .addGroup(layout.createSequentialGroup()
+                                        .addGap(27, 27, 27)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel3)
-                                            .addComponent(jLabel4)
-                                            .addComponent(jLabel5)
-                                            .addComponent(jLabel6))
-                                        .addGap(41, 41, 41)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(cedulatext)
-                                            .addComponent(nombretext)
-                                            .addComponent(apellidotext)
-                                            .addComponent(edadtext)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(fechanactext, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE)))))))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel3)
+                                                    .addComponent(jLabel4)
+                                                    .addComponent(jLabel5)
+                                                    .addComponent(jLabel6))
+                                                .addGap(41, 41, 41)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(cedulatext)
+                                                    .addComponent(nombretext)
+                                                    .addComponent(apellidotext)
+                                                    .addComponent(edadtext)))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel7)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(fechanactext, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(0, 0, Short.MAX_VALUE)))))))))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(112, 112, 112))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,11 +177,15 @@ public class AgregarUsuario extends javax.swing.JPanel {
                             .addComponent(fechanactext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(18, 18, 18)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel8)
+                .addGap(3, 3, 3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(agrfoto)
                     .addComponent(agrusuario))
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rutatext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(35, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -169,7 +195,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Por favor diligencie todo el formulario", "Error", JOptionPane.ERROR_MESSAGE);
             } else {
 
-                jugador = Jugador.crear(0, "", Integer.parseInt(cedulatext.getText()), nombretext.getText(), apellidotext.getText(), Integer.parseInt(edadtext.getText()), fechanactext.getText(), Jugador.aho);
+                jugador = Jugador.crear(0, rutatext.getText(), Integer.parseInt(cedulatext.getText()), nombretext.getText(), apellidotext.getText(), Integer.parseInt(edadtext.getText()), fechanactext.getText(), Jugador.aho);
                 Insertar.crear(jugador);
                 JOptionPane.showMessageDialog(this, "Persona creada satisfactoriamente", "Bien", JOptionPane.INFORMATION_MESSAGE);
               
@@ -180,6 +206,23 @@ public class AgregarUsuario extends javax.swing.JPanel {
         }
         
     }//GEN-LAST:event_agrusuarioActionPerformed
+
+    private void agrfotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agrfotoActionPerformed
+        FileNameExtensionFilter filtro = new FileNameExtensionFilter("Formatos JPEG(*.JPG;*.JPEG)", "jpg","jpeg");
+        JFileChooser seleccionar = new JFileChooser();
+        seleccionar.addChoosableFileFilter(filtro);
+        seleccionar.setDialogTitle("Seleccionar Imagen");
+        File ruta = new File("C:\\Users\\Pavilion 15\\Pictures");
+        seleccionar.setCurrentDirectory(ruta);
+        int aux = seleccionar.showOpenDialog(null);
+        if(aux==JFileChooser.APPROVE_OPTION){
+            File file = seleccionar.getSelectedFile();
+            rutatext.setText(String.valueOf(file));
+            Image foto= getToolkit().getImage(rutatext.getText());
+            foto = foto.getScaledInstance(120, 140, Image.SCALE_DEFAULT);
+            jl_foto.setIcon(new ImageIcon(foto));
+        }
+    }//GEN-LAST:event_agrfotoActionPerformed
 
 
 
@@ -197,7 +240,9 @@ public class AgregarUsuario extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jl_foto;
     private javax.swing.JTextField nombretext;
+    private javax.swing.JTextField rutatext;
     // End of variables declaration//GEN-END:variables
 }
