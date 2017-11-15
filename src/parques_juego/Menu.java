@@ -85,12 +85,27 @@ public class Menu extends javax.swing.JPanel {
 
         opcion3.setBackground(new java.awt.Color(51, 102, 255));
         opcion3.setText(">>");
+        opcion3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opcion3ActionPerformed(evt);
+            }
+        });
 
         opcion4.setBackground(new java.awt.Color(102, 153, 255));
         opcion4.setText(">>");
+        opcion4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opcion4ActionPerformed(evt);
+            }
+        });
 
         opcion5.setBackground(new java.awt.Color(153, 255, 255));
         opcion5.setText(">>");
+        opcion5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opcion5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -174,6 +189,21 @@ public class Menu extends javax.swing.JPanel {
         Menu.this.revalidate();
         Menu.this.repaint();
     }//GEN-LAST:event_opcion2ActionPerformed
+
+    private void opcion5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcion5ActionPerformed
+        Usuarios user = new Usuarios();
+        user.setVisible(true);
+    }//GEN-LAST:event_opcion5ActionPerformed
+
+    private void opcion4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcion4ActionPerformed
+       Historial histo = new Historial();
+       histo.setVisible(true);
+    }//GEN-LAST:event_opcion4ActionPerformed
+
+    private void opcion3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcion3ActionPerformed
+        MejorPuntaje mejor = new MejorPuntaje();
+        mejor.setVisible(true);
+    }//GEN-LAST:event_opcion3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
