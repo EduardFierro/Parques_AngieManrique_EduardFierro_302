@@ -17,26 +17,50 @@ import javax.swing.JPanel;
  * @author Angie
  */
 public class Parques extends javax.swing.JPanel {
-    JLabel fichaamarilla, fichaazul, ficharoja, fichaverde;
+
     /**
      * Creates new form Parques
      */
     public Parques() {
-        
         initComponents();
         configComponents();
+        //moverFichas();
     }
 
     public void configComponents() {
         ImageIcon parques = new ImageIcon(getClass().getResource("/images/parques.JPG"));
         ImageIcon icon = new ImageIcon(parques.getImage().getScaledInstance(580, 580, Image.SCALE_DEFAULT));
         tablero.setIcon(icon);
-        ImageIcon fichayellow = new ImageIcon(getClass().getResource("/images/fichaamarilla.png"));
-        ImageIcon iconyellow = new ImageIcon(fichayellow.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
-        //fichaamarilla.setIcon(iconyellow);
-        
+
     }
-    
+
+    public static void moverFichas() {
+        if(Dados.cont==1){
+            if (Dados.num1 == Dados.num2) {
+            roja1.setLocation(195, 155);
+            roja2.setLocation(220, 155);
+        }
+        }
+        if(Dados.cont==2){
+            if (Dados.num1 == Dados.num2) {
+                verde1.setLocation(465, 240);
+                verde2.setLocation(465, 265);
+            }
+        } 
+        if(Dados.cont==3){
+            if (Dados.num1 == Dados.num2) {
+                azul1.setLocation(355, 510);
+                azul2.setLocation(380, 510);
+            }
+        } 
+        if(Dados.cont==4){
+            if (Dados.num1 == Dados.num2) {
+                amarilla1.setLocation(110, 400);
+                amarilla2.setLocation(110, 425);
+            }
+        } 
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -46,14 +70,6 @@ public class Parques extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        verde1 = new javax.swing.JLabel();
-        verde2 = new javax.swing.JLabel();
-        amarilla1 = new javax.swing.JLabel();
-        amarilla2 = new javax.swing.JLabel();
-        azul1 = new javax.swing.JLabel();
-        azul2 = new javax.swing.JLabel();
-        roja1 = new javax.swing.JLabel();
-        roja2 = new javax.swing.JLabel();
         tablero = new javax.swing.JLabel();
         titulo = new javax.swing.JLabel();
         botondados = new javax.swing.JButton();
@@ -63,36 +79,36 @@ public class Parques extends javax.swing.JPanel {
 
         verde1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
         add(verde1);
-        verde1.setBounds(470, 250, 25, 20);
+        verde1.setBounds(540, 90, 25, 20);
 
         verde2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
         add(verde2);
-        verde2.setBounds(470, 280, 25, 20);
+        verde2.setBounds(460, 160, 25, 20);
         verde2.getAccessibleContext().setAccessibleName("verde1");
 
         amarilla1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
         add(amarilla1);
-        amarilla1.setBounds(110, 390, 25, 20);
+        amarilla1.setBounds(120, 580, 25, 20);
 
         amarilla2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
         add(amarilla2);
-        amarilla2.setBounds(110, 420, 25, 20);
+        amarilla2.setBounds(40, 500, 25, 20);
 
         azul1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
         add(azul1);
-        azul1.setBounds(350, 510, 25, 20);
+        azul1.setBounds(540, 510, 25, 20);
 
         azul2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
         add(azul2);
-        azul2.setBounds(380, 510, 25, 20);
+        azul2.setBounds(470, 590, 25, 20);
 
         roja1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
         add(roja1);
-        roja1.setBounds(190, 155, 25, 20);
+        roja1.setBounds(120, 170, 30, 20);
 
         roja2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
         add(roja2);
-        roja2.setBounds(220, 154, 25, 20);
+        roja2.setBounds(40, 90, 25, 20);
 
         tablero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/parques.JPG"))); // NOI18N
         add(tablero);
@@ -120,16 +136,16 @@ public class Parques extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel amarilla1;
-    private javax.swing.JLabel amarilla2;
-    private javax.swing.JLabel azul1;
-    private javax.swing.JLabel azul2;
+    public static final javax.swing.JLabel amarilla1 = new javax.swing.JLabel();
+    public static final javax.swing.JLabel amarilla2 = new javax.swing.JLabel();
+    public static final javax.swing.JLabel azul1 = new javax.swing.JLabel();
+    public static final javax.swing.JLabel azul2 = new javax.swing.JLabel();
     private javax.swing.JButton botondados;
-    private javax.swing.JLabel roja1;
-    private javax.swing.JLabel roja2;
+    public static final javax.swing.JLabel roja1 = new javax.swing.JLabel();
+    public static final javax.swing.JLabel roja2 = new javax.swing.JLabel();
     public static javax.swing.JLabel tablero;
     private javax.swing.JLabel titulo;
-    private javax.swing.JLabel verde1;
-    private javax.swing.JLabel verde2;
+    public static final javax.swing.JLabel verde1 = new javax.swing.JLabel();
+    public static final javax.swing.JLabel verde2 = new javax.swing.JLabel();
     // End of variables declaration//GEN-END:variables
 }

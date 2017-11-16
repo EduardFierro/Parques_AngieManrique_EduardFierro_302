@@ -16,10 +16,8 @@ import static parques_juego.Parques.tablero;
  * @author Angie
  */
 public class Dados extends javax.swing.JFrame {
-
-    public static int val1, val2;
+    public static int val1, val2, num1=1, num2=1, contJug, cont=0;
     int contLanza = 0, valorRandom;
-
     /**
      * Creates new form Dados
      */
@@ -269,16 +267,17 @@ public class Dados extends javax.swing.JFrame {
     private void lanzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lanzarActionPerformed
         contLanza++;
         lanzamientos.setText("" + contLanza);
-        int num1 = generarRandom(); //Llamar a metodo Random
+        num1 = generarRandom(); //Llamar a metodo Random
         valor1.setText("" + num1);
         imagenDado1(num1);
-        int num2 = generarRandom();
+        num2 = generarRandom();
         valor2.setText("" + num2);
         imagenDado2(num2);
     }//GEN-LAST:event_lanzarActionPerformed
 
     private void moverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moverActionPerformed
-        if (contLanza == 0) {
+        cont++;
+               if (contLanza == 0) {
             JOptionPane.showMessageDialog(this, "Primero haga su lanzamiento de dados", "Error", JOptionPane.ERROR_MESSAGE);
         } else {
             try {
@@ -290,13 +289,17 @@ public class Dados extends javax.swing.JFrame {
                     if (val1 < 1 || val1 > 4 || val2 < 1 || val2 > 4) {
                         JOptionPane.showMessageDialog(this, "Ingrese el número de ficha dentro del rango 1-4", "Error", JOptionPane.ERROR_MESSAGE);
                     } else {
+                        Parques.moverFichas();
                         dispose();
                     }
                 }
-            } catch (Exception e) {
+            } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(this, "Ingrese el número de ficha que desea mover", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
+               if(cont==4){
+                   cont=0;
+               }
     }//GEN-LAST:event_moverActionPerformed
 
 
