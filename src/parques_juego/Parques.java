@@ -26,14 +26,14 @@ public class Parques extends javax.swing.JPanel {
         configComponents();
         //moverFichas();
     }
-
+    //imagen del parques
     public void configComponents() {
         ImageIcon parques = new ImageIcon(getClass().getResource("/images/parques.JPG"));
         ImageIcon icon = new ImageIcon(parques.getImage().getScaledInstance(580, 580, Image.SCALE_DEFAULT));
         tablero.setIcon(icon);
 
     }
-
+    //funcion para mover las fichas
     public static void moverFichas() {
         if(Dados.cont==1){
             if (Dados.num1 == Dados.num2) {

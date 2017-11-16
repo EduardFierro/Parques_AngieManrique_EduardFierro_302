@@ -16,6 +16,7 @@ import static parques_juego.Parques.tablero;
  * @author Angie
  */
 public class Dados extends javax.swing.JFrame {
+    //variables 
     public static int val1, val2, num1=1, num2=1, contJug, cont=0;
     int contLanza = 0, valorRandom;
     /**
@@ -66,7 +67,7 @@ public class Dados extends javax.swing.JFrame {
                 break;
         }
     }
-
+    //funciones
     public void imagenDado2(int iValorDado) {
         switch (iValorDado) {
             case 1:
