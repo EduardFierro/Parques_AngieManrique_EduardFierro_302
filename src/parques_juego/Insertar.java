@@ -6,7 +6,9 @@
 package parques_juego;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import parques_juego.database.BaseC;
 
 /**
@@ -36,5 +38,71 @@ public class Insertar {
             e.printStackTrace();
         }
 
+    }
+     public static ArrayList<Jugador> obtenerTodos() {
+        ArrayList<Jugador> jugador = new ArrayList<Jugador>();
+
+        try {
+            String query = "SELECT * FROM personas WHERE edad >=5 && edad <=15;";
+            PreparedStatement sentenciaP = database.open().prepareStatement(query);
+            ResultSet resultado = sentenciaP.executeQuery();
+
+            while (resultado.next()) {
+                jugador.add(Jugador.crear(resultado.getInt("id"),resultado.getString("foto"),Integer.parseInt(resultado.getString("documento")), resultado.getString("nombre"),resultado.getString("apellido"),Integer.parseInt(resultado.getString("edad")), resultado.getString("fechaNacimiento"),resultado.getString("fechaRegistro")));
+            }
+
+            sentenciaP.close();
+            database.close();
+
+            return jugador;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return jugador;
+    }
+     public static ArrayList<Jugador> obtenerTodos1() {
+        ArrayList<Jugador> jugador = new ArrayList<Jugador>();
+
+        try {
+            String query = "SELECT * FROM personas WHERE edad >=16 && edad<=24;";
+            PreparedStatement sentenciaP = database.open().prepareStatement(query);
+            ResultSet resultado = sentenciaP.executeQuery();
+
+            while (resultado.next()) {
+                jugador.add(Jugador.crear(resultado.getInt("id"),resultado.getString("foto"),Integer.parseInt(resultado.getString("documento")), resultado.getString("nombre"),resultado.getString("apellido"),Integer.parseInt(resultado.getString("edad")), resultado.getString("fechaNacimiento"),resultado.getString("fechaRegistro")));
+            }
+
+            sentenciaP.close();
+            database.close();
+
+            return jugador;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return jugador;
+    }
+     public static ArrayList<Jugador> obtenerTodos2() {
+        ArrayList<Jugador> jugador = new ArrayList<Jugador>();
+
+        try {
+            String query = "SELECT * FROM personas WHERE edad >=25 && edad<=50;";
+            PreparedStatement sentenciaP = database.open().prepareStatement(query);
+            ResultSet resultado = sentenciaP.executeQuery();
+
+            while (resultado.next()) {
+                jugador.add(Jugador.crear(resultado.getInt("id"),resultado.getString("foto"),Integer.parseInt(resultado.getString("documento")), resultado.getString("nombre"),resultado.getString("apellido"),Integer.parseInt(resultado.getString("edad")), resultado.getString("fechaNacimiento"),resultado.getString("fechaRegistro")));
+            }
+
+            sentenciaP.close();
+            database.close();
+
+            return jugador;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return jugador;
     }
 }

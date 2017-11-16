@@ -5,17 +5,27 @@
  */
 package parques_juego;
 
+import javax.swing.table.DefaultTableModel;
+import parques_juego.Jugador;
+import parques_juego.AgregarUsuario;
+
 /**
  *
  * @author Pavilion 15
  */
 public class Usuarios extends javax.swing.JFrame {
 
+    
+
     /**
      * Creates new form Usuarios
      */
+    AgregarUsuario u = new AgregarUsuario();
     public Usuarios() {
         initComponents();
+        configComponents();
+        configComponents1();
+        configComponents2();
     }
 
     /**
@@ -95,9 +105,9 @@ public class Usuarios extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane3)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 607, Short.MAX_VALUE)
                             .addComponent(jScrollPane2)
-                            .addComponent(jScrollPane1)))
+                            .addComponent(jScrollPane3)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(175, 175, 175)
                         .addComponent(jLabel1))
@@ -107,7 +117,7 @@ public class Usuarios extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(186, 186, 186)
                         .addComponent(jLabel3)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -176,4 +186,62 @@ public class Usuarios extends javax.swing.JFrame {
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     // End of variables declaration//GEN-END:variables
+    //metodo para agregar el contenido a la tabla.
+    private void configComponents() {
+        DefaultTableModel table_model_personas = new DefaultTableModel();
+        table_model_personas.addColumn("Id");
+        table_model_personas.addColumn("Foto");
+        table_model_personas.addColumn("Cedula");
+        table_model_personas.addColumn("Nombre");
+        table_model_personas.addColumn("Apellido");
+        table_model_personas.addColumn("Edad");
+        table_model_personas.addColumn("FechaNacimiento");
+        table_model_personas.addColumn("FechaResgistro");
+
+        
+        System.out.print(Jugador.aho);
+        
+        jTable1.setModel(table_model_personas);
+        
+        u.setTableModel(table_model_personas);
+        u.refreshTableModel();
+    }
+    private void configComponents1() {
+        DefaultTableModel table_model_personas1 = new DefaultTableModel();
+        table_model_personas1.addColumn("Id");
+        table_model_personas1.addColumn("Foto");
+        table_model_personas1.addColumn("Cedula");
+        table_model_personas1.addColumn("Nombre");
+        table_model_personas1.addColumn("Apellido");
+        table_model_personas1.addColumn("Edad");
+        table_model_personas1.addColumn("FechaNacimiento");
+        table_model_personas1.addColumn("FechaResgistro");
+
+        
+        System.out.print(Jugador.aho);
+        
+        jTable2.setModel(table_model_personas1);
+        
+        u.setTableModel1(table_model_personas1);
+        u.refreshTableModel1();
+    }
+    private void configComponents2() {
+        DefaultTableModel table_model_personas2 = new DefaultTableModel();
+        table_model_personas2.addColumn("Id");
+        table_model_personas2.addColumn("Foto");
+        table_model_personas2.addColumn("Cedula");
+        table_model_personas2.addColumn("Nombre");
+        table_model_personas2.addColumn("Apellido");
+        table_model_personas2.addColumn("Edad");
+        table_model_personas2.addColumn("FechaNacimiento");
+        table_model_personas2.addColumn("FechaResgistro");
+
+        
+        System.out.print(Jugador.aho);
+        
+        jTable3.setModel(table_model_personas2);
+        
+        u.setTableModel2(table_model_personas2);
+        u.refreshTableModel2();
+    }
 }

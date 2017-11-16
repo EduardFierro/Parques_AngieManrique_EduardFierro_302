@@ -8,10 +8,12 @@ package parques_juego;
 import java.awt.BorderLayout;
 import java.awt.Image;
 import java.io.File;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -22,11 +24,63 @@ public class AgregarUsuario extends javax.swing.JPanel {
     /**
      * Creates new form AgregarUsuario
      */
-    private Jugador jugador;
+    public static Jugador jugador;
+    public static DefaultTableModel table_model_personas;
+    public static DefaultTableModel table_model_personas1;
+    public static DefaultTableModel table_model_personas2;
     Principal pr = new Principal();
 
     public AgregarUsuario() {
         initComponents();
+    }
+    public void setTableModel(DefaultTableModel table_model_personas){
+        this.table_model_personas = table_model_personas;
+    }
+    public void setTableModel1(DefaultTableModel table_model_personas1){
+        this.table_model_personas1= table_model_personas1;
+    }
+    public void setTableModel2(DefaultTableModel table_model_personas2){
+        this.table_model_personas2 = table_model_personas2;
+    }
+    
+    public void refreshTableModel()
+    {
+        ArrayList<Jugador> lista_personas = Insertar.obtenerTodos();
+        while (table_model_personas.getRowCount() > 0) {
+            table_model_personas.removeRow(0);
+        }
+        
+        for(Jugador p : lista_personas)
+        {
+            String[] data = {Integer.toString(p.getId()),p.getFoto(), Integer.toString(p.getCedula()), p.getNombre(),p.getApellido(),Integer.toString(p.getEdad()), p.getFechan(),p.getAho()};
+            table_model_personas.addRow(data);
+        }
+    }
+    public void refreshTableModel1()
+    {
+        ArrayList<Jugador> lista_personas1 = Insertar.obtenerTodos1();
+        while (table_model_personas1.getRowCount() > 0) {
+            table_model_personas1.removeRow(0);
+        }
+        
+        for(Jugador p : lista_personas1)
+        {
+            String[] data = {Integer.toString(p.getId()),p.getFoto(), Integer.toString(p.getCedula()), p.getNombre(),p.getApellido(),Integer.toString(p.getEdad()), p.getFechan(),p.getAho()};
+            table_model_personas1.addRow(data);
+        }
+    }
+    public void refreshTableModel2()
+    {
+        ArrayList<Jugador> lista_personas2 = Insertar.obtenerTodos2();
+        while (table_model_personas2.getRowCount() > 0) {
+            table_model_personas2.removeRow(0);
+        }
+        
+        for(Jugador p : lista_personas2)
+        {
+            String[] data = {Integer.toString(p.getId()),p.getFoto(), Integer.toString(p.getCedula()), p.getNombre(),p.getApellido(),Integer.toString(p.getEdad()), p.getFechan(),p.getAho()};
+            table_model_personas2.addRow(data);
+        }
     }
 
     /**
