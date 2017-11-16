@@ -13,11 +13,11 @@ public class Recomendacion {
     /**
      * Van bien muchachos!!!
      * 
-     *  Es recomndable en todo desarrollo ir documentando cada clase, método o 
+     *  Es recomandable en todo desarrollo ir documentando cada clase, método o 
         variable que vayamos creando, esto con el fin de que documentar no se 
         vuelva una tarea tediosa al finalizar la aplicación
 
-        Era recomendable se parar por paquetes la parte lógica de la gráfica,
+        Era recomendable separar por paquetes la parte lógica de la gráfica,
         esto con el fin de que sea mas claro para cualquier desarrollador
 
         Les queda mas fácil pintar por coordenadas en una imagen?, no era más fácil

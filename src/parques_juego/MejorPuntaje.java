@@ -5,6 +5,10 @@
  */
 package parques_juego;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import static parques_juego.Parques.tablero;
+
 /**
  *
  * @author Pavilion 15
@@ -16,8 +20,16 @@ public class MejorPuntaje extends javax.swing.JFrame {
      */
     public MejorPuntaje() {
         initComponents();
+        configComponents();
     }
+    
+    public void configComponents() {
+        ImageIcon fondo = new ImageIcon(getClass().getResource("/images/wallpaper.jpg"));
+        ImageIcon icon = new ImageIcon(fondo.getImage().getScaledInstance(labelfondo.getWidth(), labelfondo.getHeight(), Image.SCALE_DEFAULT));
+        labelfondo.setIcon(icon);
 
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,15 +44,21 @@ public class MejorPuntaje extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
-        jLabel3 = new javax.swing.JLabel();
+        labelfondo = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Mejores Puntajes");
         setBackground(new java.awt.Color(153, 255, 153));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setMaximumSize(new java.awt.Dimension(470, 540));
+        setMinimumSize(new java.awt.Dimension(470, 540));
+        setPreferredSize(new java.awt.Dimension(470, 540));
+        getContentPane().setLayout(null);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -55,8 +73,13 @@ public class MejorPuntaje extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel1.setForeground(new java.awt.Color(51, 0, 255));
-        jLabel1.setText("Mejor Puntaje Infantil");
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(20, 50, 420, 101);
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Mejores puntajes infantil");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(150, 20, 150, 14);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -71,9 +94,19 @@ public class MejorPuntaje extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
+        getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(20, 210, 415, 103);
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Mejores puntajes mayores");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(150, 330, 200, 14);
+
         jLabel2.setBackground(new java.awt.Color(102, 102, 255));
-        jLabel2.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel2.setText("Mejor Puntaje Juvenil");
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Mejores puntajes juvenil");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(150, 170, 170, 14);
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -88,52 +121,31 @@ public class MejorPuntaje extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(jTable3);
 
-        jLabel3.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel3.setText("Mejor Puntaje Mayores");
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(20, 370, 420, 111);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(151, 151, 151)
-                                .addComponent(jLabel1))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addComponent(jLabel3)))
-                .addContainerGap(15, Short.MAX_VALUE))
+        labelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/wallpaper.jpg"))); // NOI18N
+        labelfondo.setMaximumSize(new java.awt.Dimension(450, 540));
+        labelfondo.setMinimumSize(new java.awt.Dimension(450, 540));
+        labelfondo.setPreferredSize(new java.awt.Dimension(450, 540));
+        getContentPane().add(labelfondo);
+        labelfondo.setBounds(4, 0, 450, 520);
+
+        jPanel1.setMaximumSize(new java.awt.Dimension(450, 520));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 450, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addGap(32, 32, 32)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addGap(32, 32, 32)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 520, Short.MAX_VALUE)
         );
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 450, 520);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -177,11 +189,13 @@ public class MejorPuntaje extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
+    private javax.swing.JLabel labelfondo;
     // End of variables declaration//GEN-END:variables
 }

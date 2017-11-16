@@ -18,6 +18,8 @@ import javax.swing.JPanel;
  */
 public class Parques extends javax.swing.JPanel {
 
+    public static int redflag = 0, greenflag = 0, blueflag = 0, yellowflag = 0;
+
     /**
      * Creates new form Parques
      */
@@ -26,6 +28,7 @@ public class Parques extends javax.swing.JPanel {
         configComponents();
         //moverFichas();
     }
+
     //imagen del parques
     public void configComponents() {
         ImageIcon parques = new ImageIcon(getClass().getResource("/images/parques.JPG"));
@@ -33,32 +36,33 @@ public class Parques extends javax.swing.JPanel {
         tablero.setIcon(icon);
 
     }
+
     //funcion para mover las fichas
     public static void moverFichas() {
-        if(Dados.cont==1){
+        if (Dados.cont == 1) {
             if (Dados.num1 == Dados.num2) {
-            roja1.setLocation(195, 155);
-            roja2.setLocation(220, 155);
+                roja1.setLocation(195, 155);
+                roja2.setLocation(220, 155);
+            }
         }
-        }
-        if(Dados.cont==2){
+        if (Dados.cont == 2) {
             if (Dados.num1 == Dados.num2) {
                 verde1.setLocation(465, 240);
                 verde2.setLocation(465, 265);
             }
-        } 
-        if(Dados.cont==3){
+        }
+        if (Dados.cont == 3) {
             if (Dados.num1 == Dados.num2) {
                 azul1.setLocation(355, 510);
                 azul2.setLocation(380, 510);
             }
-        } 
-        if(Dados.cont==4){
+        }
+        if (Dados.cont == 4) {
             if (Dados.num1 == Dados.num2) {
                 amarilla1.setLocation(110, 400);
                 amarilla2.setLocation(110, 425);
             }
-        } 
+        }
     }
 
     /**

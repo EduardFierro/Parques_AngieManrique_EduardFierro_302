@@ -5,6 +5,9 @@
  */
 package parques_juego;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Pavilion 15
@@ -16,8 +19,16 @@ public class Historial extends javax.swing.JFrame {
      */
     public Historial() {
         initComponents();
+        configComponents();
     }
 
+    public void configComponents() {
+        ImageIcon fondo = new ImageIcon(getClass().getResource("/images/wallpaper.jpg"));
+        ImageIcon icon = new ImageIcon(fondo.getImage().getScaledInstance(labelfondo.getWidth(), labelfondo.getHeight(), Image.SCALE_DEFAULT));
+        labelfondo.setIcon(icon);
+
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,12 +38,24 @@ public class Historial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jLabel2 = new javax.swing.JLabel();
+        labelfondo = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(102, 102, 255));
+        setMaximumSize(new java.awt.Dimension(470, 540));
+        setMinimumSize(new java.awt.Dimension(470, 540));
+        setPreferredSize(new java.awt.Dimension(470, 540));
+        getContentPane().setLayout(null);
+
+        jLabel2.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("HISTORIAL DE JUEGOS");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(90, 0, 293, 44);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -47,31 +70,32 @@ public class Historial extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel2.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel2.setText("Historial de Juego");
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(10, 50, 430, 380);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(145, 145, 145)
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        labelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/wallpaper.jpg"))); // NOI18N
+        labelfondo.setMaximumSize(new java.awt.Dimension(470, 540));
+        labelfondo.setMinimumSize(new java.awt.Dimension(470, 540));
+        labelfondo.setPreferredSize(new java.awt.Dimension(470, 540));
+        getContentPane().add(labelfondo);
+        labelfondo.setBounds(0, 0, 450, 540);
+
+        jPanel1.setMaximumSize(new java.awt.Dimension(450, 540));
+        jPanel1.setMinimumSize(new java.awt.Dimension(450, 540));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 450, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 540, Short.MAX_VALUE)
         );
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 410, 390);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -113,7 +137,9 @@ public class Historial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JLabel labelfondo;
     // End of variables declaration//GEN-END:variables
 }
