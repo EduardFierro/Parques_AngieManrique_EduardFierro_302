@@ -8,6 +8,12 @@ package parques_juego;
 import java.awt.BorderLayout;
 import java.awt.Image;
 import java.io.File;
+import java.sql.Date;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -26,6 +32,9 @@ public class AgregarUsuario extends javax.swing.JPanel {
      * Creates new form AgregarUsuario
      */
     //declaracion de variables
+    private Timestamp ahora12;
+    private Date fecha1;
+    private LocalDate fechan;
     public static int cont=0;
     public static Jugador jugador;
     public static DefaultTableModel table_model_personas;
@@ -56,7 +65,13 @@ public class AgregarUsuario extends javax.swing.JPanel {
         
         for(Jugador p : lista_personas)
         {
-            String[] data = {Integer.toString(p.getId()),p.getFoto(), Integer.toString(p.getCedula()), p.getNombre(),p.getApellido(),Integer.toString(p.getEdad()), p.getFechan(),p.getAho()};
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+         
+            String fecha1 = sdf.format(p.getFechan());
+            SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+         
+            String fecha2 = sdf.format(p.getAho());
+            String[] data = {Integer.toString(p.getId()),p.getFoto(), Integer.toString(p.getCedula()), p.getNombre(),p.getApellido(),Integer.toString(p.getEdad()),fecha1, fecha2};
             table_model_personas.addRow(data);
         }
     }
@@ -70,7 +85,13 @@ public class AgregarUsuario extends javax.swing.JPanel {
         
         for(Jugador p : lista_personas1)
         {
-            String[] data = {Integer.toString(p.getId()),p.getFoto(), Integer.toString(p.getCedula()), p.getNombre(),p.getApellido(),Integer.toString(p.getEdad()), p.getFechan(),p.getAho()};
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+         
+            String fecha1 = sdf.format(p.getFechan());
+            SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+         
+            String fecha2 = sdf.format(p.getAho());
+            String[] data = {Integer.toString(p.getId()),p.getFoto(), Integer.toString(p.getCedula()), p.getNombre(),p.getApellido(),Integer.toString(p.getEdad()),fecha1, fecha2};
             table_model_personas1.addRow(data);
         }
     }
@@ -84,7 +105,13 @@ public class AgregarUsuario extends javax.swing.JPanel {
         
         for(Jugador p : lista_personas2)
         {
-            String[] data = {Integer.toString(p.getId()),p.getFoto(), Integer.toString(p.getCedula()), p.getNombre(),p.getApellido(),Integer.toString(p.getEdad()), p.getFechan(),p.getAho()};
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+         
+            String fecha1 = sdf.format(p.getFechan());
+            SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+         
+            String fecha2 = sdf.format(p.getAho());
+            String[] data = {Integer.toString(p.getId()),p.getFoto(), Integer.toString(p.getCedula()), p.getNombre(),p.getApellido(),Integer.toString(p.getEdad()), fecha1,fecha2};
             table_model_personas2.addRow(data);
         }
     }
@@ -116,6 +143,11 @@ public class AgregarUsuario extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         rutatext = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        mes = new javax.swing.JTextField();
+        dia = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(204, 153, 255));
         setName("panelAgregar"); // NOI18N
@@ -154,56 +186,92 @@ public class AgregarUsuario extends javax.swing.JPanel {
             }
         });
 
+        rutatext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rutatextActionPerformed(evt);
+            }
+        });
+
         jLabel9.setText("DIRECCIÓN DE UBICACIÓN DE LA FOTO:");
+
+        jLabel10.setText("Año");
+
+        jLabel11.setText("Mes");
+
+        jLabel12.setText("Dia");
+
+        mes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jLabel2)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(agrfoto, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(99, 99, 99)
-                                .addComponent(agrusuario))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(rutatext, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jl_foto, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel3)
-                                            .addComponent(jLabel4)
-                                            .addComponent(jLabel5)
-                                            .addComponent(jLabel6))
-                                        .addGap(41, 41, 41)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(cedulatext)
-                                            .addComponent(nombretext)
-                                            .addComponent(apellidotext)
-                                            .addComponent(edadtext)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(fechanactext)))))
-                        .addContainerGap())))
-            .addGroup(layout.createSequentialGroup()
                 .addGap(126, 126, 126)
                 .addComponent(jLabel1)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jl_foto, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel6))
+                                .addGap(41, 41, 41)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cedulatext)
+                                    .addComponent(nombretext)
+                                    .addComponent(apellidotext)
+                                    .addComponent(edadtext)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel10)
+                                        .addGap(30, 30, 30)
+                                        .addComponent(jLabel11)
+                                        .addGap(28, 28, 28)
+                                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(fechanactext, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(mes, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(dia, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(jLabel2)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 10, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(agrfoto, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(79, 79, 79)
+                                .addComponent(agrusuario)
+                                .addGap(20, 20, 20))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rutatext, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -233,22 +301,26 @@ public class AgregarUsuario extends javax.swing.JPanel {
                         .addGap(11, 11, 11)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
-                            .addComponent(fechanactext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(fechanactext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(mes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jl_foto, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel12))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rutatext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jLabel8))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(agrusuario)
-                            .addComponent(agrfoto))))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(agrfoto)
+                    .addComponent(agrusuario))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8)
+                .addContainerGap(60, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -263,8 +335,12 @@ public class AgregarUsuario extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Por favor diligencie todo el formulario", "Error", JOptionPane.ERROR_MESSAGE);
             } else {
                 cont++;
+                LocalDateTime ahora = LocalDateTime.now();
+                fechan = LocalDate.of(Integer.parseInt(fechanactext.getText()), Month.of(Integer.parseInt(mes.getText())), Integer.parseInt(dia.getText()));
+                    fecha1 = Date.valueOf(fechan);
+                    ahora12 = Timestamp.valueOf(ahora);
                 //agregar los datos del panel al metodo crear de la clase jugador
-                jugador = Jugador.crear(0, rutatext.getText(), Integer.parseInt(cedulatext.getText()), nombretext.getText(), apellidotext.getText(), Integer.parseInt(edadtext.getText()), fechanactext.getText(), Jugador.aho);
+                jugador = Jugador.crear(0, rutatext.getText(), Integer.parseInt(cedulatext.getText()), nombretext.getText(), apellidotext.getText(), Integer.parseInt(edadtext.getText()), fecha1, ahora12);
                 Insertar.crear(jugador);
                 JOptionPane.showMessageDialog(this, "Persona creada satisfactoriamente", "Bien", JOptionPane.INFORMATION_MESSAGE);
              // if(cont==4){
@@ -297,6 +373,14 @@ public class AgregarUsuario extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_agrfotoActionPerformed
 
+    private void mesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mesActionPerformed
+
+    private void rutatextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rutatextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rutatextActionPerformed
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -304,9 +388,13 @@ public class AgregarUsuario extends javax.swing.JPanel {
     private javax.swing.JButton agrusuario;
     private javax.swing.JTextField apellidotext;
     private javax.swing.JTextField cedulatext;
+    private javax.swing.JTextField dia;
     private javax.swing.JTextField edadtext;
     private javax.swing.JTextField fechanactext;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -316,6 +404,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jl_foto;
+    private javax.swing.JTextField mes;
     private javax.swing.JTextField nombretext;
     private javax.swing.JTextField rutatext;
     // End of variables declaration//GEN-END:variables

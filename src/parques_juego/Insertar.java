@@ -27,8 +27,8 @@ public class Insertar {
             sentenciaP.setString(3, jugador.getNombre());
             sentenciaP.setString(4, jugador.getApellido());
             sentenciaP.setString(5, String.valueOf(jugador.getEdad()));
-            sentenciaP.setString(6, jugador.getFechan());
-            sentenciaP.setString(7, jugador.getAho());
+            sentenciaP.setDate(6, jugador.getFechan());
+            sentenciaP.setTimestamp(7, jugador.getAho());
             
 
             sentenciaP.executeUpdate();
@@ -50,7 +50,7 @@ public class Insertar {
             ResultSet resultado = sentenciaP.executeQuery();
 
             while (resultado.next()) {
-                jugador.add(Jugador.crear(resultado.getInt("id"),resultado.getString("foto"),Integer.parseInt(resultado.getString("documento")), resultado.getString("nombre"),resultado.getString("apellido"),Integer.parseInt(resultado.getString("edad")), resultado.getString("fechaNacimiento"),resultado.getString("fechaRegistro")));
+                jugador.add(Jugador.crear(resultado.getInt("id"),resultado.getString("foto"),Integer.parseInt(resultado.getString("documento")), resultado.getString("nombre"),resultado.getString("apellido"),Integer.parseInt(resultado.getString("edad")), resultado.getDate("fechaNacimiento"),resultado.getTimestamp("fechaRegistro")));
             }
 
             sentenciaP.close();
@@ -73,7 +73,7 @@ public class Insertar {
             ResultSet resultado = sentenciaP.executeQuery();
 
             while (resultado.next()) {
-                jugador.add(Jugador.crear(resultado.getInt("id"),resultado.getString("foto"),Integer.parseInt(resultado.getString("documento")), resultado.getString("nombre"),resultado.getString("apellido"),Integer.parseInt(resultado.getString("edad")), resultado.getString("fechaNacimiento"),resultado.getString("fechaRegistro")));
+                jugador.add(Jugador.crear(resultado.getInt("id"),resultado.getString("foto"),Integer.parseInt(resultado.getString("documento")), resultado.getString("nombre"),resultado.getString("apellido"),Integer.parseInt(resultado.getString("edad")), resultado.getDate("fechaNacimiento"),resultado.getTimestamp("fechaRegistro")));
             }
 
             sentenciaP.close();
@@ -96,7 +96,7 @@ public class Insertar {
             ResultSet resultado = sentenciaP.executeQuery();
 
             while (resultado.next()) {
-                jugador.add(Jugador.crear(resultado.getInt("id"),resultado.getString("foto"),Integer.parseInt(resultado.getString("documento")), resultado.getString("nombre"),resultado.getString("apellido"),Integer.parseInt(resultado.getString("edad")), resultado.getString("fechaNacimiento"),resultado.getString("fechaRegistro")));
+                jugador.add(Jugador.crear(resultado.getInt("id"),resultado.getString("foto"),Integer.parseInt(resultado.getString("documento")), resultado.getString("nombre"),resultado.getString("apellido"),Integer.parseInt(resultado.getString("edad")), resultado.getDate("fechaNacimiento"),resultado.getTimestamp("fechaRegistro")));
             }
 
             sentenciaP.close();

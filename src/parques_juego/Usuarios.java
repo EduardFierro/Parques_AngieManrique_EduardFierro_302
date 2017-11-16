@@ -61,8 +61,10 @@ public class Usuarios extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Usuarios Registrados");
         setBackground(new java.awt.Color(153, 153, 255));
-        setMaximumSize(new java.awt.Dimension(630, 610));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setMaximumSize(new java.awt.Dimension(650, 630));
+        setMinimumSize(new java.awt.Dimension(650, 630));
+        setPreferredSize(new java.awt.Dimension(650, 630));
+        getContentPane().setLayout(null);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -77,7 +79,8 @@ public class Usuarios extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 57, 607, 123));
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(10, 57, 607, 123);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -92,7 +95,8 @@ public class Usuarios extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 224, 607, 137));
+        getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(10, 224, 607, 137);
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -107,22 +111,27 @@ public class Usuarios extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(jTable3);
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 412, 607, 138));
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(10, 412, 607, 138);
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Categoria Infantil");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, -1, -1));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(250, 30, 84, 14);
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Categoria Juvenil");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, -1, -1));
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(250, 190, 83, 14);
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Categoria Mayores");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 380, -1, -1));
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(250, 380, 91, 14);
 
         labelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/wallpaper.jpg"))); // NOI18N
-        getContentPane().add(labelfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 610));
+        getContentPane().add(labelfondo);
+        labelfondo.setBounds(0, 0, 630, 610);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -187,7 +196,7 @@ public class Usuarios extends javax.swing.JFrame {
         table_model_personas.addColumn("FechaResgistro");
 
         
-        System.out.print(Jugador.aho);
+       
         
         jTable1.setModel(table_model_personas);
         
@@ -207,7 +216,6 @@ public class Usuarios extends javax.swing.JFrame {
         table_model_personas1.addColumn("FechaResgistro");
 
         
-        System.out.print(Jugador.aho);
         
         jTable2.setModel(table_model_personas1);
         
@@ -226,8 +234,7 @@ public class Usuarios extends javax.swing.JFrame {
         table_model_personas2.addColumn("FechaNacimiento");
         table_model_personas2.addColumn("FechaResgistro");
 
-        
-        System.out.print(Jugador.aho);
+       
         
         jTable3.setModel(table_model_personas2);
         

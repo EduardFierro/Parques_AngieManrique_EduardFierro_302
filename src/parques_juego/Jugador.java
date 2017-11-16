@@ -6,6 +6,8 @@
 package parques_juego;
 
 import java.io.FileInputStream;
+import java.sql.Date;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 /**
@@ -15,12 +17,11 @@ import java.time.LocalDateTime;
 public class Jugador {
     public static LocalDateTime registro = LocalDateTime.now();
     
-    public static String  foto,nombre,apellido, fechan,aho=String.valueOf(registro);           
-
-    
-                    
+    private String  foto,nombre,apellido;  
+    private Date fechan;
+    private Timestamp aho;
     private int id=0, cedula,edad;
-    public Jugador(int id,String foto,int cedula, String nombre, String apellido,int edad, String fechan, String aho ){
+    public Jugador(int id,String foto,int cedula, String nombre, String apellido,int edad, Date fechan, Timestamp aho ){
         this.id = id;
         this.foto =foto;
         this.cedula = cedula;
@@ -30,61 +31,54 @@ public class Jugador {
         this.fechan = fechan;
         this.aho = aho;
     }
-     public static Jugador crear(int id,String foto,int cedula, String nombre,String apellido,int edad,String fechan, String aho ) {
+     public static Jugador crear(int id,String foto,int cedula, String nombre,String apellido,int edad,Date fechan, Timestamp aho ) {
         return new Jugador(id,foto, cedula, nombre, apellido,edad,fechan,aho);
     }
 
-    public static LocalDateTime getRegistro() {
-        return registro;
-    }
-
-    public static void setRegistro(LocalDateTime registro) {
-        Jugador.registro = registro;
-    }
     public void setId(int id) {
         this.id = id;
     }
       public int getId() {
         return this.id;
     }
-    public static String getFoto() {
+    public String getFoto() {
         return foto;
     }
 
-    public static void setFoto(String foto) {
-        Jugador.foto = foto;
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 
-    public static String getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public static void setNombre(String nombre) {
-        Jugador.nombre = nombre;
+    public  void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public static String getApellido() {
+    public  String getApellido() {
         return apellido;
     }
 
-    public static void setApellido(String apellido) {
-        Jugador.apellido = apellido;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
-    public static String getFechan() {
+    public Date getFechan() {
         return fechan;
     }
 
-    public static void setFechan(String fechan) {
-        Jugador.fechan = fechan;
+    public void setFechan(Date fechan) {
+        this.fechan = fechan;
     }
 
-    public static String getAho() {
+    public Timestamp getAho() {
         return aho;
     }
 
-    public static void setAho(String aho) {
-        Jugador.aho = aho;
+    public void setAho(Timestamp aho) {
+        this.aho = aho;
     }
 
     public int getCedula() {
