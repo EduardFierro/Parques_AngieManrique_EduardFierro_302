@@ -169,7 +169,7 @@ public class Menu extends javax.swing.JPanel {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+   //boton que genera el panel de registro de usuarios
     private void opcion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcion1ActionPerformed
         AgregarUsuario agr = new AgregarUsuario();
         agr.setSize(470, 390);
@@ -179,7 +179,7 @@ public class Menu extends javax.swing.JPanel {
         Menu.this.revalidate();
         Menu.this.repaint();
     }//GEN-LAST:event_opcion1ActionPerformed
-
+//boton que genera el panel de juego
     private void opcion2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcion2ActionPerformed
         Parques par = new Parques();
         par.setSize(620,660);
@@ -189,17 +189,17 @@ public class Menu extends javax.swing.JPanel {
         Menu.this.revalidate();
         Menu.this.repaint();
     }//GEN-LAST:event_opcion2ActionPerformed
-
+//boton para mostrar los usuarios registrados 
     private void opcion5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcion5ActionPerformed
         Usuarios user = new Usuarios();
         user.setVisible(true);
     }//GEN-LAST:event_opcion5ActionPerformed
-
+//boton que genera el panel que contiene las tablas con el historial de juego
     private void opcion4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcion4ActionPerformed
        Historial histo = new Historial();
        histo.setVisible(true);
     }//GEN-LAST:event_opcion4ActionPerformed
-
+//boton que  muestra el panel de los mjores puntajes del juego
     private void opcion3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcion3ActionPerformed
         MejorPuntaje mejor = new MejorPuntaje();
         mejor.setVisible(true);

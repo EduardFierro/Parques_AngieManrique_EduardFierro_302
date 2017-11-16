@@ -14,6 +14,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
+import static parques_juego.Principal.panelPrincipal;
 
 /**
  *
@@ -24,6 +25,8 @@ public class AgregarUsuario extends javax.swing.JPanel {
     /**
      * Creates new form AgregarUsuario
      */
+    //declaracion de variables
+    public static int cont=0;
     public static Jugador jugador;
     public static DefaultTableModel table_model_personas;
     public static DefaultTableModel table_model_personas1;
@@ -33,6 +36,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
     public AgregarUsuario() {
         initComponents();
     }
+    //conructor de la tabla recive parametro DefaultTableMode
     public void setTableModel(DefaultTableModel table_model_personas){
         this.table_model_personas = table_model_personas;
     }
@@ -42,7 +46,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
     public void setTableModel2(DefaultTableModel table_model_personas2){
         this.table_model_personas2 = table_model_personas2;
     }
-    
+    //actualiza la tabla segun la informacion de la base de datos 
     public void refreshTableModel()
     {
         ArrayList<Jugador> lista_personas = Insertar.obtenerTodos();
@@ -56,6 +60,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
             table_model_personas.addRow(data);
         }
     }
+    //actualiza la tabla segun la informacion de la base de datos 
     public void refreshTableModel1()
     {
         ArrayList<Jugador> lista_personas1 = Insertar.obtenerTodos1();
@@ -69,6 +74,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
             table_model_personas1.addRow(data);
         }
     }
+    //actualiza la tabla segun la informacion de la base de datos 
     public void refreshTableModel2()
     {
         ArrayList<Jugador> lista_personas2 = Insertar.obtenerTodos2();
@@ -247,18 +253,25 @@ public class AgregarUsuario extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void agrusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agrusuarioActionPerformed
+        Menu menu = new Menu();
+                    menu.setVisible(true);
+                    
         try {
+            //validacion de los TextField que no esten vacios
             if (nombretext.getText().isEmpty() || rutatext.getText().isEmpty() ||cedulatext.getText().isEmpty()
                 || apellidotext.getText().isEmpty() || edadtext.getText().isEmpty() || fechanactext.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Por favor diligencie todo el formulario", "Error", JOptionPane.ERROR_MESSAGE);
             } else {
-
+                cont++;
+                //agregar los datos del panel al metodo crear de la clase jugador
                 jugador = Jugador.crear(0, rutatext.getText(), Integer.parseInt(cedulatext.getText()), nombretext.getText(), apellidotext.getText(), Integer.parseInt(edadtext.getText()), fechanactext.getText(), Jugador.aho);
                 Insertar.crear(jugador);
                 JOptionPane.showMessageDialog(this, "Persona creada satisfactoriamente", "Bien", JOptionPane.INFORMATION_MESSAGE);
-              
+             // if(cont==4){
+                    
+             // }
         }      
-
+            
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Datos mal ingresados", "Error", JOptionPane.ERROR_MESSAGE);
         }
@@ -266,6 +279,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_agrusuarioActionPerformed
 
     private void agrfotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agrfotoActionPerformed
+        //crea filtro para el JFileChooser con los formatos de imagen
         FileNameExtensionFilter filtro = new FileNameExtensionFilter("Formatos JPEG(*.JPG;*.JPEG)", "jpg","jpeg");
         JFileChooser seleccionar = new JFileChooser();
         seleccionar.addChoosableFileFilter(filtro);
@@ -273,6 +287,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
         File ruta = new File("C:\\Users\\Pavilion 15\\Pictures");
         seleccionar.setCurrentDirectory(ruta);
         int aux = seleccionar.showOpenDialog(null);
+        //agrega la imagen al JLabel
         if(aux==JFileChooser.APPROVE_OPTION){
             File file = seleccionar.getSelectedFile();
             rutatext.setText(String.valueOf(file));

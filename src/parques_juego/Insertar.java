@@ -16,6 +16,7 @@ import parques_juego.database.BaseC;
  * @author Pavilion 15
  */
 public class Insertar {
+    //metodo que inserta los datos del jugador a la base de datos
     private static BaseC database = new BaseC();
     public static void crear (Jugador jugador) {
         try {
@@ -39,6 +40,7 @@ public class Insertar {
         }
 
     }
+    //metodo que optiene la informacion de la base de datos pra agregarlo a las tabals de informacion por categorias
      public static ArrayList<Jugador> obtenerTodos() {
         ArrayList<Jugador> jugador = new ArrayList<Jugador>();
 
@@ -61,6 +63,7 @@ public class Insertar {
 
         return jugador;
     }
+     //metodo que optiene la informacion de la base de datos pra agregarlo a las tabals de informacion por categorias
      public static ArrayList<Jugador> obtenerTodos1() {
         ArrayList<Jugador> jugador = new ArrayList<Jugador>();
 
@@ -83,6 +86,7 @@ public class Insertar {
 
         return jugador;
     }
+     //metodo que optiene la informacion de la base de datos pra agregarlo a las tabals de informacion por categorias
      public static ArrayList<Jugador> obtenerTodos2() {
         ArrayList<Jugador> jugador = new ArrayList<Jugador>();
 

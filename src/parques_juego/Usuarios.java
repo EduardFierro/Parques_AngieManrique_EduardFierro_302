@@ -186,7 +186,7 @@ public class Usuarios extends javax.swing.JFrame {
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     // End of variables declaration//GEN-END:variables
-    //metodo para agregar el contenido a la tabla.
+    //metodo para agregar el contenido a la tabla y configurarla.
     private void configComponents() {
         DefaultTableModel table_model_personas = new DefaultTableModel();
         table_model_personas.addColumn("Id");
@@ -206,6 +206,7 @@ public class Usuarios extends javax.swing.JFrame {
         u.setTableModel(table_model_personas);
         u.refreshTableModel();
     }
+     //metodo para agregar el contenido a la tabla y configurarla.
     private void configComponents1() {
         DefaultTableModel table_model_personas1 = new DefaultTableModel();
         table_model_personas1.addColumn("Id");
@@ -225,6 +226,7 @@ public class Usuarios extends javax.swing.JFrame {
         u.setTableModel1(table_model_personas1);
         u.refreshTableModel1();
     }
+     //metodo para agregar el contenido a la tabla y configurar sus componentes.
     private void configComponents2() {
         DefaultTableModel table_model_personas2 = new DefaultTableModel();
         table_model_personas2.addColumn("Id");
