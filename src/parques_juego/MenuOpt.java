@@ -29,7 +29,6 @@ public class MenuOpt extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -199,12 +198,7 @@ public class MenuOpt extends javax.swing.JFrame {
 
     private void opcion2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcion2ActionPerformed
         Parques par = new Parques();
-        par.setSize(620,660);
-        par.setLocation(0, 0);
-        MenuOpt.this.removeAll();
-        MenuOpt.this.add(par, BorderLayout.CENTER);
-        MenuOpt.this.revalidate();
-        MenuOpt.this.repaint();
+        par.setVisible(true);
     }//GEN-LAST:event_opcion2ActionPerformed
 
     private void opcion3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcion3ActionPerformed
@@ -264,7 +258,7 @@ public class MenuOpt extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
+    public static final javax.swing.JPanel jPanel1 = new javax.swing.JPanel();
     private javax.swing.JButton opcion1;
     private javax.swing.JButton opcion2;
     private javax.swing.JButton opcion3;

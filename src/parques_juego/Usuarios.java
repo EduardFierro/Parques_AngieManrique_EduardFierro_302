@@ -9,7 +9,6 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.table.DefaultTableModel;
 import parques_juego.Jugador;
-import parques_juego.AgregarUsuario;
 
 /**
  *
@@ -22,7 +21,7 @@ public class Usuarios extends javax.swing.JFrame {
     /**
      * Creates new form Usuarios
      */
-    AgregarUsuario u = new AgregarUsuario();
+    Agregar u = new Agregar();
     public Usuarios() {
         initComponents();
         configComponents();
@@ -127,7 +126,7 @@ public class Usuarios extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Categoria Mayores");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(250, 380, 100, 14);
+        jLabel3.setBounds(250, 380, 140, 14);
 
         labelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/wallpaper.jpg"))); // NOI18N
         getContentPane().add(labelfondo);

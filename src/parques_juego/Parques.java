@@ -5,28 +5,29 @@
  */
 package parques_juego;
 
-import java.awt.Color;
-import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import static parques_juego.Parques.amarilla1;
+import static parques_juego.Parques.amarilla2;
+import static parques_juego.Parques.azul1;
+import static parques_juego.Parques.azul2;
+import static parques_juego.Parques.roja1;
+import static parques_juego.Parques.roja2;
+import static parques_juego.Parques.tablero;
+import static parques_juego.Parques.verde1;
+import static parques_juego.Parques.verde2;
 
 /**
  *
  * @author Angie
  */
-public class Parques extends javax.swing.JPanel {
-
-    public static int redflag = 0, greenflag = 0, blueflag = 0, yellowflag = 0;
+public class Parques extends javax.swing.JFrame {
 
     /**
-     * Creates new form Parques
+     * Creates new form Parquest
      */
     public Parques() {
-        initComponents();
-        configComponents();
-        //moverFichas();
+        initComponents();   configComponents();
     }
 
     //imagen del parques
@@ -64,7 +65,6 @@ public class Parques extends javax.swing.JPanel {
             }
         }
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -74,54 +74,56 @@ public class Parques extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         tablero = new javax.swing.JLabel();
         titulo = new javax.swing.JLabel();
         botondados = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 153, 255));
-        setLayout(null);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel1.setLayout(null);
 
         verde1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
-        add(verde1);
+        jPanel1.add(verde1);
         verde1.setBounds(540, 90, 25, 20);
 
         verde2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
-        add(verde2);
+        jPanel1.add(verde2);
         verde2.setBounds(460, 160, 25, 20);
-        verde2.getAccessibleContext().setAccessibleName("verde1");
 
         amarilla1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
-        add(amarilla1);
+        jPanel1.add(amarilla1);
         amarilla1.setBounds(120, 580, 25, 20);
 
         amarilla2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
-        add(amarilla2);
+        jPanel1.add(amarilla2);
         amarilla2.setBounds(40, 500, 25, 20);
 
         azul1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
-        add(azul1);
+        jPanel1.add(azul1);
         azul1.setBounds(540, 510, 25, 20);
 
         azul2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
-        add(azul2);
+        jPanel1.add(azul2);
         azul2.setBounds(470, 590, 25, 20);
 
         roja1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
-        add(roja1);
+        jPanel1.add(roja1);
         roja1.setBounds(120, 170, 30, 20);
 
         roja2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
-        add(roja2);
+        jPanel1.add(roja2);
         roja2.setBounds(40, 90, 25, 20);
 
         tablero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/parques.JPG"))); // NOI18N
-        add(tablero);
+        jPanel1.add(tablero);
         tablero.setBounds(8, 50, 580, 580);
 
         titulo.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         titulo.setForeground(new java.awt.Color(102, 0, 102));
         titulo.setText("PARQUÉS");
-        add(titulo);
+        jPanel1.add(titulo);
         titulo.setBounds(238, 0, 139, 44);
 
         botondados.setText("LANZAR DADOS");
@@ -130,14 +132,72 @@ public class Parques extends javax.swing.JPanel {
                 botondadosActionPerformed(evt);
             }
         });
-        add(botondados);
+        jPanel1.add(botondados);
         botondados.setBounds(237, 636, 130, 23);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 588, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 588, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 664, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 664, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void botondadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botondadosActionPerformed
         new Dados().setVisible(true);
     }//GEN-LAST:event_botondadosActionPerformed
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Parques.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Parques.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Parques.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Parques.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Parques().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static final javax.swing.JLabel amarilla1 = new javax.swing.JLabel();
@@ -145,6 +205,7 @@ public class Parques extends javax.swing.JPanel {
     public static final javax.swing.JLabel azul1 = new javax.swing.JLabel();
     public static final javax.swing.JLabel azul2 = new javax.swing.JLabel();
     private javax.swing.JButton botondados;
+    private javax.swing.JPanel jPanel1;
     public static final javax.swing.JLabel roja1 = new javax.swing.JLabel();
     public static final javax.swing.JLabel roja2 = new javax.swing.JLabel();
     public static javax.swing.JLabel tablero;
