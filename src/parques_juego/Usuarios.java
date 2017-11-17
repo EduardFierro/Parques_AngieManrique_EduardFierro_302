@@ -61,9 +61,9 @@ public class Usuarios extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Usuarios Registrados");
         setBackground(new java.awt.Color(153, 153, 255));
-        setMaximumSize(new java.awt.Dimension(650, 630));
-        setMinimumSize(new java.awt.Dimension(650, 630));
-        setPreferredSize(new java.awt.Dimension(650, 630));
+        setMaximumSize(new java.awt.Dimension(900, 630));
+        setMinimumSize(new java.awt.Dimension(900, 630));
+        setPreferredSize(new java.awt.Dimension(900, 630));
         getContentPane().setLayout(null);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -80,7 +80,7 @@ public class Usuarios extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 57, 607, 123);
+        jScrollPane1.setBounds(10, 57, 870, 123);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -96,7 +96,7 @@ public class Usuarios extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTable2);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(10, 224, 607, 137);
+        jScrollPane2.setBounds(10, 224, 870, 137);
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -112,26 +112,26 @@ public class Usuarios extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jTable3);
 
         getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(10, 412, 607, 138);
+        jScrollPane3.setBounds(10, 412, 870, 138);
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Categoria Infantil");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(250, 30, 84, 14);
+        jLabel1.setBounds(250, 30, 110, 14);
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Categoria Juvenil");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(250, 190, 83, 14);
+        jLabel2.setBounds(250, 190, 110, 14);
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Categoria Mayores");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(250, 380, 91, 14);
+        jLabel3.setBounds(250, 380, 100, 14);
 
         labelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/wallpaper.jpg"))); // NOI18N
         getContentPane().add(labelfondo);
-        labelfondo.setBounds(0, 0, 630, 610);
+        labelfondo.setBounds(0, 0, 910, 610);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

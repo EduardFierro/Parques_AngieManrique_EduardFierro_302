@@ -148,6 +148,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         mes = new javax.swing.JTextField();
         dia = new javax.swing.JTextField();
+        menu = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 153, 255));
         setName("panelAgregar"); // NOI18N
@@ -206,14 +207,17 @@ public class AgregarUsuario extends javax.swing.JPanel {
             }
         });
 
+        menu.setText("Menu");
+        menu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(126, 126, 126)
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,40 +242,50 @@ public class AgregarUsuario extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel10)
-                                        .addGap(30, 30, 30)
-                                        .addComponent(jLabel11)
-                                        .addGap(28, 28, 28)
-                                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
                                         .addComponent(fechanactext, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(mes, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(dia, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                        .addComponent(dia, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel10)
+                                        .addGap(30, 30, 30)
+                                        .addComponent(jLabel11)
+                                        .addGap(28, 28, 28)
+                                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(8, 8, 8)))))
                         .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jLabel2)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 10, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(agrfoto, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(79, 79, 79)
-                                .addComponent(agrusuario)
-                                .addGap(20, 20, 20))
+                                .addComponent(agrfoto, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rutatext, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())))))
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(menu)
+                                .addGap(69, 69, 69)))
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(63, 63, 63))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rutatext, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(43, 43, 43)
+                                .addComponent(jLabel2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(278, 278, 278)
+                                .addComponent(agrusuario)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(126, 126, 126)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -318,15 +332,16 @@ public class AgregarUsuario extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(agrfoto)
                     .addComponent(agrusuario))
+                .addGap(35, 35, 35)
+                .addComponent(menu)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void agrusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agrusuarioActionPerformed
-        Menu menu = new Menu();
-                    menu.setVisible(true);
+        
                     
         try {
             //validacion de los TextField que no esten vacios
@@ -343,9 +358,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
                 jugador = Jugador.crear(0, rutatext.getText(), Integer.parseInt(cedulatext.getText()), nombretext.getText(), apellidotext.getText(), Integer.parseInt(edadtext.getText()), fecha1, ahora12);
                 Insertar.crear(jugador);
                 JOptionPane.showMessageDialog(this, "Persona creada satisfactoriamente", "Bien", JOptionPane.INFORMATION_MESSAGE);
-             // if(cont==4){
-                    
-             // }
+             
         }      
             
         } catch (NumberFormatException e) {
@@ -381,6 +394,12 @@ public class AgregarUsuario extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_rutatextActionPerformed
 
+    private void menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActionPerformed
+        MenuOpt menu = new MenuOpt();
+        menu.setVisible(true);
+        
+    }//GEN-LAST:event_menuActionPerformed
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -404,6 +423,7 @@ public class AgregarUsuario extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jl_foto;
+    private javax.swing.JButton menu;
     private javax.swing.JTextField mes;
     private javax.swing.JTextField nombretext;
     private javax.swing.JTextField rutatext;

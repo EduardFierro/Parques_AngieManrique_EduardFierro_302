@@ -58,24 +58,25 @@ public class Principal extends javax.swing.JFrame {
         panelPrincipalLayout.setHorizontalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(fichaamarilla, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(jLabel1)
-                .addContainerGap(98, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincipalLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(60, 60, 60))
+                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelPrincipalLayout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addComponent(fichaamarilla, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabel1))
+                    .addGroup(panelPrincipalLayout.createSequentialGroup()
+                        .addGap(265, 265, 265)
+                        .addComponent(jButton1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addContainerGap(247, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(229, 229, 229)
+                .addGap(48, 48, 48)
                 .addComponent(jButton1)
-                .addGap(45, 45, 45))
+                .addGap(226, 226, 226))
             .addGroup(panelPrincipalLayout.createSequentialGroup()
                 .addGap(223, 223, 223)
                 .addComponent(fichaamarilla, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -113,13 +114,8 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     //boton que genera el menu de opciones
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Menu menu = new Menu();
-        menu.setSize(600, 660);
-        menu.setLocation(0, 0);
-        panelPrincipal.removeAll();
-        panelPrincipal.add(menu, BorderLayout.CENTER);
-        panelPrincipal.revalidate();
-        panelPrincipal.repaint();
+        MenuOpt menu = new MenuOpt();
+        menu.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
