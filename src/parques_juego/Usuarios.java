@@ -192,7 +192,7 @@ public class Usuarios extends javax.swing.JFrame {
         table_model_personas.addColumn("Apellido");
         table_model_personas.addColumn("Edad");
         table_model_personas.addColumn("FechaNacimiento");
-        table_model_personas.addColumn("FechaResgistro");
+        table_model_personas.addColumn("FechaRegistro");
 
         
        
@@ -212,7 +212,7 @@ public class Usuarios extends javax.swing.JFrame {
         table_model_personas1.addColumn("Apellido");
         table_model_personas1.addColumn("Edad");
         table_model_personas1.addColumn("FechaNacimiento");
-        table_model_personas1.addColumn("FechaResgistro");
+        table_model_personas1.addColumn("FechaRegistro");
 
         
         
@@ -231,7 +231,7 @@ public class Usuarios extends javax.swing.JFrame {
         table_model_personas2.addColumn("Apellido");
         table_model_personas2.addColumn("Edad");
         table_model_personas2.addColumn("FechaNacimiento");
-        table_model_personas2.addColumn("FechaResgistro");
+        table_model_personas2.addColumn("FechaRegistro");
 
        
         

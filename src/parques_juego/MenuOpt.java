@@ -197,8 +197,9 @@ public class MenuOpt extends javax.swing.JFrame {
     }//GEN-LAST:event_opcion1ActionPerformed
 
     private void opcion2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcion2ActionPerformed
-        Parques par = new Parques();
-        par.setVisible(true);
+        JugadoresPartida reg= new JugadoresPartida();
+        reg.setVisible(true);
+        
     }//GEN-LAST:event_opcion2ActionPerformed
 
     private void opcion3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcion3ActionPerformed
