@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package parques_juego;
-
 import java.io.FileInputStream;
 import java.sql.Date;
 import java.sql.Timestamp;
