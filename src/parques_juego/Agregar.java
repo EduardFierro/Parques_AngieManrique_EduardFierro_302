@@ -353,7 +353,7 @@ public class Agregar extends javax.swing.JFrame {
             File file = seleccionar.getSelectedFile();
             rutatext.setText(String.valueOf(file));
             Image foto= getToolkit().getImage(rutatext.getText());
-            foto = foto.getScaledInstance(120, 140, Image.SCALE_DEFAULT);
+            foto = foto.getScaledInstance(134, 148, Image.SCALE_DEFAULT);
             jl_foto.setIcon(new ImageIcon(foto));
         }
     }//GEN-LAST:event_agrfotoActionPerformed
