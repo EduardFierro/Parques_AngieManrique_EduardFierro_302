@@ -145,6 +145,7 @@ public class Agregar extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         mes = new javax.swing.JTextField();
         dia = new javax.swing.JTextField();
+        cerrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(102, 0, 102));
@@ -203,6 +204,14 @@ public class Agregar extends javax.swing.JFrame {
         mes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mesActionPerformed(evt);
+            }
+        });
+
+        cerrar.setBackground(new java.awt.Color(255, 0, 0));
+        cerrar.setText("CERRAR");
+        cerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cerrarActionPerformed(evt);
             }
         });
 
@@ -275,6 +284,10 @@ public class Agregar extends javax.swing.JFrame {
                 .addGap(126, 126, 126)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cerrar)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -309,10 +322,10 @@ public class Agregar extends javax.swing.JFrame {
                             .addComponent(dia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jl_foto, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel10)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel12))
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel11))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rutatext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -321,7 +334,9 @@ public class Agregar extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(agrfoto)
                     .addComponent(agrusuario))
-                .addGap(64, 64, 64)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cerrar)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel8))
         );
 
@@ -392,6 +407,10 @@ public class Agregar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_mesActionPerformed
 
+    private void cerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrarActionPerformed
+        dispose();
+    }//GEN-LAST:event_cerrarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -432,6 +451,7 @@ public class Agregar extends javax.swing.JFrame {
     private javax.swing.JButton agrusuario;
     private javax.swing.JTextField apellidotext;
     private javax.swing.JTextField cedulatext;
+    private javax.swing.JButton cerrar;
     private javax.swing.JTextField dia;
     private javax.swing.JTextField edadtext;
     private javax.swing.JTextField fechanactext;

@@ -31,17 +31,20 @@ public class GuiaProyecto extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        cerrar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("GUÍA DEL PROYECTO");
-        setMaximumSize(new java.awt.Dimension(400, 460));
-        setMinimumSize(new java.awt.Dimension(400, 460));
-        setPreferredSize(new java.awt.Dimension(400, 460));
+        setLocationByPlatform(true);
+        setMaximumSize(new java.awt.Dimension(415, 500));
+        setMinimumSize(new java.awt.Dimension(415, 500));
+        setPreferredSize(new java.awt.Dimension(415, 500));
         getContentPane().setLayout(null);
 
         jPanel3.setBackground(new java.awt.Color(102, 102, 102));
         jPanel3.setMaximumSize(new java.awt.Dimension(400, 455));
         jPanel3.setMinimumSize(new java.awt.Dimension(400, 455));
+        jPanel3.setPreferredSize(new java.awt.Dimension(400, 455));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
@@ -50,9 +53,17 @@ public class GuiaProyecto extends javax.swing.JFrame {
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Monospac821 BT", 0, 14)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("El proyecto Parqués AngieFi cuenta en su menú\n5 principales funciones, las cuales son: \nRegistrar jugadores, jugar, mostrar mejores \npuntajes, mostrar el historial de juegos y \nmostrar los jugadores registrados.\n\nREGISTRAR JUGADORES\nEn esta opción usted debe ingresar los datos \ncorrespondientes al jugador que desee registrar,\nlos datos que el sistema requiere son Número\nde cédula, nombre, apellido, edad, fecha de \nnacimiento, y una foto que nos permitirá\nidentificar al jugador registrado.\nSi por algún motivo o error ingresa mal los\ndatos, el sistema le lanzará un mensaje de \nerror y usted deberá corregir los datos mal\ningresados y así ya podrá quedar registrado\nel jugador.\n\nJUEGO\nEn esta opción lo primero que usted ve al\nseleccionar el botón de jugar en el menú\nde funciones es una ventana para que\nregistre la cédula de cada uno de los 4\njugadores que participará en la partida de\njuego, el sistema valida que las cédulas\nque usted escribió ya han sido registradas\nanteriormente si esto es así el sistema le\nmostrará otra ventana para que usted elija\nel tipo de juego que guste jugar.");
+        jTextArea1.setText("El proyecto Parqués AngieFi cuenta en su menú\ncon 5  funciones principales, las cuales son:\nRegistrar jugadores, jugar, mostrar mejores \npuntajes, mostrar el historial de juegos y \nmostrar los jugadores registrados.\n\nREGISTRAR JUGADORES\nEn esta opción usted debe ingresar los datos \ncorrespondientes al jugador que desee registrar,\nlos datos que el sistema requiere son Número\nde cédula, nombre, apellido, edad, fecha de \nnacimiento, y una foto que nos permitirá\nidentificar al jugador registrado.\nSi por algún motivo o error ingresa mal los\ndatos, el sistema le lanzará un mensaje de \nerror y usted deberá corregir los datos mal\ningresados y así ya podrá quedar registrado\nel jugador.\n\nJUEGO\nEn esta opción lo primero que usted ve al\nseleccionar el botón de jugar en el menú\nde funciones es una ventana para que\nregistre la cédula de cada uno de los 4\njugadores que participará en la partida de\njuego, el sistema valida que las cédulas\nque usted escribió ya han sido registradas\nanteriormente si esto es así el sistema le\nmostrará otra ventana para que usted elija\nel tipo de juego que guste jugar.");
         jScrollPane1.setViewportView(jTextArea1);
+
+        cerrar.setText("CERRAR");
+        cerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cerrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -62,9 +73,13 @@ public class GuiaProyecto extends javax.swing.JFrame {
                 .addGap(73, 73, 73)
                 .addComponent(jLabel1)
                 .addContainerGap(55, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(cerrar))
+                    .addComponent(jScrollPane1))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -74,14 +89,20 @@ public class GuiaProyecto extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cerrar)
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel3);
-        jPanel3.setBounds(0, 0, 383, 470);
+        jPanel3.setBounds(0, 0, 400, 470);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrarActionPerformed
+        dispose();
+    }//GEN-LAST:event_cerrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,6 +141,7 @@ public class GuiaProyecto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cerrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;

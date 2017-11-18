@@ -27,7 +27,8 @@ public class Parques extends javax.swing.JFrame {
      * Creates new form Parquest
      */
     public Parques() {
-        initComponents();   configComponents();
+        initComponents();   
+        configComponents();
     }
 
     //imagen del parques
@@ -75,9 +76,75 @@ public class Parques extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        tablero = new javax.swing.JLabel();
         titulo = new javax.swing.JLabel();
+        r1sal1 = new javax.swing.JLabel();
+        r2sal1 = new javax.swing.JLabel();
+        y1sal2 = new javax.swing.JLabel();
+        y2sal2 = new javax.swing.JLabel();
+        b1sal3 = new javax.swing.JLabel();
+        b2sal3 = new javax.swing.JLabel();
+        g1sal4 = new javax.swing.JLabel();
+        g2sal4 = new javax.swing.JLabel();
+        r1fin = new javax.swing.JLabel();
+        r2fin = new javax.swing.JLabel();
+        y1fin = new javax.swing.JLabel();
+        y2fin = new javax.swing.JLabel();
+        b1fin = new javax.swing.JLabel();
+        b2fin = new javax.swing.JLabel();
+        g1fin = new javax.swing.JLabel();
+        g2fin = new javax.swing.JLabel();
+        r01seg1 = new javax.swing.JLabel();
+        r1seg1 = new javax.swing.JLabel();
+        r2seg1 = new javax.swing.JLabel();
+        r02seg1 = new javax.swing.JLabel();
+        r01seg2 = new javax.swing.JLabel();
+        r1seg2 = new javax.swing.JLabel();
+        r2seg2 = new javax.swing.JLabel();
+        r02seg2 = new javax.swing.JLabel();
+        y01seg3 = new javax.swing.JLabel();
+        y1seg3 = new javax.swing.JLabel();
+        y2seg3 = new javax.swing.JLabel();
+        y02seg3 = new javax.swing.JLabel();
+        y01seg4 = new javax.swing.JLabel();
+        y1seg4 = new javax.swing.JLabel();
+        y2seg4 = new javax.swing.JLabel();
+        y02seg4 = new javax.swing.JLabel();
+        b01seg5 = new javax.swing.JLabel();
+        b1seg5 = new javax.swing.JLabel();
+        b2seg5 = new javax.swing.JLabel();
+        b02seg5 = new javax.swing.JLabel();
+        b01seg6 = new javax.swing.JLabel();
+        b1seg6 = new javax.swing.JLabel();
+        b2seg6 = new javax.swing.JLabel();
+        b02seg6 = new javax.swing.JLabel();
+        g01seg7 = new javax.swing.JLabel();
+        g1seg7 = new javax.swing.JLabel();
+        g2seg7 = new javax.swing.JLabel();
+        g02seg7 = new javax.swing.JLabel();
+        g01seg8 = new javax.swing.JLabel();
+        g1seg8 = new javax.swing.JLabel();
+        g2seg8 = new javax.swing.JLabel();
+        g02seg8 = new javax.swing.JLabel();
+        y1cas1 = new javax.swing.JLabel();
+        y2cas1 = new javax.swing.JLabel();
+        b1cas1 = new javax.swing.JLabel();
+        b2cas1 = new javax.swing.JLabel();
+        g1cas1 = new javax.swing.JLabel();
+        g2cas1 = new javax.swing.JLabel();
+        y1cas2 = new javax.swing.JLabel();
+        y2cas2 = new javax.swing.JLabel();
+        b1cas2 = new javax.swing.JLabel();
+        b2cas2 = new javax.swing.JLabel();
+        g1cas2 = new javax.swing.JLabel();
+        g2cas2 = new javax.swing.JLabel();
         botondados = new javax.swing.JButton();
+        y1cas3 = new javax.swing.JLabel();
+        y2cas3 = new javax.swing.JLabel();
+        b1cas3 = new javax.swing.JLabel();
+        b2cas3 = new javax.swing.JLabel();
+        g1cas3 = new javax.swing.JLabel();
+        g2cas3 = new javax.swing.JLabel();
+        tablero = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -86,45 +153,325 @@ public class Parques extends javax.swing.JFrame {
 
         verde1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
         jPanel1.add(verde1);
-        verde1.setBounds(540, 90, 25, 20);
+        verde1.setBounds(465, 160, 20, 20);
 
         verde2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
         jPanel1.add(verde2);
-        verde2.setBounds(460, 160, 25, 20);
+        verde2.setBounds(545, 85, 20, 20);
 
         amarilla1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
         jPanel1.add(amarilla1);
-        amarilla1.setBounds(120, 580, 25, 20);
+        amarilla1.setBounds(40, 505, 20, 20);
 
         amarilla2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
         jPanel1.add(amarilla2);
-        amarilla2.setBounds(40, 500, 25, 20);
+        amarilla2.setBounds(115, 580, 20, 20);
 
         azul1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
         jPanel1.add(azul1);
-        azul1.setBounds(540, 510, 25, 20);
+        azul1.setBounds(467, 587, 20, 20);
 
         azul2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
         jPanel1.add(azul2);
-        azul2.setBounds(470, 590, 25, 20);
+        azul2.setBounds(548, 510, 20, 20);
 
         roja1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
         jPanel1.add(roja1);
-        roja1.setBounds(120, 170, 30, 20);
+        roja1.setBounds(45, 85, 30, 20);
 
         roja2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
         jPanel1.add(roja2);
-        roja2.setBounds(40, 90, 25, 20);
-
-        tablero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/parques.JPG"))); // NOI18N
-        jPanel1.add(tablero);
-        tablero.setBounds(8, 50, 580, 580);
+        roja2.setBounds(120, 165, 20, 20);
 
         titulo.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         titulo.setForeground(new java.awt.Color(102, 0, 102));
         titulo.setText("PARQUÉS");
         jPanel1.add(titulo);
         titulo.setBounds(238, 0, 139, 44);
+
+        r1sal1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
+        r1sal1.setVisible(false);
+        jPanel1.add(r1sal1);
+        r1sal1.setBounds(200, 155, 20, 20);
+
+        r2sal1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
+        r2sal1.setVisible(false);
+        jPanel1.add(r2sal1);
+        r2sal1.setBounds(220, 155, 20, 20);
+
+        y1sal2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        y1sal2.setVisible(false);
+        jPanel1.add(y1sal2);
+        y1sal2.setBounds(110, 400, 20, 20);
+
+        y2sal2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        y2sal2.setVisible(false);
+        jPanel1.add(y2sal2);
+        y2sal2.setBounds(110, 420, 20, 20);
+
+        b1sal3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
+        b1sal3.setVisible(false);
+        jPanel1.add(b1sal3);
+        b1sal3.setBounds(360, 510, 20, 20);
+
+        b2sal3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
+        b2sal3.setVisible(false);
+        jPanel1.add(b2sal3);
+        b2sal3.setBounds(380, 510, 20, 20);
+
+        g1sal4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
+        g1sal4.setVisible(false);
+        jPanel1.add(g1sal4);
+        g1sal4.setBounds(470, 240, 20, 20);
+
+        g2sal4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
+        g2sal4.setVisible(false);
+        jPanel1.add(g2sal4);
+        g2sal4.setBounds(470, 260, 20, 20);
+
+        r1fin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
+        r1fin.setVisible(false);
+        jPanel1.add(r1fin);
+        r1fin.setBounds(280, 260, 20, 20);
+
+        r2fin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
+        r2fin.setVisible(false);
+        jPanel1.add(r2fin);
+        r2fin.setBounds(300, 260, 20, 20);
+
+        y1fin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        y1fin.setVisible(false);
+        jPanel1.add(y1fin);
+        y1fin.setBounds(220, 315, 20, 20);
+
+        y2fin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        y2fin.setVisible(false);
+        jPanel1.add(y2fin);
+        y2fin.setBounds(220, 335, 20, 20);
+
+        b1fin.setVisible(false);
+        b1fin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
+        jPanel1.add(b1fin);
+        b1fin.setBounds(280, 405, 20, 20);
+
+        b2fin.setVisible(false);
+        b2fin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
+        jPanel1.add(b2fin);
+        b2fin.setBounds(300, 405, 20, 20);
+
+        g1fin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
+        g1fin.setVisible(false);
+        jPanel1.add(g1fin);
+        g1fin.setBounds(360, 315, 20, 20);
+
+        g2fin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
+        g2fin.setVisible(false);
+        jPanel1.add(g2fin);
+        g2fin.setBounds(360, 335, 20, 20);
+
+        r01seg1.setVisible(false);
+        jPanel1.add(r01seg1);
+        r01seg1.setBounds(110, 225, 20, 20);
+
+        r1seg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
+        r1seg1.setVisible(false);
+        jPanel1.add(r1seg1);
+        r1seg1.setBounds(110, 245, 20, 20);
+
+        r2seg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
+        r2seg1.setVisible(false);
+        jPanel1.add(r2seg1);
+        r2seg1.setBounds(110, 265, 20, 20);
+
+        r02seg1.setVisible(false);
+        jPanel1.add(r02seg1);
+        r02seg1.setBounds(110, 285, 20, 20);
+
+        r01seg2.setVisible(false);
+        jPanel1.add(r01seg2);
+        r01seg2.setBounds(15, 300, 20, 20);
+
+        r1seg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        r1seg2.setVisible(false);
+        jPanel1.add(r1seg2);
+        r1seg2.setBounds(15, 320, 20, 20);
+
+        r2seg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        r2seg2.setVisible(false);
+        jPanel1.add(r2seg2);
+        r2seg2.setBounds(15, 340, 20, 20);
+
+        r02seg2.setVisible(false);
+        jPanel1.add(r02seg2);
+        r02seg2.setBounds(15, 360, 20, 20);
+
+        y01seg3.setVisible(false);
+        jPanel1.add(y01seg3);
+        y01seg3.setBounds(175, 510, 20, 20);
+
+        y1seg3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        y1seg3.setVisible(false);
+        jPanel1.add(y1seg3);
+        y1seg3.setBounds(195, 510, 20, 20);
+
+        y2seg3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        y2seg3.setVisible(false);
+        jPanel1.add(y2seg3);
+        y2seg3.setBounds(215, 510, 20, 20);
+
+        y02seg3.setVisible(false);
+        jPanel1.add(y02seg3);
+        y02seg3.setBounds(235, 510, 20, 20);
+
+        y01seg4.setVisible(false);
+        jPanel1.add(y01seg4);
+        y01seg4.setBounds(260, 605, 20, 20);
+
+        y1seg4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
+        y1seg4.setVisible(false);
+        jPanel1.add(y1seg4);
+        y1seg4.setBounds(280, 605, 20, 20);
+
+        y2seg4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
+        y2seg4.setVisible(false);
+        jPanel1.add(y2seg4);
+        y2seg4.setBounds(300, 605, 20, 20);
+
+        y02seg4.setVisible(false);
+        jPanel1.add(y02seg4);
+        y02seg4.setBounds(320, 605, 20, 20);
+
+        b01seg5.setVisible(false);
+        jPanel1.add(b01seg5);
+        b01seg5.setBounds(470, 380, 20, 20);
+
+        b1seg5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
+        b1seg5.setVisible(false);
+        jPanel1.add(b1seg5);
+        b1seg5.setBounds(470, 400, 20, 20);
+
+        b2seg5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
+        b2seg5.setVisible(false);
+        jPanel1.add(b2seg5);
+        b2seg5.setBounds(470, 420, 20, 20);
+
+        b02seg5.setVisible(false);
+        jPanel1.add(b02seg5);
+        b02seg5.setBounds(340, 510, 20, 20);
+
+        b01seg6.setVisible(false);
+        jPanel1.add(b01seg6);
+        b01seg6.setBounds(565, 300, 20, 20);
+
+        b1seg6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
+        b1seg6.setVisible(false);
+        jPanel1.add(b1seg6);
+        b1seg6.setBounds(565, 320, 20, 20);
+
+        b2seg6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
+        b2seg6.setVisible(false);
+        jPanel1.add(b2seg6);
+        b2seg6.setBounds(565, 340, 20, 20);
+
+        b02seg6.setVisible(false);
+        jPanel1.add(b02seg6);
+        b02seg6.setBounds(565, 360, 20, 20);
+
+        g01seg7.setVisible(false);
+        jPanel1.add(g01seg7);
+        g01seg7.setBounds(340, 155, 20, 20);
+
+        g1seg7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
+        g1seg7.setVisible(false);
+        jPanel1.add(g1seg7);
+        g1seg7.setBounds(360, 155, 20, 20);
+
+        g2seg7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
+        g2seg7.setVisible(false);
+        jPanel1.add(g2seg7);
+        g2seg7.setBounds(380, 155, 20, 20);
+
+        g02seg7.setVisible(false);
+        jPanel1.add(g02seg7);
+        g02seg7.setBounds(400, 155, 20, 20);
+
+        g01seg8.setVisible(false);
+        jPanel1.add(g01seg8);
+        g01seg8.setBounds(260, 60, 20, 20);
+
+        g1seg8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
+        g1seg8.setVisible(false);
+        jPanel1.add(g1seg8);
+        g1seg8.setBounds(280, 60, 20, 20);
+
+        g2seg8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
+        g2seg8.setVisible(false);
+        jPanel1.add(g2seg8);
+        g2seg8.setBounds(300, 60, 20, 20);
+
+        g02seg8.setVisible(false);
+        jPanel1.add(g02seg8);
+        g02seg8.setBounds(320, 60, 20, 20);
+
+        y1cas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        y1cas1.setVisible(false);
+        jPanel1.add(y1cas1);
+        y1cas1.setBounds(200, 60, 20, 20);
+
+        y2cas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        y2cas1.setVisible(false);
+        jPanel1.add(y2cas1);
+        y2cas1.setBounds(220, 60, 20, 20);
+
+        b1cas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
+        b1cas1.setVisible(false);
+        jPanel1.add(b1cas1);
+        b1cas1.setBounds(200, 60, 20, 20);
+
+        b2cas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
+        b2cas1.setVisible(false);
+        jPanel1.add(b2cas1);
+        b2cas1.setBounds(220, 60, 20, 20);
+
+        g1cas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
+        g1cas1.setVisible(false);
+        jPanel1.add(g1cas1);
+        g1cas1.setBounds(200, 60, 20, 20);
+
+        g2cas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
+        g2cas1.setVisible(false);
+        jPanel1.add(g2cas1);
+        g2cas1.setBounds(220, 60, 20, 20);
+
+        y1cas2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        y1cas2.setVisible(false);
+        jPanel1.add(y1cas2);
+        y1cas2.setBounds(200, 85, 20, 20);
+
+        y2cas2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        y2cas2.setVisible(false);
+        jPanel1.add(y2cas2);
+        y2cas2.setBounds(220, 85, 20, 20);
+
+        b1cas2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
+        b1cas2.setVisible(false);
+        jPanel1.add(b1cas2);
+        b1cas2.setBounds(200, 85, 20, 20);
+
+        b2cas2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
+        b2cas2.setVisible(false);
+        jPanel1.add(b2cas2);
+        b2cas2.setBounds(220, 85, 20, 20);
+
+        g1cas2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
+        g1cas2.setVisible(false);
+        jPanel1.add(g1cas2);
+        g1cas2.setBounds(200, 85, 20, 20);
+
+        g2cas2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
+        g2cas2.setVisible(false);
+        jPanel1.add(g2cas2);
+        g2cas2.setBounds(220, 85, 20, 20);
 
         botondados.setText("LANZAR DADOS");
         botondados.addActionListener(new java.awt.event.ActionListener() {
@@ -135,15 +482,49 @@ public class Parques extends javax.swing.JFrame {
         jPanel1.add(botondados);
         botondados.setBounds(237, 636, 130, 23);
 
+        y1cas3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        y1cas3.setVisible(false);
+        jPanel1.add(y1cas3);
+        y1cas3.setBounds(200, 110, 20, 20);
+
+        y2cas3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        y2cas3.setVisible(false);
+        jPanel1.add(y2cas3);
+        y2cas3.setBounds(220, 110, 20, 20);
+
+        b1cas3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        b1cas3.setVisible(false);
+        jPanel1.add(b1cas3);
+        b1cas3.setBounds(200, 110, 20, 20);
+
+        b2cas3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        b2cas3.setVisible(false);
+        jPanel1.add(b2cas3);
+        b2cas3.setBounds(220, 110, 20, 20);
+
+        g1cas3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        y1cas3.setVisible(false);
+        jPanel1.add(g1cas3);
+        g1cas3.setBounds(200, 110, 20, 20);
+
+        g2cas3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
+        y2cas3.setVisible(false);
+        jPanel1.add(g2cas3);
+        g2cas3.setBounds(220, 110, 20, 20);
+
+        tablero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/parques.JPG"))); // NOI18N
+        jPanel1.add(tablero);
+        tablero.setBounds(8, 50, 580, 580);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 588, Short.MAX_VALUE)
+            .addGap(0, 600, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 588, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -204,13 +585,79 @@ public class Parques extends javax.swing.JFrame {
     public static final javax.swing.JLabel amarilla2 = new javax.swing.JLabel();
     public static final javax.swing.JLabel azul1 = new javax.swing.JLabel();
     public static final javax.swing.JLabel azul2 = new javax.swing.JLabel();
+    private javax.swing.JLabel b01seg5;
+    private javax.swing.JLabel b01seg6;
+    private javax.swing.JLabel b02seg5;
+    private javax.swing.JLabel b02seg6;
+    private javax.swing.JLabel b1cas1;
+    private javax.swing.JLabel b1cas2;
+    private javax.swing.JLabel b1cas3;
+    private javax.swing.JLabel b1fin;
+    private javax.swing.JLabel b1sal3;
+    private javax.swing.JLabel b1seg5;
+    private javax.swing.JLabel b1seg6;
+    private javax.swing.JLabel b2cas1;
+    private javax.swing.JLabel b2cas2;
+    private javax.swing.JLabel b2cas3;
+    private javax.swing.JLabel b2fin;
+    private javax.swing.JLabel b2sal3;
+    private javax.swing.JLabel b2seg5;
+    private javax.swing.JLabel b2seg6;
     private javax.swing.JButton botondados;
+    private javax.swing.JLabel g01seg7;
+    private javax.swing.JLabel g01seg8;
+    private javax.swing.JLabel g02seg7;
+    private javax.swing.JLabel g02seg8;
+    private javax.swing.JLabel g1cas1;
+    private javax.swing.JLabel g1cas2;
+    private javax.swing.JLabel g1cas3;
+    private javax.swing.JLabel g1fin;
+    private javax.swing.JLabel g1sal4;
+    private javax.swing.JLabel g1seg7;
+    private javax.swing.JLabel g1seg8;
+    private javax.swing.JLabel g2cas1;
+    private javax.swing.JLabel g2cas2;
+    private javax.swing.JLabel g2cas3;
+    private javax.swing.JLabel g2fin;
+    private javax.swing.JLabel g2sal4;
+    private javax.swing.JLabel g2seg7;
+    private javax.swing.JLabel g2seg8;
     private javax.swing.JPanel jPanel1;
+    public static javax.swing.JLabel r01seg1;
+    public static javax.swing.JLabel r01seg2;
+    public static javax.swing.JLabel r02seg1;
+    public static javax.swing.JLabel r02seg2;
+    private javax.swing.JLabel r1fin;
+    public static javax.swing.JLabel r1sal1;
+    public static javax.swing.JLabel r1seg1;
+    public static javax.swing.JLabel r1seg2;
+    private javax.swing.JLabel r2fin;
+    public static javax.swing.JLabel r2sal1;
+    public static javax.swing.JLabel r2seg1;
+    public static javax.swing.JLabel r2seg2;
     public static final javax.swing.JLabel roja1 = new javax.swing.JLabel();
     public static final javax.swing.JLabel roja2 = new javax.swing.JLabel();
     public static javax.swing.JLabel tablero;
     private javax.swing.JLabel titulo;
     public static final javax.swing.JLabel verde1 = new javax.swing.JLabel();
     public static final javax.swing.JLabel verde2 = new javax.swing.JLabel();
+    private javax.swing.JLabel y01seg3;
+    private javax.swing.JLabel y01seg4;
+    private javax.swing.JLabel y02seg3;
+    private javax.swing.JLabel y02seg4;
+    private javax.swing.JLabel y1cas1;
+    private javax.swing.JLabel y1cas2;
+    private javax.swing.JLabel y1cas3;
+    private javax.swing.JLabel y1fin;
+    private javax.swing.JLabel y1sal2;
+    private javax.swing.JLabel y1seg3;
+    private javax.swing.JLabel y1seg4;
+    private javax.swing.JLabel y2cas1;
+    private javax.swing.JLabel y2cas2;
+    private javax.swing.JLabel y2cas3;
+    private javax.swing.JLabel y2fin;
+    private javax.swing.JLabel y2sal2;
+    private javax.swing.JLabel y2seg3;
+    private javax.swing.JLabel y2seg4;
     // End of variables declaration//GEN-END:variables
 }

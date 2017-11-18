@@ -10,6 +10,7 @@ import java.awt.Image;
 import java.util.Random;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import logica_parques.MoverPiedra;
 import static parques_juego.Parques.tablero;
 
 /**
@@ -19,7 +20,6 @@ import static parques_juego.Parques.tablero;
 public class Dados extends javax.swing.JFrame {
 
     public static int val1, val2, num1 = 1, num2 = 1, contJug, cont = 0;
-
     int contLanza = 0, valorRandom;
 
     /**
@@ -312,7 +312,7 @@ public class Dados extends javax.swing.JFrame {
                     if (val1 < 1 || val1 > 2 || val2 < 1 || val2 > 2) {
                         JOptionPane.showMessageDialog(this, "Ingrese el número de ficha a mover(1 ó 2)", "Error", JOptionPane.ERROR_MESSAGE);
                     } else {
-                        Parques.moverFichas();
+                        MoverPiedra.moverFichas();
                         dispose();
                     }
                 }

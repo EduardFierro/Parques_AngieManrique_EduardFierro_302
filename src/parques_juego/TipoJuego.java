@@ -100,11 +100,13 @@ public class TipoJuego extends javax.swing.JFrame {
     private void casillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casillaActionPerformed
         Parques par = new Parques();
         par.setVisible(true);
+        dispose();
     }//GEN-LAST:event_casillaActionPerformed
 
     private void piedraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_piedraActionPerformed
         Parques par = new Parques();
         par.setVisible(true);
+        dispose();
     }//GEN-LAST:event_piedraActionPerformed
 
     /**
