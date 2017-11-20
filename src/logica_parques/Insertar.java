@@ -110,4 +110,27 @@ public class Insertar {
 
         return jugador;
     }
+     
+     //Método que valida que la cédula de la base coincide con la cedula ingresada 
+    public static int validarcedula(int cedula) {
+        int bandera = 0;
+        try {
+            String query = "SELECT * FROM personas WHERE documento = '" + cedula + "';";
+            PreparedStatement sentenciaP = database.open().prepareStatement(query);
+            ResultSet resultado = sentenciaP.executeQuery();
+
+            while (resultado.next()) {
+                if (resultado.getInt("documento") == cedula) {
+                    bandera++;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        if (bandera > 0) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }
