@@ -8,6 +8,7 @@ package parques_juego;
 import java.awt.Image;
 import java.util.Random;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import static parques_juego.Parques.amarilla1;
 import static parques_juego.Parques.amarilla2;
 import static parques_juego.Parques.azul1;
@@ -24,11 +25,16 @@ import logica_parques.LanzamientoDados;
  * @author Angie
  */
 public class Parques extends javax.swing.JFrame {
+
     /**
      * Creates new form Parquest
      */
+    public static int val1, val2, num1 = 1, num2 = 1;
+    int contAm = 0, contAz = 0, contVer = 0, contRoj = 0, valorRandom, c = 1;
+
+    ;
     public Parques() {
-        initComponents();   
+        initComponents();
         configComponents();
     }
 
@@ -39,16 +45,14 @@ public class Parques extends javax.swing.JFrame {
         tablero.setIcon(icon);
 
     }
-    
-    public static int val1, val2, num1 = 1, num2 = 1;
-    int contLanza = 0, valorRandom;
+
     public int generarRandom() {
         Random objRandom = new Random();
         valorRandom = objRandom.nextInt(6) + 1;
         return valorRandom;
 
     }
-    
+
     public void imagenDado1(int iValorDado) {
         switch (iValorDado) {
             case 1:
@@ -119,7 +123,7 @@ public class Parques extends javax.swing.JFrame {
                 break;
         }
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -666,6 +670,9 @@ public class Parques extends javax.swing.JFrame {
         Dado1F2 = new javax.swing.JButton();
         Dado2F1 = new javax.swing.JButton();
         Dado2F2 = new javax.swing.JButton();
+        labeljugador1 = new javax.swing.JLabel();
+        labeljugador2 = new javax.swing.JLabel();
+        labeljugador3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -3360,6 +3367,21 @@ public class Parques extends javax.swing.JFrame {
         jPanel1.add(Dado2F2);
         Dado2F2.setBounds(780, 280, 50, 23);
 
+        labeljugador1.setText("JUGADOR 2");
+        jPanel1.add(labeljugador1);
+        labeljugador1.setBounds(600, 60, 80, 14);
+        labeljugador1.setVisible(false);
+
+        labeljugador2.setText("JUGADOR 3");
+        jPanel1.add(labeljugador2);
+        labeljugador2.setBounds(600, 60, 80, 14);
+        labeljugador2.setVisible(false);
+
+        labeljugador3.setText("JUGADOR 4");
+        jPanel1.add(labeljugador3);
+        labeljugador3.setBounds(600, 60, 80, 14);
+        labeljugador3.setVisible(false);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -3378,14 +3400,109 @@ public class Parques extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lanzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lanzarActionPerformed
-         contLanza++;
-        Parques.lanzamientos.setText("" + contLanza);
-        num1 = generarRandom(); 
-        Parques.valor1.setText("" + num1);
-        imagenDado1(num1);
-        num2 = generarRandom();
-        Parques.valor2.setText("" + num2);
-        imagenDado2(num2);
+        
+        
+        switch (c) {
+            case 1:
+                labeljugador.setVisible(true);
+                labeljugador1.setVisible(false);
+                labeljugador2.setVisible(false);
+                labeljugador3.setVisible(false);
+                c = 1;
+                if (c < 2) {
+                    lanzamientos.setText("" + c);
+                    num1 = generarRandom();
+                    valor1.setText("" + num1);
+                    imagenDado1(num1);
+                    num2 = generarRandom();
+                    valor2.setText("" + num2);
+                    imagenDado2(num2);
+                    if (num1 == num2) {
+                        //funcion moverFicha
+
+                    }
+
+                    c++;
+                } else {
+                    JOptionPane.showMessageDialog(this, "Limite de lanzamientos alcanzado");
+                }
+
+                break;
+            case 2:
+                labeljugador.setVisible(false);
+                labeljugador1.setVisible(true);
+                labeljugador2.setVisible(false);
+                labeljugador3.setVisible(false);
+                c=1;
+                if (c < 2) {
+                    lanzamientos.setText("" + c);
+                    num1 = generarRandom();
+                    valor1.setText("" + num1);
+                    imagenDado1(num1);
+                    num2 = generarRandom();
+                    valor2.setText("" + num2);
+                    imagenDado2(num2);
+                    if (num1 == num2) {
+                        //funcion moverFicha
+
+                    }
+
+                    c=c+2;
+                } else {
+                    JOptionPane.showMessageDialog(this, "Limite de lanzamientos alcanzado");
+                }
+                break;
+            case 3:
+                labeljugador.setVisible(false);
+                labeljugador1.setVisible(false);
+                labeljugador2.setVisible(true);
+                labeljugador3.setVisible(false);
+                c=1;
+                if (c < 2) {
+                    lanzamientos.setText("" + c);
+                    num1 = generarRandom();
+                    valor1.setText("" + num1);
+                    imagenDado1(num1);
+                    num2 = generarRandom();
+                    valor2.setText("" + num2);
+                    imagenDado2(num2);
+                    if (num1 == num2) {
+                        //funcion moverFicha
+
+                    }
+
+                    c=c+3;
+                } else {
+                    JOptionPane.showMessageDialog(this, "Limite de lanzamientos alcanzado");
+                }
+
+                break;
+            case 4:
+                labeljugador.setVisible(false);
+                labeljugador1.setVisible(false);
+                labeljugador2.setVisible(false);
+                labeljugador3.setVisible(true);
+                c = 1;
+                if (c < 2) {
+                    lanzamientos.setText("" + c);
+                    num1 = generarRandom();
+                    valor1.setText("" + num1);
+                    imagenDado1(num1);
+                    num2 = generarRandom();
+                    valor2.setText("" + num2);
+                    imagenDado2(num2);
+                    if (num1 == num2) {
+                        //funcion moverFicha
+
+                    }
+                    
+                } else {
+                    JOptionPane.showMessageDialog(this, "Limite de lanzamientos alcanzado");
+                }
+                break;
+        }
+
+
     }//GEN-LAST:event_lanzarActionPerformed
 
     /**
@@ -3700,6 +3817,9 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     public static javax.swing.JLabel labeljugador;
+    public static javax.swing.JLabel labeljugador1;
+    public static javax.swing.JLabel labeljugador2;
+    public static javax.swing.JLabel labeljugador3;
     public static javax.swing.JLabel lanzamientos;
     private javax.swing.JButton lanzar;
     public static javax.swing.JLabel r01seg1;
