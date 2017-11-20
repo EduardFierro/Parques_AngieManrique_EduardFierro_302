@@ -36,9 +36,7 @@ public class GuiaProyecto extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("GUÍA DEL PROYECTO");
         setLocationByPlatform(true);
-        setMaximumSize(new java.awt.Dimension(415, 500));
         setMinimumSize(new java.awt.Dimension(415, 500));
-        setPreferredSize(new java.awt.Dimension(415, 500));
         getContentPane().setLayout(null);
 
         jPanel3.setBackground(new java.awt.Color(102, 102, 102));
