@@ -6,6 +6,7 @@
 package parques_juego;
 
 import java.awt.Image;
+import java.util.Random;
 import javax.swing.ImageIcon;
 import static parques_juego.Parques.amarilla1;
 import static parques_juego.Parques.amarilla2;
@@ -16,13 +17,13 @@ import static parques_juego.Parques.roja2;
 import static parques_juego.Parques.tablero;
 import static parques_juego.Parques.verde1;
 import static parques_juego.Parques.verde2;
+import logica_parques.LanzamientoDados;
 
 /**
  *
  * @author Angie
  */
 public class Parques extends javax.swing.JFrame {
-
     /**
      * Creates new form Parquest
      */
@@ -38,34 +39,87 @@ public class Parques extends javax.swing.JFrame {
         tablero.setIcon(icon);
 
     }
+    
+    public static int val1, val2, num1 = 1, num2 = 1;
+    int contLanza = 0, valorRandom;
+    public int generarRandom() {
+        Random objRandom = new Random();
+        valorRandom = objRandom.nextInt(6) + 1;
+        return valorRandom;
 
-    //funcion para mover las fichas
-    public static void moverFichas() {
-        if (Dados.cont == 1) {
-            if (Dados.num1 == Dados.num2) {
-                roja1.setLocation(195, 155);
-                roja2.setLocation(220, 155);
-            }
-        }
-        if (Dados.cont == 2) {
-            if (Dados.num1 == Dados.num2) {
-                verde1.setLocation(465, 240);
-                verde2.setLocation(465, 265);
-            }
-        }
-        if (Dados.cont == 3) {
-            if (Dados.num1 == Dados.num2) {
-                azul1.setLocation(355, 510);
-                azul2.setLocation(380, 510);
-            }
-        }
-        if (Dados.cont == 4) {
-            if (Dados.num1 == Dados.num2) {
-                amarilla1.setLocation(110, 400);
-                amarilla2.setLocation(110, 425);
-            }
+    }
+    
+    public void imagenDado1(int iValorDado) {
+        switch (iValorDado) {
+            case 1:
+                ImageIcon cara1 = new ImageIcon(getClass().getResource("/images/cara1.jpg"));
+                ImageIcon icon1 = new ImageIcon(cara1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+                Parques.dado1.setIcon(icon1);
+                break;
+            case 2:
+                ImageIcon cara2 = new ImageIcon(getClass().getResource("/images/cara2.jpg"));
+                ImageIcon icon2 = new ImageIcon(cara2.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+                Parques.dado1.setIcon(icon2);
+                break;
+            case 3:
+                ImageIcon cara3 = new ImageIcon(getClass().getResource("/images/cara3.jpg"));
+                ImageIcon icon3 = new ImageIcon(cara3.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+                Parques.dado1.setIcon(icon3);
+                break;
+            case 4:
+                ImageIcon cara4 = new ImageIcon(getClass().getResource("/images/cara4.jpg"));
+                ImageIcon icon4 = new ImageIcon(cara4.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+                Parques.dado1.setIcon(icon4);
+                break;
+            case 5:
+                ImageIcon cara5 = new ImageIcon(getClass().getResource("/images/cara5.jpg"));
+                ImageIcon icon5 = new ImageIcon(cara5.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+                Parques.dado1.setIcon(icon5);
+                break;
+            case 6:
+                ImageIcon cara6 = new ImageIcon(getClass().getResource("/images/cara6.jpg"));
+                ImageIcon icon6 = new ImageIcon(cara6.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+                Parques.dado1.setIcon(icon6);
+                break;
         }
     }
+
+    //funciones
+    public void imagenDado2(int iValorDado) {
+        switch (iValorDado) {
+            case 1:
+                ImageIcon cara1 = new ImageIcon(getClass().getResource("/images/cara1.jpg"));
+                ImageIcon icon1 = new ImageIcon(cara1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+                Parques.dado2.setIcon(icon1);
+                break;
+            case 2:
+                ImageIcon cara2 = new ImageIcon(getClass().getResource("/images/cara2.jpg"));
+                ImageIcon icon2 = new ImageIcon(cara2.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+                Parques.dado2.setIcon(icon2);
+                break;
+            case 3:
+                ImageIcon cara3 = new ImageIcon(getClass().getResource("/images/cara3.jpg"));
+                ImageIcon icon3 = new ImageIcon(cara3.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+                Parques.dado2.setIcon(icon3);
+                break;
+            case 4:
+                ImageIcon cara4 = new ImageIcon(getClass().getResource("/images/cara4.jpg"));
+                ImageIcon icon4 = new ImageIcon(cara4.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+                Parques.dado2.setIcon(icon4);
+                break;
+            case 5:
+                ImageIcon cara5 = new ImageIcon(getClass().getResource("/images/cara5.jpg"));
+                ImageIcon icon5 = new ImageIcon(cara5.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+                Parques.dado2.setIcon(icon5);
+                break;
+            case 6:
+                ImageIcon cara6 = new ImageIcon(getClass().getResource("/images/cara6.jpg"));
+                ImageIcon icon6 = new ImageIcon(cara6.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+                Parques.dado2.setIcon(icon6);
+                break;
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -137,7 +191,6 @@ public class Parques extends javax.swing.JFrame {
         b2cas2 = new javax.swing.JLabel();
         g1cas2 = new javax.swing.JLabel();
         g2cas2 = new javax.swing.JLabel();
-        botondados = new javax.swing.JButton();
         y1cas3 = new javax.swing.JLabel();
         y2cas3 = new javax.swing.JLabel();
         b1cas3 = new javax.swing.JLabel();
@@ -599,6 +652,20 @@ public class Parques extends javax.swing.JFrame {
         g1cas63 = new javax.swing.JLabel();
         g2cas63 = new javax.swing.JLabel();
         tablero = new javax.swing.JLabel();
+        dado1 = new javax.swing.JLabel();
+        labeljugador = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        valor1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        valor2 = new javax.swing.JLabel();
+        dado2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        lanzamientos = new javax.swing.JLabel();
+        lanzar = new javax.swing.JButton();
+        Dado1F1 = new javax.swing.JButton();
+        Dado1F2 = new javax.swing.JButton();
+        Dado2F1 = new javax.swing.JButton();
+        Dado2F2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -926,15 +993,6 @@ public class Parques extends javax.swing.JFrame {
         g2cas2.setVisible(false);
         jPanel1.add(g2cas2);
         g2cas2.setBounds(220, 85, 20, 20);
-
-        botondados.setText("LANZAR DADOS");
-        botondados.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botondadosActionPerformed(evt);
-            }
-        });
-        jPanel1.add(botondados);
-        botondados.setBounds(237, 636, 130, 23);
 
         y1cas3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
         y1cas3.setVisible(false);
@@ -3240,33 +3298,95 @@ public class Parques extends javax.swing.JFrame {
         jPanel1.add(tablero);
         tablero.setBounds(8, 50, 580, 580);
 
+        dado1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(dado1);
+        dado1.setBounds(600, 150, 100, 100);
+
+        labeljugador.setText("JUGADOR 1");
+        jPanel1.add(labeljugador);
+        labeljugador.setBounds(600, 60, 80, 14);
+
+        jLabel1.setText("Dado 1:");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(600, 120, 70, 14);
+
+        valor1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.add(valor1);
+        valor1.setBounds(670, 120, 30, 14);
+
+        jLabel2.setText("Dado 2:");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(720, 120, 70, 14);
+
+        valor2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.add(valor2);
+        valor2.setBounds(790, 120, 30, 14);
+
+        dado2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(dado2);
+        dado2.setBounds(730, 150, 100, 100);
+
+        jLabel3.setText("Cantidad lanzamientos:");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(600, 90, 140, 14);
+
+        lanzamientos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(lanzamientos);
+        lanzamientos.setBounds(750, 90, 34, 14);
+
+        lanzar.setBackground(new java.awt.Color(204, 153, 255));
+        lanzar.setText("¡LANZAR!");
+        lanzar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lanzarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(lanzar);
+        lanzar.setBounds(739, 50, 90, 23);
+
+        Dado1F1.setText("F1");
+        jPanel1.add(Dado1F1);
+        Dado1F1.setBounds(600, 280, 50, 23);
+
+        Dado1F2.setText("F2");
+        jPanel1.add(Dado1F2);
+        Dado1F2.setBounds(650, 280, 50, 23);
+
+        Dado2F1.setText("F1");
+        jPanel1.add(Dado2F1);
+        Dado2F1.setBounds(730, 280, 50, 23);
+
+        Dado2F2.setText("F2");
+        jPanel1.add(Dado2F2);
+        Dado2F2.setBounds(780, 280, 50, 23);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 842, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 664, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 664, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 642, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botondadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botondadosActionPerformed
-        new Dados().setVisible(true);
-    }//GEN-LAST:event_botondadosActionPerformed
+    private void lanzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lanzarActionPerformed
+         contLanza++;
+        Parques.lanzamientos.setText("" + contLanza);
+        num1 = generarRandom(); 
+        Parques.valor1.setText("" + num1);
+        imagenDado1(num1);
+        num2 = generarRandom();
+        Parques.valor2.setText("" + num2);
+        imagenDado2(num2);
+    }//GEN-LAST:event_lanzarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3305,6 +3425,10 @@ public class Parques extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JButton Dado1F1;
+    public static javax.swing.JButton Dado1F2;
+    public static javax.swing.JButton Dado2F1;
+    public static javax.swing.JButton Dado2F2;
     public static final javax.swing.JLabel amarilla1 = new javax.swing.JLabel();
     public static final javax.swing.JLabel amarilla2 = new javax.swing.JLabel();
     public static final javax.swing.JLabel azul1 = new javax.swing.JLabel();
@@ -3439,7 +3563,8 @@ public class Parques extends javax.swing.JFrame {
     private javax.swing.JLabel b2sal3;
     private javax.swing.JLabel b2seg5;
     private javax.swing.JLabel b2seg6;
-    private javax.swing.JButton botondados;
+    public static javax.swing.JLabel dado1;
+    public static javax.swing.JLabel dado2;
     private javax.swing.JLabel g01seg7;
     private javax.swing.JLabel g01seg8;
     private javax.swing.JLabel g02seg7;
@@ -3570,7 +3695,13 @@ public class Parques extends javax.swing.JFrame {
     private javax.swing.JLabel g2sal4;
     private javax.swing.JLabel g2seg7;
     private javax.swing.JLabel g2seg8;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    public static javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    public static javax.swing.JLabel labeljugador;
+    public static javax.swing.JLabel lanzamientos;
+    private javax.swing.JButton lanzar;
     public static javax.swing.JLabel r01seg1;
     public static javax.swing.JLabel r01seg2;
     public static javax.swing.JLabel r02seg1;
@@ -3705,6 +3836,8 @@ public class Parques extends javax.swing.JFrame {
     public static final javax.swing.JLabel roja2 = new javax.swing.JLabel();
     public static javax.swing.JLabel tablero;
     private javax.swing.JLabel titulo;
+    public static javax.swing.JLabel valor1;
+    public static javax.swing.JLabel valor2;
     public static final javax.swing.JLabel verde1 = new javax.swing.JLabel();
     public static final javax.swing.JLabel verde2 = new javax.swing.JLabel();
     private javax.swing.JLabel y01seg3;

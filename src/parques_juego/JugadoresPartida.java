@@ -190,7 +190,7 @@ public class JugadoresPartida extends javax.swing.JFrame {
         try{
             //verificacion de que la cedula ingresada se encuentre registrada en la base de datos
             if(Insertar.validarcedula(Integer.parseInt(cedula1.getText()))==1 && Insertar.validarcedula(Integer.parseInt(cedula2.getText()))==1 
-                    && Insertar.validarcedula(Integer.parseInt(cedula3.getText()))==1 && Insertar.validarcedula(Integer.parseInt(cedula1.getText()))==1){
+                    && Insertar.validarcedula(Integer.parseInt(cedula3.getText()))==1 && Insertar.validarcedula(Integer.parseInt(cedula4.getText()))==1){
 
                 JOptionPane.showMessageDialog(this, "Bienvenidos, Buen juego", "Panel Ingreso", JOptionPane.INFORMATION_MESSAGE);
                 TipoJuego tipo = new TipoJuego();
