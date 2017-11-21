@@ -656,8 +656,6 @@ public class Parques extends javax.swing.JFrame {
         Dado2F1 = new javax.swing.JButton();
         Dado2F2 = new javax.swing.JButton();
         labeljugador1 = new javax.swing.JLabel();
-        labeljugador2 = new javax.swing.JLabel();
-        labeljugador3 = new javax.swing.JLabel();
         y1sal1 = new javax.swing.JLabel();
         b1sal1 = new javax.swing.JLabel();
         g1sal1 = new javax.swing.JLabel();
@@ -3388,18 +3386,6 @@ public class Parques extends javax.swing.JFrame {
         labeljugador1.setBounds(600, 60, 80, 14);
         labeljugador1.setVisible(false);
 
-        labeljugador2.setForeground(new java.awt.Color(0, 0, 204));
-        labeljugador2.setText("JUGADOR 3");
-        jPanel1.add(labeljugador2);
-        labeljugador2.setBounds(600, 60, 80, 14);
-        labeljugador2.setVisible(false);
-
-        labeljugador3.setForeground(new java.awt.Color(0, 102, 0));
-        labeljugador3.setText("JUGADOR 4");
-        jPanel1.add(labeljugador3);
-        labeljugador3.setBounds(600, 60, 80, 14);
-        labeljugador3.setVisible(false);
-
         y1sal1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
         y1sal1.setVisible(false);
         jPanel1.add(y1sal1);
@@ -3787,8 +3773,6 @@ public class Parques extends javax.swing.JFrame {
             case 1:
                 labeljugador.setVisible(true);
                 labeljugador1.setVisible(false);
-                labeljugador2.setVisible(false);
-                labeljugador3.setVisible(false);
                 c = 1;
                 if (c < 2) {
                     lanzamientos.setText("" + c);
@@ -3798,24 +3782,15 @@ public class Parques extends javax.swing.JFrame {
                     num2Rojo = generarRandom();
                     valor2.setText("" + num2Rojo);
                     imagenDado2(num2Rojo);
-                    if (TipoJuego.modo == 1) {
-                        MoverCasilla.moverFichas();
-                    }
-                    if (TipoJuego.modo == 2) {
-                        MoverPiedra.moverFichas();
-                    }
+                    MoverPiedra.moverFichas();
                     c++;
-
                 } else {
                     JOptionPane.showMessageDialog(this, "Limite de lanzamientos alcanzado");
                 }
-
                 break;
             case 2:
                 labeljugador.setVisible(false);
                 labeljugador1.setVisible(true);
-                labeljugador2.setVisible(false);
-                labeljugador3.setVisible(false);
                 c = 1;
                 if (c < 2) {
                     lanzamientos.setText("" + c);
@@ -3825,67 +3800,12 @@ public class Parques extends javax.swing.JFrame {
                     num2Ama = generarRandom();
                     valor2.setText("" + num2Ama);
                     imagenDado2(num2Ama);
-                    if (TipoJuego.modo == 1) {
-                        MoverCasilla.moverFichas();
-                    }
-                    if (TipoJuego.modo == 2) {
-                        MoverPiedra.moverFichas();
-                    }
-                    //c = c + 2;
-                } else {
-                    JOptionPane.showMessageDialog(this, "Limite de lanzamientos alcanzado");
-                }
-                break;
-            /*case 3:
-                labeljugador.setVisible(false);
-                labeljugador1.setVisible(false);
-                labeljugador2.setVisible(true);
-                labeljugador3.setVisible(false);
-                c = 1;
-                if (c < 2) {
-                    lanzamientos.setText("" + c);
-                    num1Az = generarRandom();
-                    valor1.setText("" + num1Az);
-                    imagenDado1(num1Az);
-                    num2Az = generarRandom();
-                    valor2.setText("" + num2Az);
-                    imagenDado2(num2Az);
-                    if (TipoJuego.modo == 1) {
-                        MoverCasilla.moverFichas();
-                    }
-                    if (TipoJuego.modo == 2) {
-                        MoverPiedra.moverFichas();
-                    }
-                    c = c + 3;
-                } else {
-                    JOptionPane.showMessageDialog(this, "Limite de lanzamientos alcanzado");
-                }
+                    MoverPiedra.moverFichas();
 
-                break;
-            case 4:
-                labeljugador.setVisible(false);
-                labeljugador1.setVisible(false);
-                labeljugador2.setVisible(false);
-                labeljugador3.setVisible(true);
-                c = 1;
-                if (c < 2) {
-                    lanzamientos.setText("" + c);
-                    num1Ve = generarRandom();
-                    valor1.setText("" + num1Ve);
-                    imagenDado1(num1Ve);
-                    num2Ve = generarRandom();
-                    valor2.setText("" + num2Ve);
-                    imagenDado2(num2Ve);
-                    if (TipoJuego.modo == 1) {
-                        MoverCasilla.moverFichas();
-                    }
-                    if (TipoJuego.modo == 2) {
-                        MoverPiedra.moverFichas();
-                    }
                 } else {
                     JOptionPane.showMessageDialog(this, "Limite de lanzamientos alcanzado");
                 }
-                break;*/
+                break;
         }
 
 
@@ -4248,8 +4168,6 @@ public class Parques extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     public static javax.swing.JLabel labeljugador;
     public static javax.swing.JLabel labeljugador1;
-    public static javax.swing.JLabel labeljugador2;
-    public static javax.swing.JLabel labeljugador3;
     public static javax.swing.JLabel lanzamientos;
     private javax.swing.JButton lanzar;
     public static javax.swing.JLabel r1cas10;

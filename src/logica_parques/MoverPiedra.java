@@ -16,11 +16,13 @@ import parques_juego.Parques;
  * @author Angie
  */
 public class MoverPiedra {
-public static int puntaje=0;
- public static HistorialJuegos historial;
+
+    public static int puntaje = 0;
+    public static HistorialJuegos historial;
+
     //funcion para mover las fichas
     public static void moverFichas() {
-        
+
         int num1Rojo = Parques.num1Rojo;
         int num2Rojo = Parques.num2Rojo;
         int sumaRoja = 0;
@@ -29,14 +31,84 @@ public static int puntaje=0;
         int num2Ama = Parques.num2Ama;
         int sumaAma = 0;
         sumaAma = num1Ama + num2Ama;
-        int num1Az = Parques.num1Az;
-        int num2Az = Parques.num2Az;
-        int sumaAz = 0;
-        sumaAz = num1Az + num2Az;
-        int num1Ve = Parques.num1Ve;
-        int num2Ve = Parques.num2Ve;
-        int sumaVe = 0;
-        sumaVe = num1Ve + num2Ve;
+        //Si la ficha roja sale y está en esa casilla las ficha amarilla, la amarilla va a la cárcel
+        if (Parques.y1sal1.isVisible()) {
+            if (Parques.r1sal1.isVisible() || Parques.r2sal1.isVisible()) {
+                Parques.y1sal1.setVisible(false);
+                Parques.amarilla1.setVisible(true);
+            }
+        }
+        if (Parques.y2sal1.isVisible()) {
+            if (Parques.r1sal1.isVisible() || Parques.r2sal1.isVisible()) {
+                Parques.y2sal1.setVisible(false);
+                Parques.amarilla2.setVisible(true);
+            }
+        }
+        //Si la ficha amarilla sale y está en esa casilla la ficha roja, la roja se va a la cárcel
+        if (Parques.r1sal2.isVisible()) {
+            if (Parques.y1sal2.isVisible() || Parques.y2sal2.isVisible()) {
+                Parques.r1sal2.setVisible(false);
+                Parques.roja1.setVisible(true);
+            }
+        }
+        if (Parques.r2sal2.isVisible()) {
+            if (Parques.y1sal2.isVisible() || Parques.y2sal2.isVisible()) {
+                Parques.r2sal2.setVisible(false);
+                Parques.roja2.setVisible(true);
+            }
+        }
+        //Si la ficha roja está en la salida 3 y llega la ficha amarilla, la roja se va a la cárcel
+        if (Parques.r1sal3.isVisible()) {
+            if (Parques.y1sal3.isVisible() || Parques.y2sal3.isVisible()) {
+                Parques.r1sal3.setVisible(false);
+                Parques.roja1.setVisible(true);
+            }
+        }
+        if (Parques.r2sal3.isVisible()) {
+            if (Parques.y1sal3.isVisible() || Parques.y2sal3.isVisible()) {
+                Parques.r2sal3.setVisible(false);
+                Parques.roja2.setVisible(true);
+            }
+        }
+        //Si la ficha amarilla está en la salida 3 y llega la ficha roja, la amarilla se va a la cárcel
+        if (Parques.y1sal3.isVisible()) {
+            if (Parques.r1sal3.isVisible() || Parques.r2sal3.isVisible()) {
+                Parques.y1sal3.setVisible(false);
+                Parques.roja1.setVisible(true);
+            }
+        }
+        if (Parques.y2sal3.isVisible()) {
+            if (Parques.r1sal3.isVisible() || Parques.r2sal3.isVisible()) {
+                Parques.y2sal3.setVisible(false);
+                Parques.roja2.setVisible(true);
+            }
+        }
+        //Si la ficha roja está en la salida 4 y llega la ficha amarilla, la roja se va a la cárcel
+        if (Parques.r1sal4.isVisible()) {
+            if (Parques.y1sal4.isVisible() || Parques.y2sal4.isVisible()) {
+                Parques.r1sal4.setVisible(false);
+                Parques.roja1.setVisible(true);
+            }
+        }
+        if (Parques.r2sal4.isVisible()) {
+            if (Parques.y1sal4.isVisible() || Parques.y2sal4.isVisible()) {
+                Parques.r2sal4.setVisible(false);
+                Parques.roja2.setVisible(true);
+            }
+        }
+        //Si la ficha amarilla está en la salida 4 y llega la ficha roja, la amarilla se va a la cárcel
+        if (Parques.y1sal4.isVisible()) {
+            if (Parques.r1sal4.isVisible() || Parques.r2sal4.isVisible()) {
+                Parques.y1sal4.setVisible(false);
+                Parques.roja1.setVisible(true);
+            }
+        }
+        if (Parques.y2sal4.isVisible()) {
+            if (Parques.r1sal4.isVisible() || Parques.r2sal4.isVisible()) {
+                Parques.y2sal4.setVisible(false);
+                Parques.roja2.setVisible(true);
+            }
+        }
         //Si las fichas rojas están en la cárcel revisa si los dados son iguales para salir de la cárcel
         if (Parques.roja1.isVisible() && Parques.roja2.isVisible()) {
             if (num1Rojo == num2Rojo) {
@@ -46,11 +118,25 @@ public static int puntaje=0;
                 Parques.r2sal1.setVisible(true);
             }
         }
+        //Si la ficha roja1 está en la cárcel revisa si los dados son iguales para poder salir
+        if (Parques.roja1.isVisible()) {
+            if (num1Rojo == num2Rojo) {
+                Parques.roja1.setVisible(false);
+                Parques.r1sal1.setVisible(true);
+            }
+        }
+        //Si la ficha roja2 está en la cárcel revisa si los dados son iguales para poder salir
+        if (Parques.roja2.isVisible()) {
+            if (num1Rojo == num2Rojo) {
+                Parques.roja2.setVisible(false);
+                Parques.r2sal1.setVisible(true);
+            }
+        }
         //Si las dos fichas están afuera, has ganado
         if (Parques.r1fin.isVisible() && Parques.r2fin.isVisible()) {
-            puntaje=puntaje+10;
-            historial = HistorialJuegos.crear(JugadoresPartida.ced1,puntaje);
-                Repositorio.crear(historial);
+            puntaje = puntaje + 10;
+            historial = HistorialJuegos.crear(JugadoresPartida.ced1, puntaje);
+            Repositorio.crear(historial);
             JOptionPane.showMessageDialog(null, "¡Felicidades, has ganado!");
             MenuOpt menu = new MenuOpt();
             menu.setVisible(true);
@@ -287,12 +373,26 @@ public static int puntaje=0;
                 Parques.y2sal2.setVisible(true);
             }
         }
+        //Si la ficha amarilla1 está en la cárcel revisa si los dados son iguales para poder salir
+        if (Parques.amarilla1.isVisible()) {
+            if (num1Ama == num2Ama) {
+                Parques.amarilla1.setVisible(false);
+                Parques.y1sal2.setVisible(true);
+            }
+        }
+        //Si la ficha amarilla2 está en la cárcel revisa si los dados son iguales para poder salir
+        if (Parques.amarilla2.isVisible()) {
+            if (num1Ama == num2Ama) {
+                Parques.amarilla2.setVisible(false);
+                Parques.y2sal2.setVisible(true);
+            }
+        }
         //Si las dos fichas están afuera, has ganado
         if (Parques.y1fin.isVisible() && Parques.y2fin.isVisible()) {
             JOptionPane.showMessageDialog(null, "¡Felicidades, has ganado!");
-            puntaje=puntaje+10;
-            historial = HistorialJuegos.crear(JugadoresPartida.ced2,puntaje);
-                Repositorio.crear(historial);
+            puntaje = puntaje + 10;
+            historial = HistorialJuegos.crear(JugadoresPartida.ced2, puntaje);
+            Repositorio.crear(historial);
             MenuOpt menu = new MenuOpt();
             menu.setVisible(true);
             Parques par = new Parques();
@@ -515,482 +615,6 @@ public static int puntaje=0;
                 if (Parques.y2sal4.isVisible()) {
                     Parques.y2sal4.setVisible(false);
                     Parques.y2seg8.setVisible(true);
-                }
-            }
-
-            //Si las fichas azules están en la cárcel revisa si los dados son iguales para salir de la cárcel
-            if (Parques.azul1.isVisible() && Parques.azul2.isVisible()) {
-                if (Parques.num1Az == Parques.num2Az) {
-                    Parques.azul1.setVisible(false);
-                    Parques.azul2.setVisible(false);
-                    Parques.b1sal3.setVisible(true);
-                    Parques.b2sal3.setVisible(true);
-                }
-            }
-            //Si las dos fichas están afuera, has ganado
-            if (Parques.b1fin.isVisible() && Parques.b2fin.isVisible()) {
-                JOptionPane.showMessageDialog(null, "¡Felicidades, has ganado!");
-                MenuOpt menu = new MenuOpt();
-                menu.setVisible(true);
-                Parques par = new Parques();
-                par.dispose();
-            }
-            //Si la suma de los dados es igual a 7 se realizan los siguientes movimientos
-            if (sumaAz == 7) {
-                //Si presiona el botón de la ficha 1 del dado 1 y si presiona el botón de la ficha 1 del dado 2
-                if (Parques.moverd1 == 1 && Parques.moverd2 == 1) {
-                    if (Parques.b1sal1.isVisible()) {
-                        Parques.b1sal1.setVisible(false);
-                        Parques.b1seg1.setVisible(true);
-                    }
-                    if (Parques.b1sal2.isVisible()) {
-                        Parques.b1seg3.setVisible(true);
-                        Parques.b1sal2.setVisible(false);
-                    }
-                    if (Parques.b1sal3.isVisible()) {
-                        Parques.b1seg5.setVisible(true);
-                        Parques.b1sal3.setVisible(false);
-                    }
-                    if (Parques.b1sal4.isVisible()) {
-                        Parques.b1seg7.setVisible(true);
-                        Parques.b1sal4.setVisible(false);
-                    }
-                }
-                //Si presiona el botón de la ficha 2 del dado 1 y si presiona el botón de la ficha 2 del dado 2
-                if (Parques.moverd1 == 2 && Parques.moverd2 == 2) {
-                    if (Parques.b2sal1.isVisible()) {
-                        Parques.b2sal1.setVisible(false);
-                        Parques.b2seg1.setVisible(true);
-                    }
-                    if (Parques.b2sal2.isVisible()) {
-                        Parques.b2seg3.setVisible(true);
-                        Parques.b2sal2.setVisible(false);
-                    }
-                    if (Parques.b2sal3.isVisible()) {
-                        Parques.b2seg5.setVisible(true);
-                        Parques.b2sal3.setVisible(false);
-                    }
-                    if (Parques.b2sal4.isVisible()) {
-                        Parques.b2seg7.setVisible(true);
-                        Parques.b2sal4.setVisible(false);
-                    }
-                }
-
-            }
-            //Si la suma de los dados es igual a 5 se realizan los siguientes movimientos
-            if (sumaAz == 5) {
-                //Si presiona el botón de la ficha 1 del dado 1 y si presiona el botón de la ficha 1 del dado 2
-                if (Parques.moverd1 == 1 && Parques.moverd2 == 1) {
-                    if (Parques.b1seg7.isVisible()) {
-                        Parques.b1seg7.setVisible(false);
-                        Parques.b1seg8.setVisible(true);
-                    }
-                    if (Parques.b1seg6.isVisible()) {
-                        Parques.b1seg6.setVisible(false);
-                        Parques.b1sal4.setVisible(true);
-                    }
-                    if (Parques.b1seg5.isVisible()) {
-                        Parques.b1seg5.setVisible(false);
-                        Parques.b1seg6.setVisible(true);
-                    }
-                    if (Parques.b1seg2.isVisible()) {
-                        Parques.b1seg2.setVisible(false);
-                        Parques.b1sal2.setVisible(true);
-                    }
-                    if (Parques.b1seg3.isVisible()) {
-                        Parques.b1seg3.setVisible(false);
-                        Parques.b1seg4.setVisible(true);
-                    }
-                    if (Parques.b1seg8.isVisible()) {
-                        Parques.b1seg8.setVisible(false);
-                        Parques.b1sal1.setVisible(true);
-                    }
-                    if (Parques.b1seg1.isVisible()) {
-                        Parques.b1seg1.setVisible(false);
-                        Parques.b1seg2.setVisible(true);
-                    }
-                }
-                //Si presiona el botón de la ficha 2 del dado 1 y si presiona el botón de la ficha 2 del dado 2
-                if (Parques.moverd1 == 2 && Parques.moverd2 == 2) {
-                    if (Parques.b2seg7.isVisible()) {
-                        Parques.b2seg7.setVisible(false);
-                        Parques.b2seg8.setVisible(true);
-                    }
-                    if (Parques.b2seg6.isVisible()) {
-                        Parques.b2seg6.setVisible(false);
-                        Parques.b2sal4.setVisible(true);
-                    }
-                    if (Parques.b2seg5.isVisible()) {
-                        Parques.b2seg5.setVisible(false);
-                        Parques.b2seg6.setVisible(true);
-                    }
-                    if (Parques.b2seg2.isVisible()) {
-                        Parques.b2seg2.setVisible(false);
-                        Parques.b2sal2.setVisible(true);
-                    }
-                    if (Parques.b2seg3.isVisible()) {
-                        Parques.b2seg3.setVisible(false);
-                        Parques.b2seg4.setVisible(true);
-                    }
-                    if (Parques.b2seg8.isVisible()) {
-                        Parques.b2seg8.setVisible(false);
-                        Parques.b2sal1.setVisible(true);
-                    }
-                    if (Parques.b2seg1.isVisible()) {
-                        Parques.b2seg1.setVisible(false);
-                        Parques.b2seg2.setVisible(true);
-                    }
-                }
-            }
-            //Si la suma de los dados es igual a 8 se realizan los siguientes movimientos
-            if (sumaAz == 8) {
-                if (Parques.moverd1 == 1 && Parques.moverd2 == 1) {
-                    if (Parques.b1seg4.isVisible()) {
-                        Parques.b1seg4.setVisible(false);
-                        Parques.b1fin.setVisible(true);
-                        JOptionPane.showMessageDialog(null, "Sacaste la ficha 1");
-                    }
-                }
-
-                if (Parques.moverd1 == 2 && Parques.moverd2 == 2) {
-                    if (Parques.b2seg4.isVisible()) {
-                        Parques.b2seg4.setVisible(false);
-                        Parques.b2fin.setVisible(true);
-                        JOptionPane.showMessageDialog(null, "Sacaste la ficha 2");
-                    }
-                }
-            }
-            //Si la suma de los dados es igual a 10 se realizan los siguientes movimientos
-            if (sumaAz == 10) {
-                if (Parques.moverd1 == 1 && Parques.moverd2 == 1) {
-                    if (Parques.b1seg5.isVisible()) {
-                        Parques.b1seg5.setVisible(false);
-                        Parques.b1sal4.setVisible(true);
-                    }
-                    if (Parques.b1seg1.isVisible()) {
-                        Parques.b1seg1.setVisible(false);
-                        Parques.b1sal2.setVisible(true);
-                    }
-                    if (Parques.b1seg7.isVisible()) {
-                        Parques.b1seg7.setVisible(false);
-                        Parques.b1sal1.setVisible(true);
-                    }
-                }
-
-                if (Parques.moverd1 == 2 && Parques.moverd2 == 2) {
-                    if (Parques.b2seg5.isVisible()) {
-                        Parques.b2seg5.setVisible(false);
-                        Parques.b2sal4.setVisible(true);
-                    }
-                    if (Parques.b2seg1.isVisible()) {
-                        Parques.b2seg1.setVisible(false);
-                        Parques.b2sal2.setVisible(true);
-                    }
-                    if (Parques.b2seg7.isVisible()) {
-                        Parques.b2seg7.setVisible(false);
-                        Parques.b2sal1.setVisible(true);
-                    }
-                }
-            }
-            //Si la suma de los dados es igual a 12 se realizan los siguientes movimientos
-            if (sumaAz == 12) {
-                if (Parques.moverd1 == 1 && Parques.moverd2 == 1) {
-                    if (Parques.b1seg6.isVisible()) {
-                        Parques.b1seg6.setVisible(false);
-                        Parques.b1seg7.setVisible(true);
-                    }
-                    if (Parques.b1seg8.isVisible()) {
-                        Parques.b1seg8.setVisible(false);
-                        Parques.b1seg1.setVisible(true);
-                    }
-                    if (Parques.b1sal1.isVisible()) {
-                        Parques.b1sal1.setVisible(false);
-                        Parques.b1seg2.setVisible(true);
-                    }
-                    if (Parques.b1sal2.isVisible()) {
-                        Parques.b1sal2.setVisible(false);
-                        Parques.b1seg4.setVisible(true);
-                    }
-                    if (Parques.b1sal3.isVisible()) {
-                        Parques.b1sal3.setVisible(false);
-                        Parques.b1seg6.setVisible(true);
-                    }
-                    if (Parques.b1sal4.isVisible()) {
-                        Parques.b1sal4.setVisible(false);
-                        Parques.b1seg8.setVisible(true);
-                    }
-                    if (Parques.b1seg2.isVisible()) {
-                        Parques.b1seg2.setVisible(false);
-                        Parques.b1seg3.setVisible(true);
-                    }
-                }
-                if (Parques.moverd1 == 2 && Parques.moverd2 == 2) {
-                    if (Parques.b1seg6.isVisible()) {
-                        Parques.b1seg6.setVisible(false);
-                        Parques.b1seg7.setVisible(true);
-                    }
-                    if (Parques.b1seg8.isVisible()) {
-                        Parques.b1seg8.setVisible(false);
-                        Parques.b1seg1.setVisible(true);
-                    }
-                    if (Parques.b1sal1.isVisible()) {
-                        Parques.b1sal1.setVisible(false);
-                        Parques.b1seg2.setVisible(true);
-                    }
-                    if (Parques.b1sal2.isVisible()) {
-                        Parques.b1sal2.setVisible(false);
-                        Parques.b1seg4.setVisible(true);
-                    }
-                    if (Parques.b1sal3.isVisible()) {
-                        Parques.b1sal3.setVisible(false);
-                        Parques.b1seg6.setVisible(true);
-                    }
-                    if (Parques.b1sal4.isVisible()) {
-                        Parques.b1sal4.setVisible(false);
-                        Parques.b1seg8.setVisible(true);
-                    }
-                    if (Parques.b1seg2.isVisible()) {
-                        Parques.b1seg2.setVisible(false);
-                        Parques.b1seg3.setVisible(true);
-                    }
-                }
-            }
-
-            //Si las fichas verdes están en la cárcel revisa si los dados son iguales para salir de la cárcel
-            if (Parques.verde1.isVisible() && Parques.verde2.isVisible()) {
-                if (Parques.num1Ve == Parques.num2Ve) {
-                    Parques.verde1.setVisible(false);
-                    Parques.verde2.setVisible(false);
-                    Parques.g1sal4.setVisible(true);
-                    Parques.g2sal4.setVisible(true);
-                }
-            }
-            //Si las dos fichas están afuera, has ganado
-            if (Parques.g1fin.isVisible() && Parques.g2fin.isVisible()) {
-                JOptionPane.showMessageDialog(null, "¡Felicidades, has ganado!");
-                MenuOpt menu = new MenuOpt();
-                menu.setVisible(true);
-                Parques par = new Parques();
-                par.dispose();
-            }
-            //Si la suma de los dados es igual a 7 se realizan los siguientes movimientos
-            if (sumaVe == 7) {
-                //Si presiona el botón de la ficha 1 del dado 1 y si presiona el botón de la ficha 1 del dado 2
-                if (Parques.moverd1 == 1 && Parques.moverd2 == 1) {
-                    if (Parques.g1sal1.isVisible()) {
-                        Parques.g1sal1.setVisible(false);
-                        Parques.g1seg1.setVisible(true);
-                    }
-                    if (Parques.g1sal2.isVisible()) {
-                        Parques.g1seg3.setVisible(true);
-                        Parques.g1sal2.setVisible(false);
-                    }
-                    if (Parques.g1sal3.isVisible()) {
-                        Parques.g1seg5.setVisible(true);
-                        Parques.g1sal3.setVisible(false);
-                    }
-                    if (Parques.g1sal4.isVisible()) {
-                        Parques.g1seg7.setVisible(true);
-                        Parques.g1sal4.setVisible(false);
-                    }
-                }
-                //Si presiona el botón de la ficha 2 del dado 1 y si presiona el botón de la ficha 2 del dado 2
-                if (Parques.moverd1 == 2 && Parques.moverd2 == 2) {
-                    if (Parques.g2sal1.isVisible()) {
-                        Parques.g2sal1.setVisible(false);
-                        Parques.g2seg1.setVisible(true);
-                    }
-                    if (Parques.g2sal2.isVisible()) {
-                        Parques.g2seg3.setVisible(true);
-                        Parques.g2sal2.setVisible(false);
-                    }
-                    if (Parques.g2sal3.isVisible()) {
-                        Parques.g2seg5.setVisible(true);
-                        Parques.g2sal3.setVisible(false);
-                    }
-                    if (Parques.g2sal4.isVisible()) {
-                        Parques.g2seg7.setVisible(true);
-                        Parques.g2sal4.setVisible(false);
-                    }
-                }
-
-            }
-            //Si la suma de los dados es igual a 5 se realizan los siguientes movimientos
-            if (sumaVe == 5) {
-                //Si presiona el botón de la ficha 1 del dado 1 y si presiona el botón de la ficha 1 del dado 2
-                if (Parques.moverd1 == 1 && Parques.moverd2 == 1) {
-                    if (Parques.g1seg7.isVisible()) {
-                        Parques.g1seg7.setVisible(false);
-                        Parques.g1seg8.setVisible(true);
-                    }
-                    if (Parques.g1seg4.isVisible()) {
-                        Parques.g1seg4.setVisible(false);
-                        Parques.g1sal3.setVisible(true);
-                    }
-                    if (Parques.g1seg5.isVisible()) {
-                        Parques.g1seg5.setVisible(false);
-                        Parques.g1seg6.setVisible(true);
-                    }
-                    if (Parques.g1seg2.isVisible()) {
-                        Parques.g1seg2.setVisible(false);
-                        Parques.g1sal2.setVisible(true);
-                    }
-                    if (Parques.g1seg3.isVisible()) {
-                        Parques.g1seg3.setVisible(false);
-                        Parques.g1seg4.setVisible(true);
-                    }
-                    if (Parques.g1seg8.isVisible()) {
-                        Parques.g1seg8.setVisible(false);
-                        Parques.g1sal1.setVisible(true);
-                    }
-                    if (Parques.g1seg1.isVisible()) {
-                        Parques.g1seg1.setVisible(false);
-                        Parques.g1seg2.setVisible(true);
-                    }
-                }
-                //Si presiona el botón de la ficha 2 del dado 1 y si presiona el botón de la ficha 2 del dado 2
-                if (Parques.moverd1 == 2 && Parques.moverd2 == 2) {
-                    if (Parques.g2seg7.isVisible()) {
-                        Parques.g2seg7.setVisible(false);
-                        Parques.g2seg8.setVisible(true);
-                    }
-                    if (Parques.g2seg4.isVisible()) {
-                        Parques.g2seg4.setVisible(false);
-                        Parques.g2sal3.setVisible(true);
-                    }
-                    if (Parques.g2seg5.isVisible()) {
-                        Parques.g2seg5.setVisible(false);
-                        Parques.g2seg6.setVisible(true);
-                    }
-                    if (Parques.g2seg2.isVisible()) {
-                        Parques.g2seg2.setVisible(false);
-                        Parques.g2sal2.setVisible(true);
-                    }
-                    if (Parques.g2seg3.isVisible()) {
-                        Parques.g2seg3.setVisible(false);
-                        Parques.g2seg4.setVisible(true);
-                    }
-                    if (Parques.g2seg8.isVisible()) {
-                        Parques.g2seg8.setVisible(false);
-                        Parques.g2sal1.setVisible(true);
-                    }
-                    if (Parques.g2seg1.isVisible()) {
-                        Parques.g2seg1.setVisible(false);
-                        Parques.g2seg2.setVisible(true);
-                    }
-                }
-            }
-            //Si la suma de los dados es igual a 8 se realizan los siguientes movimientos
-            if (sumaVe == 8) {
-                if (Parques.moverd1 == 1 && Parques.moverd2 == 1) {
-                    if (Parques.g1seg6.isVisible()) {
-                        Parques.g1seg6.setVisible(false);
-                        Parques.g1fin.setVisible(true);
-                        JOptionPane.showMessageDialog(null, "Sacaste la ficha 1");
-                    }
-                }
-
-                if (Parques.moverd1 == 2 && Parques.moverd2 == 2) {
-                    if (Parques.g2seg6.isVisible()) {
-                        Parques.g2seg6.setVisible(false);
-                        Parques.g2fin.setVisible(true);
-                        JOptionPane.showMessageDialog(null, "Sacaste la ficha 2");
-                    }
-                }
-            }
-            //Si la suma de los dados es igual a 10 se realizan los siguientes movimientos
-            if (sumaVe == 10) {
-                if (Parques.moverd1 == 1 && Parques.moverd2 == 1) {
-                    if (Parques.g1seg3.isVisible()) {
-                        Parques.g1seg3.setVisible(false);
-                        Parques.g1sal3.setVisible(true);
-                    }
-                    if (Parques.g1seg1.isVisible()) {
-                        Parques.g1seg1.setVisible(false);
-                        Parques.g1sal2.setVisible(true);
-                    }
-                    if (Parques.g1seg7.isVisible()) {
-                        Parques.g1seg7.setVisible(false);
-                        Parques.g1sal1.setVisible(true);
-                    }
-                }
-
-                if (Parques.moverd1 == 2 && Parques.moverd2 == 2) {
-                    if (Parques.g2seg3.isVisible()) {
-                        Parques.g2seg3.setVisible(false);
-                        Parques.g2sal3.setVisible(true);
-                    }
-                    if (Parques.g2seg1.isVisible()) {
-                        Parques.g2seg1.setVisible(false);
-                        Parques.g2sal2.setVisible(true);
-                    }
-                    if (Parques.g2seg7.isVisible()) {
-                        Parques.g2seg7.setVisible(false);
-                        Parques.g2sal1.setVisible(true);
-                    }
-                }
-            }
-            //Si la suma de los dados es igual a 12 se realizan los siguientes movimientos
-            if (sumaVe == 12) {
-                if (Parques.moverd1 == 1 && Parques.moverd2 == 1) {
-                    if (Parques.g1seg4.isVisible()) {
-                        Parques.g1seg4.setVisible(false);
-                        Parques.g1seg5.setVisible(true);
-                    }
-                    if (Parques.g1seg8.isVisible()) {
-                        Parques.g1seg8.setVisible(false);
-                        Parques.g1seg1.setVisible(true);
-                    }
-                    if (Parques.g1sal1.isVisible()) {
-                        Parques.g1sal1.setVisible(false);
-                        Parques.g1seg2.setVisible(true);
-                    }
-                    if (Parques.g1sal2.isVisible()) {
-                        Parques.g1sal2.setVisible(false);
-                        Parques.g1seg4.setVisible(true);
-                    }
-                    if (Parques.g1sal3.isVisible()) {
-                        Parques.g1sal3.setVisible(false);
-                        Parques.g1seg6.setVisible(true);
-                    }
-                    if (Parques.g1sal4.isVisible()) {
-                        Parques.g1sal4.setVisible(false);
-                        Parques.g1seg8.setVisible(true);
-                    }
-                    if (Parques.g1seg2.isVisible()) {
-                        Parques.g1seg2.setVisible(false);
-                        Parques.g1seg3.setVisible(true);
-                    }
-                }
-                if (Parques.moverd1 == 2 && Parques.moverd2 == 2) {
-                    if (Parques.g2seg4.isVisible()) {
-                        Parques.g2seg4.setVisible(false);
-                        Parques.g2seg5.setVisible(true);
-                    }
-                    if (Parques.g2seg8.isVisible()) {
-                        Parques.g2seg8.setVisible(false);
-                        Parques.g2seg1.setVisible(true);
-                    }
-                    if (Parques.g2sal1.isVisible()) {
-                        Parques.g2sal1.setVisible(false);
-                        Parques.g2seg2.setVisible(true);
-                    }
-                    if (Parques.g2sal2.isVisible()) {
-                        Parques.g2sal2.setVisible(false);
-                        Parques.g2seg4.setVisible(true);
-                    }
-                    if (Parques.g2sal3.isVisible()) {
-                        Parques.g2sal3.setVisible(false);
-                        Parques.g2seg6.setVisible(true);
-                    }
-                    if (Parques.g2sal4.isVisible()) {
-                        Parques.g2sal4.setVisible(false);
-                        Parques.g2seg8.setVisible(true);
-                    }
-                    if (Parques.g2seg2.isVisible()) {
-                        Parques.g2seg2.setVisible(false);
-                        Parques.g2seg3.setVisible(true);
-                    }
                 }
             }
         }
