@@ -31,10 +31,9 @@ public class Parques extends javax.swing.JFrame {
     /**
      * Creates new form Parquest
      */
-    public static int val1, val2, num1 = 1, num2 = 1,moverd1=0,moverd2=0;
+    public static int val1, val2, num1Rojo = 1, num2Rojo = 1, num1Ama = 1, num2Ama = 0, num1Az = 1, num2Az = 1, num1Ve = 1, num2Ve = 1, moverd1 = 0, moverd2 = 0;
     int contAm = 0, contAz = 0, contVer = 0, contRoj = 0, valorRandom, c = 1;
 
-    
     public Parques() {
         initComponents();
         configComponents();
@@ -153,38 +152,22 @@ public class Parques extends javax.swing.JFrame {
         b2fin = new javax.swing.JLabel();
         g1fin = new javax.swing.JLabel();
         g2fin = new javax.swing.JLabel();
-        r01seg1 = new javax.swing.JLabel();
         r1seg1 = new javax.swing.JLabel();
         r2seg1 = new javax.swing.JLabel();
-        r02seg1 = new javax.swing.JLabel();
-        r01seg2 = new javax.swing.JLabel();
         r1seg2 = new javax.swing.JLabel();
         r2seg2 = new javax.swing.JLabel();
-        r02seg2 = new javax.swing.JLabel();
-        y01seg3 = new javax.swing.JLabel();
         y2seg3 = new javax.swing.JLabel();
         y1seg3 = new javax.swing.JLabel();
-        y02seg3 = new javax.swing.JLabel();
-        y01seg4 = new javax.swing.JLabel();
         y1seg4 = new javax.swing.JLabel();
         y2seg4 = new javax.swing.JLabel();
-        y02seg4 = new javax.swing.JLabel();
-        b01seg5 = new javax.swing.JLabel();
         b1seg5 = new javax.swing.JLabel();
         b2seg5 = new javax.swing.JLabel();
-        b02seg5 = new javax.swing.JLabel();
-        b01seg6 = new javax.swing.JLabel();
         b2seg6 = new javax.swing.JLabel();
         b1seg6 = new javax.swing.JLabel();
-        b02seg6 = new javax.swing.JLabel();
-        g01seg7 = new javax.swing.JLabel();
         g1seg7 = new javax.swing.JLabel();
         g2seg7 = new javax.swing.JLabel();
-        g02seg7 = new javax.swing.JLabel();
-        g01seg8 = new javax.swing.JLabel();
         g1seg8 = new javax.swing.JLabel();
         g2seg8 = new javax.swing.JLabel();
-        g02seg8 = new javax.swing.JLabel();
         y1cas1 = new javax.swing.JLabel();
         y2cas1 = new javax.swing.JLabel();
         b1cas1 = new javax.swing.JLabel();
@@ -871,10 +854,6 @@ public class Parques extends javax.swing.JFrame {
         jPanel1.add(g2fin);
         g2fin.setBounds(360, 335, 20, 20);
 
-        r01seg1.setVisible(false);
-        jPanel1.add(r01seg1);
-        r01seg1.setBounds(110, 225, 20, 20);
-
         r1seg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
         r1seg1.setVisible(false);
         jPanel1.add(r1seg1);
@@ -884,14 +863,6 @@ public class Parques extends javax.swing.JFrame {
         r2seg1.setVisible(false);
         jPanel1.add(r2seg1);
         r2seg1.setBounds(110, 265, 20, 20);
-
-        r02seg1.setVisible(false);
-        jPanel1.add(r02seg1);
-        r02seg1.setBounds(110, 285, 20, 20);
-
-        r01seg2.setVisible(false);
-        jPanel1.add(r01seg2);
-        r01seg2.setBounds(15, 300, 20, 20);
 
         r1seg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
         r1seg2.setVisible(false);
@@ -903,14 +874,6 @@ public class Parques extends javax.swing.JFrame {
         jPanel1.add(r2seg2);
         r2seg2.setBounds(15, 340, 20, 20);
 
-        r02seg2.setVisible(false);
-        jPanel1.add(r02seg2);
-        r02seg2.setBounds(15, 360, 20, 20);
-
-        y01seg3.setVisible(false);
-        jPanel1.add(y01seg3);
-        y01seg3.setBounds(175, 510, 20, 20);
-
         y2seg3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
         y2seg3.setVisible(false);
         jPanel1.add(y2seg3);
@@ -920,14 +883,6 @@ public class Parques extends javax.swing.JFrame {
         y1seg3.setVisible(false);
         jPanel1.add(y1seg3);
         y1seg3.setBounds(215, 510, 20, 20);
-
-        y02seg3.setVisible(false);
-        jPanel1.add(y02seg3);
-        y02seg3.setBounds(235, 510, 20, 20);
-
-        y01seg4.setVisible(false);
-        jPanel1.add(y01seg4);
-        y01seg4.setBounds(260, 605, 20, 20);
 
         y1seg4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
         y1seg4.setVisible(false);
@@ -939,14 +894,6 @@ public class Parques extends javax.swing.JFrame {
         jPanel1.add(y2seg4);
         y2seg4.setBounds(300, 605, 20, 20);
 
-        y02seg4.setVisible(false);
-        jPanel1.add(y02seg4);
-        y02seg4.setBounds(320, 605, 20, 20);
-
-        b01seg5.setVisible(false);
-        jPanel1.add(b01seg5);
-        b01seg5.setBounds(470, 380, 20, 20);
-
         b1seg5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
         b1seg5.setVisible(false);
         jPanel1.add(b1seg5);
@@ -956,14 +903,6 @@ public class Parques extends javax.swing.JFrame {
         b2seg5.setVisible(false);
         jPanel1.add(b2seg5);
         b2seg5.setBounds(470, 420, 20, 20);
-
-        b02seg5.setVisible(false);
-        jPanel1.add(b02seg5);
-        b02seg5.setBounds(340, 510, 20, 20);
-
-        b01seg6.setVisible(false);
-        jPanel1.add(b01seg6);
-        b01seg6.setBounds(565, 300, 20, 20);
 
         b2seg6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
         b2seg6.setVisible(false);
@@ -975,14 +914,6 @@ public class Parques extends javax.swing.JFrame {
         jPanel1.add(b1seg6);
         b1seg6.setBounds(565, 340, 20, 20);
 
-        b02seg6.setVisible(false);
-        jPanel1.add(b02seg6);
-        b02seg6.setBounds(565, 360, 20, 20);
-
-        g01seg7.setVisible(false);
-        jPanel1.add(g01seg7);
-        g01seg7.setBounds(340, 155, 20, 20);
-
         g1seg7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
         g1seg7.setVisible(false);
         jPanel1.add(g1seg7);
@@ -993,14 +924,6 @@ public class Parques extends javax.swing.JFrame {
         jPanel1.add(g2seg7);
         g2seg7.setBounds(380, 155, 20, 20);
 
-        g02seg7.setVisible(false);
-        jPanel1.add(g02seg7);
-        g02seg7.setBounds(400, 155, 20, 20);
-
-        g01seg8.setVisible(false);
-        jPanel1.add(g01seg8);
-        g01seg8.setBounds(260, 60, 20, 20);
-
         g1seg8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
         g1seg8.setVisible(false);
         jPanel1.add(g1seg8);
@@ -1010,10 +933,6 @@ public class Parques extends javax.swing.JFrame {
         g2seg8.setVisible(false);
         jPanel1.add(g2seg8);
         g2seg8.setBounds(300, 60, 20, 20);
-
-        g02seg8.setVisible(false);
-        jPanel1.add(g02seg8);
-        g02seg8.setBounds(320, 60, 20, 20);
 
         y1cas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
         y1cas1.setVisible(false);
@@ -3537,32 +3456,32 @@ public class Parques extends javax.swing.JFrame {
         g2seg1.setBounds(110, 265, 20, 20);
 
         y1seg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
-        r1seg2.setVisible(false);
+        y1seg2.setVisible(false);
         jPanel1.add(y1seg2);
         y1seg2.setBounds(15, 320, 20, 20);
 
         b1seg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
-        r1seg2.setVisible(false);
+        b1seg2.setVisible(false);
         jPanel1.add(b1seg2);
         b1seg2.setBounds(15, 320, 20, 20);
 
         g1seg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
-        r1seg2.setVisible(false);
+        g1seg2.setVisible(false);
         jPanel1.add(g1seg2);
         g1seg2.setBounds(15, 320, 20, 20);
 
         y2seg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
-        r2seg2.setVisible(false);
+        y2seg2.setVisible(false);
         jPanel1.add(y2seg2);
         y2seg2.setBounds(15, 340, 20, 20);
 
         b2seg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
-        r2seg2.setVisible(false);
+        b2seg2.setVisible(false);
         jPanel1.add(b2seg2);
         b2seg2.setBounds(15, 340, 20, 20);
 
         g2seg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
-        r2seg2.setVisible(false);
+        g2seg2.setVisible(false);
         jPanel1.add(g2seg2);
         g2seg2.setBounds(15, 340, 20, 20);
 
@@ -3807,32 +3726,32 @@ public class Parques extends javax.swing.JFrame {
         y2seg7.setBounds(380, 155, 20, 20);
 
         r2seg8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
-        g2seg8.setVisible(false);
+        r2seg8.setVisible(false);
         jPanel1.add(r2seg8);
         r2seg8.setBounds(300, 60, 20, 20);
 
         y2seg8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
-        g2seg8.setVisible(false);
+        y2seg8.setVisible(false);
         jPanel1.add(y2seg8);
         y2seg8.setBounds(300, 60, 20, 20);
 
         b2seg8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
-        g2seg8.setVisible(false);
+        b2seg8.setVisible(false);
         jPanel1.add(b2seg8);
         b2seg8.setBounds(300, 60, 20, 20);
 
         r1seg8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
-        g1seg8.setVisible(false);
+        r1seg8.setVisible(false);
         jPanel1.add(r1seg8);
         r1seg8.setBounds(280, 60, 20, 20);
 
         y1seg8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaamarilla.png"))); // NOI18N
-        g1seg8.setVisible(false);
+        y1seg8.setVisible(false);
         jPanel1.add(y1seg8);
         y1seg8.setBounds(280, 60, 20, 20);
 
         b1seg8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
-        g1seg8.setVisible(false);
+        b1seg8.setVisible(false);
         jPanel1.add(b1seg8);
         b1seg8.setBounds(280, 60, 20, 20);
 
@@ -3858,7 +3777,7 @@ public class Parques extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lanzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lanzarActionPerformed
-                
+
         switch (c) {
             case 1:
                 labeljugador.setVisible(true);
@@ -3868,24 +3787,20 @@ public class Parques extends javax.swing.JFrame {
                 c = 1;
                 if (c < 2) {
                     lanzamientos.setText("" + c);
-                    num1 = generarRandom();
-                    valor1.setText("" + num1);
-                    imagenDado1(num1);
-                    num2 = generarRandom();
-                    valor2.setText("" + num2);
-                    imagenDado2(num2);
-                    if (num1 == num2) {
-                        //funcion moverFicha
-
-                    }
-                    if(TipoJuego.modo ==1){
+                    num1Rojo = generarRandom();
+                    valor1.setText("" + num1Rojo);
+                    imagenDado1(num1Rojo);
+                    num2Rojo = generarRandom();
+                    valor2.setText("" + num2Rojo);
+                    imagenDado2(num2Rojo);
+                    if (TipoJuego.modo == 1) {
                         MoverCasilla.moverFichas();
                     }
-                    if(TipoJuego.modo ==2){
+                    if (TipoJuego.modo == 2) {
                         MoverPiedra.moverFichas();
                     }
                     c++;
-                    
+
                 } else {
                     JOptionPane.showMessageDialog(this, "Limite de lanzamientos alcanzado");
                 }
@@ -3896,55 +3811,47 @@ public class Parques extends javax.swing.JFrame {
                 labeljugador1.setVisible(true);
                 labeljugador2.setVisible(false);
                 labeljugador3.setVisible(false);
-                c=1;
+                c = 1;
                 if (c < 2) {
                     lanzamientos.setText("" + c);
-                    num1 = generarRandom();
-                    valor1.setText("" + num1);
-                    imagenDado1(num1);
-                    num2 = generarRandom();
-                    valor2.setText("" + num2);
-                    imagenDado2(num2);
-                    if (num1 == num2) {
-                        //funcion moverFicha
-
-                    }
-                     if(TipoJuego.modo ==1){
+                    num1Ama = generarRandom();
+                    valor1.setText("" + num1Ama);
+                    imagenDado1(num1Ama);
+                    num2Ama = generarRandom();
+                    valor2.setText("" + num2Ama);
+                    imagenDado2(num2Ama);
+                    if (TipoJuego.modo == 1) {
                         MoverCasilla.moverFichas();
                     }
-                    if(TipoJuego.modo ==2){
+                    if (TipoJuego.modo == 2) {
                         MoverPiedra.moverFichas();
                     }
-                    c=c+2;
+                    //c = c + 2;
                 } else {
                     JOptionPane.showMessageDialog(this, "Limite de lanzamientos alcanzado");
                 }
                 break;
-            case 3:
+            /*case 3:
                 labeljugador.setVisible(false);
                 labeljugador1.setVisible(false);
                 labeljugador2.setVisible(true);
                 labeljugador3.setVisible(false);
-                c=1;
+                c = 1;
                 if (c < 2) {
                     lanzamientos.setText("" + c);
-                    num1 = generarRandom();
-                    valor1.setText("" + num1);
-                    imagenDado1(num1);
-                    num2 = generarRandom();
-                    valor2.setText("" + num2);
-                    imagenDado2(num2);
-                    if (num1 == num2) {
-                        //funcion moverFicha
-
-                    }
-                     if(TipoJuego.modo ==1){
+                    num1Az = generarRandom();
+                    valor1.setText("" + num1Az);
+                    imagenDado1(num1Az);
+                    num2Az = generarRandom();
+                    valor2.setText("" + num2Az);
+                    imagenDado2(num2Az);
+                    if (TipoJuego.modo == 1) {
                         MoverCasilla.moverFichas();
                     }
-                    if(TipoJuego.modo ==2){
+                    if (TipoJuego.modo == 2) {
                         MoverPiedra.moverFichas();
                     }
-                    c=c+3;
+                    c = c + 3;
                 } else {
                     JOptionPane.showMessageDialog(this, "Limite de lanzamientos alcanzado");
                 }
@@ -3958,45 +3865,41 @@ public class Parques extends javax.swing.JFrame {
                 c = 1;
                 if (c < 2) {
                     lanzamientos.setText("" + c);
-                    num1 = generarRandom();
-                    valor1.setText("" + num1);
-                    imagenDado1(num1);
-                    num2 = generarRandom();
-                    valor2.setText("" + num2);
-                    imagenDado2(num2);
-                    if (num1 == num2) {
-                        //funcion moverFicha
-
-                    }
-                     if(TipoJuego.modo ==1){
+                    num1Ve = generarRandom();
+                    valor1.setText("" + num1Ve);
+                    imagenDado1(num1Ve);
+                    num2Ve = generarRandom();
+                    valor2.setText("" + num2Ve);
+                    imagenDado2(num2Ve);
+                    if (TipoJuego.modo == 1) {
                         MoverCasilla.moverFichas();
                     }
-                    if(TipoJuego.modo ==2){
+                    if (TipoJuego.modo == 2) {
                         MoverPiedra.moverFichas();
                     }
                 } else {
                     JOptionPane.showMessageDialog(this, "Limite de lanzamientos alcanzado");
                 }
-                break;
+                break;*/
         }
 
 
     }//GEN-LAST:event_lanzarActionPerformed
 
     private void Dado1F1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Dado1F1ActionPerformed
-         moverd1 = 1;
+        moverd1 = 1;
     }//GEN-LAST:event_Dado1F1ActionPerformed
 
     private void Dado1F2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Dado1F2ActionPerformed
-        moverd1=2;
+        moverd1 = 2;
     }//GEN-LAST:event_Dado1F2ActionPerformed
 
     private void Dado2F1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Dado2F1ActionPerformed
-       moverd2=1;
+        moverd2 = 1;
     }//GEN-LAST:event_Dado2F1ActionPerformed
 
     private void Dado2F2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Dado2F2ActionPerformed
-         moverd2=2;
+        moverd2 = 2;
     }//GEN-LAST:event_Dado2F2ActionPerformed
 
     /**
@@ -4044,11 +3947,7 @@ public class Parques extends javax.swing.JFrame {
     public static final javax.swing.JLabel amarilla2 = new javax.swing.JLabel();
     public static final javax.swing.JLabel azul1 = new javax.swing.JLabel();
     public static final javax.swing.JLabel azul2 = new javax.swing.JLabel();
-    private javax.swing.JLabel b01seg5;
-    private javax.swing.JLabel b01seg6;
-    private javax.swing.JLabel b02seg5;
-    private javax.swing.JLabel b02seg6;
-    private javax.swing.JLabel b1cas1;
+    public static javax.swing.JLabel b1cas1;
     public static javax.swing.JLabel b1cas10;
     public static javax.swing.JLabel b1cas11;
     public static javax.swing.JLabel b1cas12;
@@ -4059,7 +3958,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel b1cas17;
     public static javax.swing.JLabel b1cas18;
     public static javax.swing.JLabel b1cas19;
-    private javax.swing.JLabel b1cas2;
+    public static javax.swing.JLabel b1cas2;
     public static javax.swing.JLabel b1cas20;
     public static javax.swing.JLabel b1cas21;
     public static javax.swing.JLabel b1cas22;
@@ -4069,7 +3968,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel b1cas26;
     public static javax.swing.JLabel b1cas27;
     public static javax.swing.JLabel b1cas28;
-    private javax.swing.JLabel b1cas3;
+    public static javax.swing.JLabel b1cas3;
     public static javax.swing.JLabel b1cas33;
     public static javax.swing.JLabel b1cas34;
     public static javax.swing.JLabel b1cas35;
@@ -4077,7 +3976,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel b1cas37;
     public static javax.swing.JLabel b1cas38;
     public static javax.swing.JLabel b1cas39;
-    private javax.swing.JLabel b1cas4;
+    public static javax.swing.JLabel b1cas4;
     public static javax.swing.JLabel b1cas40;
     public static javax.swing.JLabel b1cas41;
     public static javax.swing.JLabel b1cas42;
@@ -4096,18 +3995,18 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel b1cas54;
     public static javax.swing.JLabel b1cas55;
     public static javax.swing.JLabel b1cas56;
-    private javax.swing.JLabel b1cas57;
-    private javax.swing.JLabel b1cas58;
-    private javax.swing.JLabel b1cas59;
+    public static javax.swing.JLabel b1cas57;
+    public static javax.swing.JLabel b1cas58;
+    public static javax.swing.JLabel b1cas59;
     public static javax.swing.JLabel b1cas6;
-    private javax.swing.JLabel b1cas60;
-    private javax.swing.JLabel b1cas61;
-    private javax.swing.JLabel b1cas62;
-    private javax.swing.JLabel b1cas63;
+    public static javax.swing.JLabel b1cas60;
+    public static javax.swing.JLabel b1cas61;
+    public static javax.swing.JLabel b1cas62;
+    public static javax.swing.JLabel b1cas63;
     public static javax.swing.JLabel b1cas7;
     public static javax.swing.JLabel b1cas8;
     public static javax.swing.JLabel b1cas9;
-    private javax.swing.JLabel b1fin;
+    public static javax.swing.JLabel b1fin;
     public static javax.swing.JLabel b1sal1;
     public static javax.swing.JLabel b1sal2;
     public static javax.swing.JLabel b1sal3;
@@ -4120,7 +4019,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel b1seg6;
     public static javax.swing.JLabel b1seg7;
     public static javax.swing.JLabel b1seg8;
-    private javax.swing.JLabel b2cas1;
+    public static javax.swing.JLabel b2cas1;
     public static javax.swing.JLabel b2cas10;
     public static javax.swing.JLabel b2cas11;
     public static javax.swing.JLabel b2cas12;
@@ -4131,7 +4030,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel b2cas17;
     public static javax.swing.JLabel b2cas18;
     public static javax.swing.JLabel b2cas19;
-    private javax.swing.JLabel b2cas2;
+    public static javax.swing.JLabel b2cas2;
     public static javax.swing.JLabel b2cas20;
     public static javax.swing.JLabel b2cas21;
     public static javax.swing.JLabel b2cas22;
@@ -4141,45 +4040,45 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel b2cas26;
     public static javax.swing.JLabel b2cas27;
     public static javax.swing.JLabel b2cas28;
-    private javax.swing.JLabel b2cas3;
+    public static javax.swing.JLabel b2cas3;
     public static javax.swing.JLabel b2cas33;
     public static javax.swing.JLabel b2cas34;
     public static javax.swing.JLabel b2cas35;
     public static javax.swing.JLabel b2cas36;
     public static javax.swing.JLabel b2cas37;
     public static javax.swing.JLabel b2cas38;
-    private javax.swing.JLabel b2cas39;
-    private javax.swing.JLabel b2cas4;
-    private javax.swing.JLabel b2cas40;
-    private javax.swing.JLabel b2cas41;
-    private javax.swing.JLabel b2cas42;
-    private javax.swing.JLabel b2cas43;
-    private javax.swing.JLabel b2cas44;
-    private javax.swing.JLabel b2cas45;
-    private javax.swing.JLabel b2cas46;
-    private javax.swing.JLabel b2cas47;
-    private javax.swing.JLabel b2cas48;
-    private javax.swing.JLabel b2cas49;
+    public static javax.swing.JLabel b2cas39;
+    public static javax.swing.JLabel b2cas4;
+    public static javax.swing.JLabel b2cas40;
+    public static javax.swing.JLabel b2cas41;
+    public static javax.swing.JLabel b2cas42;
+    public static javax.swing.JLabel b2cas43;
+    public static javax.swing.JLabel b2cas44;
+    public static javax.swing.JLabel b2cas45;
+    public static javax.swing.JLabel b2cas46;
+    public static javax.swing.JLabel b2cas47;
+    public static javax.swing.JLabel b2cas48;
+    public static javax.swing.JLabel b2cas49;
     public static javax.swing.JLabel b2cas5;
-    private javax.swing.JLabel b2cas50;
-    private javax.swing.JLabel b2cas51;
-    private javax.swing.JLabel b2cas52;
-    private javax.swing.JLabel b2cas53;
-    private javax.swing.JLabel b2cas54;
-    private javax.swing.JLabel b2cas55;
-    private javax.swing.JLabel b2cas56;
-    private javax.swing.JLabel b2cas57;
-    private javax.swing.JLabel b2cas58;
-    private javax.swing.JLabel b2cas59;
+    public static javax.swing.JLabel b2cas50;
+    public static javax.swing.JLabel b2cas51;
+    public static javax.swing.JLabel b2cas52;
+    public static javax.swing.JLabel b2cas53;
+    public static javax.swing.JLabel b2cas54;
+    public static javax.swing.JLabel b2cas55;
+    public static javax.swing.JLabel b2cas56;
+    public static javax.swing.JLabel b2cas57;
+    public static javax.swing.JLabel b2cas58;
+    public static javax.swing.JLabel b2cas59;
     public static javax.swing.JLabel b2cas6;
-    private javax.swing.JLabel b2cas60;
-    private javax.swing.JLabel b2cas61;
-    private javax.swing.JLabel b2cas62;
-    private javax.swing.JLabel b2cas63;
+    public static javax.swing.JLabel b2cas60;
+    public static javax.swing.JLabel b2cas61;
+    public static javax.swing.JLabel b2cas62;
+    public static javax.swing.JLabel b2cas63;
     public static javax.swing.JLabel b2cas7;
     public static javax.swing.JLabel b2cas8;
     public static javax.swing.JLabel b2cas9;
-    private javax.swing.JLabel b2fin;
+    public static javax.swing.JLabel b2fin;
     public static javax.swing.JLabel b2sal1;
     public static javax.swing.JLabel b2sal2;
     public static javax.swing.JLabel b2sal3;
@@ -4194,11 +4093,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel b2seg8;
     public static javax.swing.JLabel dado1;
     public static javax.swing.JLabel dado2;
-    private javax.swing.JLabel g01seg7;
-    private javax.swing.JLabel g01seg8;
-    private javax.swing.JLabel g02seg7;
-    private javax.swing.JLabel g02seg8;
-    private javax.swing.JLabel g1cas1;
+    public static javax.swing.JLabel g1cas1;
     public static javax.swing.JLabel g1cas10;
     public static javax.swing.JLabel g1cas11;
     public static javax.swing.JLabel g1cas12;
@@ -4209,7 +4104,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel g1cas17;
     public static javax.swing.JLabel g1cas18;
     public static javax.swing.JLabel g1cas19;
-    private javax.swing.JLabel g1cas2;
+    public static javax.swing.JLabel g1cas2;
     public static javax.swing.JLabel g1cas20;
     public static javax.swing.JLabel g1cas21;
     public static javax.swing.JLabel g1cas22;
@@ -4220,7 +4115,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel g1cas27;
     public static javax.swing.JLabel g1cas28;
     public static javax.swing.JLabel g1cas29;
-    private javax.swing.JLabel g1cas3;
+    public static javax.swing.JLabel g1cas3;
     public static javax.swing.JLabel g1cas30;
     public static javax.swing.JLabel g1cas31;
     public static javax.swing.JLabel g1cas32;
@@ -4231,7 +4126,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel g1cas37;
     public static javax.swing.JLabel g1cas38;
     public static javax.swing.JLabel g1cas39;
-    private javax.swing.JLabel g1cas4;
+    public static javax.swing.JLabel g1cas4;
     public static javax.swing.JLabel g1cas40;
     public static javax.swing.JLabel g1cas41;
     public static javax.swing.JLabel g1cas42;
@@ -4246,18 +4141,18 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel g1cas54;
     public static javax.swing.JLabel g1cas55;
     public static javax.swing.JLabel g1cas56;
-    private javax.swing.JLabel g1cas57;
-    private javax.swing.JLabel g1cas58;
-    private javax.swing.JLabel g1cas59;
+    public static javax.swing.JLabel g1cas57;
+    public static javax.swing.JLabel g1cas58;
+    public static javax.swing.JLabel g1cas59;
     public static javax.swing.JLabel g1cas6;
-    private javax.swing.JLabel g1cas60;
-    private javax.swing.JLabel g1cas61;
-    private javax.swing.JLabel g1cas62;
-    private javax.swing.JLabel g1cas63;
+    public static javax.swing.JLabel g1cas60;
+    public static javax.swing.JLabel g1cas61;
+    public static javax.swing.JLabel g1cas62;
+    public static javax.swing.JLabel g1cas63;
     public static javax.swing.JLabel g1cas7;
     public static javax.swing.JLabel g1cas8;
     public static javax.swing.JLabel g1cas9;
-    private javax.swing.JLabel g1fin;
+    public static javax.swing.JLabel g1fin;
     public static javax.swing.JLabel g1sal1;
     public static javax.swing.JLabel g1sal2;
     public static javax.swing.JLabel g1sal3;
@@ -4270,7 +4165,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel g1seg6;
     public static javax.swing.JLabel g1seg7;
     public static javax.swing.JLabel g1seg8;
-    private javax.swing.JLabel g2cas1;
+    public static javax.swing.JLabel g2cas1;
     public static javax.swing.JLabel g2cas10;
     public static javax.swing.JLabel g2cas11;
     public static javax.swing.JLabel g2cas12;
@@ -4281,7 +4176,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel g2cas17;
     public static javax.swing.JLabel g2cas18;
     public static javax.swing.JLabel g2cas19;
-    private javax.swing.JLabel g2cas2;
+    public static javax.swing.JLabel g2cas2;
     public static javax.swing.JLabel g2cas20;
     public static javax.swing.JLabel g2cas21;
     public static javax.swing.JLabel g2cas22;
@@ -4292,7 +4187,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel g2cas27;
     public static javax.swing.JLabel g2cas28;
     public static javax.swing.JLabel g2cas29;
-    private javax.swing.JLabel g2cas3;
+    public static javax.swing.JLabel g2cas3;
     public static javax.swing.JLabel g2cas30;
     public static javax.swing.JLabel g2cas31;
     public static javax.swing.JLabel g2cas32;
@@ -4302,34 +4197,34 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel g2cas36;
     public static javax.swing.JLabel g2cas37;
     public static javax.swing.JLabel g2cas38;
-    private javax.swing.JLabel g2cas39;
-    private javax.swing.JLabel g2cas4;
-    private javax.swing.JLabel g2cas40;
-    private javax.swing.JLabel g2cas41;
-    private javax.swing.JLabel g2cas42;
-    private javax.swing.JLabel g2cas47;
-    private javax.swing.JLabel g2cas48;
-    private javax.swing.JLabel g2cas49;
+    public static javax.swing.JLabel g2cas39;
+    public static javax.swing.JLabel g2cas4;
+    public static javax.swing.JLabel g2cas40;
+    public static javax.swing.JLabel g2cas41;
+    public static javax.swing.JLabel g2cas42;
+    public static javax.swing.JLabel g2cas47;
+    public static javax.swing.JLabel g2cas48;
+    public static javax.swing.JLabel g2cas49;
     public static javax.swing.JLabel g2cas5;
-    private javax.swing.JLabel g2cas50;
-    private javax.swing.JLabel g2cas51;
-    private javax.swing.JLabel g2cas52;
-    private javax.swing.JLabel g2cas53;
-    private javax.swing.JLabel g2cas54;
-    private javax.swing.JLabel g2cas55;
-    private javax.swing.JLabel g2cas56;
-    private javax.swing.JLabel g2cas57;
-    private javax.swing.JLabel g2cas58;
-    private javax.swing.JLabel g2cas59;
+    public static javax.swing.JLabel g2cas50;
+    public static javax.swing.JLabel g2cas51;
+    public static javax.swing.JLabel g2cas52;
+    public static javax.swing.JLabel g2cas53;
+    public static javax.swing.JLabel g2cas54;
+    public static javax.swing.JLabel g2cas55;
+    public static javax.swing.JLabel g2cas56;
+    public static javax.swing.JLabel g2cas57;
+    public static javax.swing.JLabel g2cas58;
+    public static javax.swing.JLabel g2cas59;
     public static javax.swing.JLabel g2cas6;
-    private javax.swing.JLabel g2cas60;
-    private javax.swing.JLabel g2cas61;
-    private javax.swing.JLabel g2cas62;
-    private javax.swing.JLabel g2cas63;
+    public static javax.swing.JLabel g2cas60;
+    public static javax.swing.JLabel g2cas61;
+    public static javax.swing.JLabel g2cas62;
+    public static javax.swing.JLabel g2cas63;
     public static javax.swing.JLabel g2cas7;
     public static javax.swing.JLabel g2cas8;
     public static javax.swing.JLabel g2cas9;
-    private javax.swing.JLabel g2fin;
+    public static javax.swing.JLabel g2fin;
     public static javax.swing.JLabel g2sal1;
     public static javax.swing.JLabel g2sal2;
     public static javax.swing.JLabel g2sal3;
@@ -4352,10 +4247,6 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel labeljugador3;
     public static javax.swing.JLabel lanzamientos;
     private javax.swing.JButton lanzar;
-    public static javax.swing.JLabel r01seg1;
-    public static javax.swing.JLabel r01seg2;
-    public static javax.swing.JLabel r02seg1;
-    public static javax.swing.JLabel r02seg2;
     public static javax.swing.JLabel r1cas10;
     public static javax.swing.JLabel r1cas11;
     public static javax.swing.JLabel r1cas12;
@@ -4404,18 +4295,18 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel r1cas54;
     public static javax.swing.JLabel r1cas55;
     public static javax.swing.JLabel r1cas56;
-    private javax.swing.JLabel r1cas57;
-    private javax.swing.JLabel r1cas58;
-    private javax.swing.JLabel r1cas59;
+    public static javax.swing.JLabel r1cas57;
+    public static javax.swing.JLabel r1cas58;
+    public static javax.swing.JLabel r1cas59;
     public static javax.swing.JLabel r1cas6;
-    private javax.swing.JLabel r1cas60;
-    private javax.swing.JLabel r1cas61;
-    private javax.swing.JLabel r1cas62;
-    private javax.swing.JLabel r1cas63;
+    public static javax.swing.JLabel r1cas60;
+    public static javax.swing.JLabel r1cas61;
+    public static javax.swing.JLabel r1cas62;
+    public static javax.swing.JLabel r1cas63;
     public static javax.swing.JLabel r1cas7;
     public static javax.swing.JLabel r1cas8;
     public static javax.swing.JLabel r1cas9;
-    private javax.swing.JLabel r1fin;
+    public static javax.swing.JLabel r1fin;
     public static javax.swing.JLabel r1sal1;
     public static javax.swing.JLabel r1sal2;
     public static javax.swing.JLabel r1sal3;
@@ -4457,37 +4348,37 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel r2cas36;
     public static javax.swing.JLabel r2cas37;
     public static javax.swing.JLabel r2cas38;
-    private javax.swing.JLabel r2cas39;
-    private javax.swing.JLabel r2cas40;
-    private javax.swing.JLabel r2cas41;
-    private javax.swing.JLabel r2cas42;
-    private javax.swing.JLabel r2cas43;
-    private javax.swing.JLabel r2cas44;
-    private javax.swing.JLabel r2cas45;
-    private javax.swing.JLabel r2cas46;
-    private javax.swing.JLabel r2cas47;
-    private javax.swing.JLabel r2cas48;
-    private javax.swing.JLabel r2cas49;
+    public static javax.swing.JLabel r2cas39;
+    public static javax.swing.JLabel r2cas40;
+    public static javax.swing.JLabel r2cas41;
+    public static javax.swing.JLabel r2cas42;
+    public static javax.swing.JLabel r2cas43;
+    public static javax.swing.JLabel r2cas44;
+    public static javax.swing.JLabel r2cas45;
+    public static javax.swing.JLabel r2cas46;
+    public static javax.swing.JLabel r2cas47;
+    public static javax.swing.JLabel r2cas48;
+    public static javax.swing.JLabel r2cas49;
     public static javax.swing.JLabel r2cas5;
-    private javax.swing.JLabel r2cas50;
-    private javax.swing.JLabel r2cas51;
-    private javax.swing.JLabel r2cas52;
-    private javax.swing.JLabel r2cas53;
-    private javax.swing.JLabel r2cas54;
-    private javax.swing.JLabel r2cas55;
-    private javax.swing.JLabel r2cas56;
-    private javax.swing.JLabel r2cas57;
-    private javax.swing.JLabel r2cas58;
-    private javax.swing.JLabel r2cas59;
+    public static javax.swing.JLabel r2cas50;
+    public static javax.swing.JLabel r2cas51;
+    public static javax.swing.JLabel r2cas52;
+    public static javax.swing.JLabel r2cas53;
+    public static javax.swing.JLabel r2cas54;
+    public static javax.swing.JLabel r2cas55;
+    public static javax.swing.JLabel r2cas56;
+    public static javax.swing.JLabel r2cas57;
+    public static javax.swing.JLabel r2cas58;
+    public static javax.swing.JLabel r2cas59;
     public static javax.swing.JLabel r2cas6;
-    private javax.swing.JLabel r2cas60;
-    private javax.swing.JLabel r2cas61;
-    private javax.swing.JLabel r2cas62;
-    private javax.swing.JLabel r2cas63;
+    public static javax.swing.JLabel r2cas60;
+    public static javax.swing.JLabel r2cas61;
+    public static javax.swing.JLabel r2cas62;
+    public static javax.swing.JLabel r2cas63;
     public static javax.swing.JLabel r2cas7;
     public static javax.swing.JLabel r2cas8;
     public static javax.swing.JLabel r2cas9;
-    private javax.swing.JLabel r2fin;
+    public static javax.swing.JLabel r2fin;
     public static javax.swing.JLabel r2sal1;
     public static javax.swing.JLabel r2sal2;
     public static javax.swing.JLabel r2sal3;
@@ -4508,18 +4399,14 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel valor2;
     public static final javax.swing.JLabel verde1 = new javax.swing.JLabel();
     public static final javax.swing.JLabel verde2 = new javax.swing.JLabel();
-    private javax.swing.JLabel y01seg3;
-    private javax.swing.JLabel y01seg4;
-    private javax.swing.JLabel y02seg3;
-    private javax.swing.JLabel y02seg4;
-    private javax.swing.JLabel y1cas1;
+    public static javax.swing.JLabel y1cas1;
     public static javax.swing.JLabel y1cas10;
     public static javax.swing.JLabel y1cas11;
     public static javax.swing.JLabel y1cas12;
     public static javax.swing.JLabel y1cas13;
     public static javax.swing.JLabel y1cas14;
     public static javax.swing.JLabel y1cas19;
-    private javax.swing.JLabel y1cas2;
+    public static javax.swing.JLabel y1cas2;
     public static javax.swing.JLabel y1cas20;
     public static javax.swing.JLabel y1cas21;
     public static javax.swing.JLabel y1cas22;
@@ -4530,7 +4417,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel y1cas27;
     public static javax.swing.JLabel y1cas28;
     public static javax.swing.JLabel y1cas29;
-    private javax.swing.JLabel y1cas3;
+    public static javax.swing.JLabel y1cas3;
     public static javax.swing.JLabel y1cas30;
     public static javax.swing.JLabel y1cas31;
     public static javax.swing.JLabel y1cas32;
@@ -4541,7 +4428,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel y1cas37;
     public static javax.swing.JLabel y1cas38;
     public static javax.swing.JLabel y1cas39;
-    private javax.swing.JLabel y1cas4;
+    public static javax.swing.JLabel y1cas4;
     public static javax.swing.JLabel y1cas40;
     public static javax.swing.JLabel y1cas41;
     public static javax.swing.JLabel y1cas42;
@@ -4571,7 +4458,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel y1cas7;
     public static javax.swing.JLabel y1cas8;
     public static javax.swing.JLabel y1cas9;
-    private javax.swing.JLabel y1fin;
+    public static javax.swing.JLabel y1fin;
     public static javax.swing.JLabel y1sal1;
     public static javax.swing.JLabel y1sal2;
     public static javax.swing.JLabel y1sal3;
@@ -4584,14 +4471,14 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel y1seg6;
     public static javax.swing.JLabel y1seg7;
     public static javax.swing.JLabel y1seg8;
-    private javax.swing.JLabel y2cas1;
+    public static javax.swing.JLabel y2cas1;
     public static javax.swing.JLabel y2cas10;
     public static javax.swing.JLabel y2cas11;
     public static javax.swing.JLabel y2cas12;
     public static javax.swing.JLabel y2cas13;
     public static javax.swing.JLabel y2cas14;
     public static javax.swing.JLabel y2cas19;
-    private javax.swing.JLabel y2cas2;
+    public static javax.swing.JLabel y2cas2;
     public static javax.swing.JLabel y2cas20;
     public static javax.swing.JLabel y2cas21;
     public static javax.swing.JLabel y2cas22;
@@ -4602,7 +4489,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel y2cas27;
     public static javax.swing.JLabel y2cas28;
     public static javax.swing.JLabel y2cas29;
-    private javax.swing.JLabel y2cas3;
+    public static javax.swing.JLabel y2cas3;
     public static javax.swing.JLabel y2cas30;
     public static javax.swing.JLabel y2cas31;
     public static javax.swing.JLabel y2cas32;
@@ -4612,26 +4499,26 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel y2cas36;
     public static javax.swing.JLabel y2cas37;
     public static javax.swing.JLabel y2cas38;
-    private javax.swing.JLabel y2cas39;
-    private javax.swing.JLabel y2cas4;
-    private javax.swing.JLabel y2cas40;
-    private javax.swing.JLabel y2cas41;
-    private javax.swing.JLabel y2cas42;
-    private javax.swing.JLabel y2cas43;
-    private javax.swing.JLabel y2cas44;
-    private javax.swing.JLabel y2cas45;
-    private javax.swing.JLabel y2cas46;
-    private javax.swing.JLabel y2cas47;
-    private javax.swing.JLabel y2cas48;
-    private javax.swing.JLabel y2cas49;
+    public static javax.swing.JLabel y2cas39;
+    public static javax.swing.JLabel y2cas4;
+    public static javax.swing.JLabel y2cas40;
+    public static javax.swing.JLabel y2cas41;
+    public static javax.swing.JLabel y2cas42;
+    public static javax.swing.JLabel y2cas43;
+    public static javax.swing.JLabel y2cas44;
+    public static javax.swing.JLabel y2cas45;
+    public static javax.swing.JLabel y2cas46;
+    public static javax.swing.JLabel y2cas47;
+    public static javax.swing.JLabel y2cas48;
+    public static javax.swing.JLabel y2cas49;
     public static javax.swing.JLabel y2cas5;
-    private javax.swing.JLabel y2cas50;
-    private javax.swing.JLabel y2cas51;
-    private javax.swing.JLabel y2cas52;
-    private javax.swing.JLabel y2cas53;
-    private javax.swing.JLabel y2cas54;
-    private javax.swing.JLabel y2cas55;
-    private javax.swing.JLabel y2cas56;
+    public static javax.swing.JLabel y2cas50;
+    public static javax.swing.JLabel y2cas51;
+    public static javax.swing.JLabel y2cas52;
+    public static javax.swing.JLabel y2cas53;
+    public static javax.swing.JLabel y2cas54;
+    public static javax.swing.JLabel y2cas55;
+    public static javax.swing.JLabel y2cas56;
     public static javax.swing.JLabel y2cas57;
     public static javax.swing.JLabel y2cas58;
     public static javax.swing.JLabel y2cas59;
@@ -4643,7 +4530,7 @@ public class Parques extends javax.swing.JFrame {
     public static javax.swing.JLabel y2cas7;
     public static javax.swing.JLabel y2cas8;
     public static javax.swing.JLabel y2cas9;
-    private javax.swing.JLabel y2fin;
+    public static javax.swing.JLabel y2fin;
     public static javax.swing.JLabel y2sal1;
     public static javax.swing.JLabel y2sal2;
     public static javax.swing.JLabel y2sal3;
