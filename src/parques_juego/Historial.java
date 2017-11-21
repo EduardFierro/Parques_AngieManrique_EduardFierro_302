@@ -6,7 +6,13 @@
 package parques_juego;
 
 import java.awt.Image;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
+import javax.swing.table.DefaultTableModel;
+import logica_parques.Insertar;
+import logica_parques.Repositorio;
+import static parques_juego.Agregar.table_model_personas;
 
 /**
  *
@@ -17,9 +23,12 @@ public class Historial extends javax.swing.JFrame {
     /**
      * Creates new form Historial
      */
+     
+    public static DefaultTableModel table_model_personas;
     public Historial() {
         initComponents();
         configComponents();
+        configComponents1();
     }
 
     public void configComponents() {
@@ -134,7 +143,25 @@ public class Historial extends javax.swing.JFrame {
             }
         });
     }
-
+    public void setTableModel(DefaultTableModel table_model_personas){
+        this.table_model_personas = table_model_personas;
+    }
+     public void refreshTableModel()
+    {
+        ArrayList<HistorialJuegos> lista_personas = Repositorio.obtenerTodos();
+        while (table_model_personas.getRowCount() > 0) {
+            table_model_personas.removeRow(0);
+        }
+        
+        for(HistorialJuegos p : lista_personas)
+        {
+            
+         
+           
+            String[] data = {Integer.toString(p.getCedula()),Integer.toString(p.getPuntaje())};
+            table_model_personas.addRow(data);
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
@@ -142,4 +169,18 @@ public class Historial extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JLabel labelfondo;
     // End of variables declaration//GEN-END:variables
+//metodo para agregar el contenido a la tabla y configurarla.
+    private void configComponents1() {
+        DefaultTableModel table_model_personas = new DefaultTableModel();
+        
+        table_model_personas.addColumn("Cedula");
+        table_model_personas.addColumn("Puntaje");
+      
+
+        
+        jTable1.setModel(table_model_personas);
+        
+        setTableModel(table_model_personas);
+        refreshTableModel();
+    }
 }

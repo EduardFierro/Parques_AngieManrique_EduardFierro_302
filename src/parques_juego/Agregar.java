@@ -42,7 +42,7 @@ public class Agregar extends javax.swing.JFrame {
     public Agregar() {
         initComponents();
     }
-//conructor de la tabla recive parametro DefaultTableMode
+//conructor de la tabla recibe parametro DefaultTableMode
     public void setTableModel(DefaultTableModel table_model_personas){
         this.table_model_personas = table_model_personas;
     }

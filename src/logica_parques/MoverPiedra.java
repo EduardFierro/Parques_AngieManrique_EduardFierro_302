@@ -6,6 +6,8 @@
 package logica_parques;
 
 import javax.swing.JOptionPane;
+import parques_juego.HistorialJuegos;
+import parques_juego.JugadoresPartida;
 import parques_juego.MenuOpt;
 import parques_juego.Parques;
 
@@ -14,9 +16,11 @@ import parques_juego.Parques;
  * @author Angie
  */
 public class MoverPiedra {
-
+public static int puntaje=0;
+ public static HistorialJuegos historial;
     //funcion para mover las fichas
     public static void moverFichas() {
+        
         int num1Rojo = Parques.num1Rojo;
         int num2Rojo = Parques.num2Rojo;
         int sumaRoja = 0;
@@ -44,6 +48,9 @@ public class MoverPiedra {
         }
         //Si las dos fichas están afuera, has ganado
         if (Parques.r1fin.isVisible() && Parques.r2fin.isVisible()) {
+            puntaje=puntaje+10;
+            historial = HistorialJuegos.crear(JugadoresPartida.ced1,puntaje);
+                Repositorio.crear(historial);
             JOptionPane.showMessageDialog(null, "¡Felicidades, has ganado!");
             MenuOpt menu = new MenuOpt();
             menu.setVisible(true);
@@ -283,6 +290,9 @@ public class MoverPiedra {
         //Si las dos fichas están afuera, has ganado
         if (Parques.y1fin.isVisible() && Parques.y2fin.isVisible()) {
             JOptionPane.showMessageDialog(null, "¡Felicidades, has ganado!");
+            puntaje=puntaje+10;
+            historial = HistorialJuegos.crear(JugadoresPartida.ced2,puntaje);
+                Repositorio.crear(historial);
             MenuOpt menu = new MenuOpt();
             menu.setVisible(true);
             Parques par = new Parques();
