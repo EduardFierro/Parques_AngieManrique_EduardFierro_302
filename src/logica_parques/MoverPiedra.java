@@ -17,7 +17,7 @@ import parques_juego.Parques;
  */
 public class MoverPiedra {
 
-    public static int puntaje = 0;
+    public static int puntaje = 0, puntajeRonda = 0;
     public static HistorialJuegos historial;
 
     //funcion para mover las fichas
@@ -134,7 +134,8 @@ public class MoverPiedra {
         }
         //Si las dos fichas están afuera, has ganado
         if (Parques.r1fin.isVisible() && Parques.r2fin.isVisible()) {
-            puntaje = puntaje + 10;
+            puntajeRonda = 10;
+            puntaje = puntaje + puntajeRonda;
             historial = HistorialJuegos.crear(JugadoresPartida.ced1, puntaje);
             Repositorio.crear(historial);
             JOptionPane.showMessageDialog(null, "¡Felicidades, has ganado!");
@@ -142,7 +143,8 @@ public class MoverPiedra {
             menu.setVisible(true);
             Parques par = new Parques();
             par.dispose();
-        }
+        } 
+
         //Si la suma de los dados es igual a 7 se realizan los siguientes movimientos
         if (sumaRoja == 7) {
             //Si presiona el botón de la ficha 1 del dado 1 y si presiona el botón de la ficha 1 del dado 2
@@ -390,14 +392,15 @@ public class MoverPiedra {
         //Si las dos fichas están afuera, has ganado
         if (Parques.y1fin.isVisible() && Parques.y2fin.isVisible()) {
             JOptionPane.showMessageDialog(null, "¡Felicidades, has ganado!");
-            puntaje = puntaje + 10;
+            puntajeRonda = 10;
+            puntaje = puntaje + puntajeRonda;
             historial = HistorialJuegos.crear(JugadoresPartida.ced2, puntaje);
             Repositorio.crear(historial);
             MenuOpt menu = new MenuOpt();
             menu.setVisible(true);
             Parques par = new Parques();
             par.dispose();
-        }
+        } 
         //Si la suma de los dados es igual a 7 se realizan los siguientes movimientos
         if (sumaAma == 7) {
             //Si presiona el botón de la ficha 1 del dado 1 y si presiona el botón de la ficha 1 del dado 2

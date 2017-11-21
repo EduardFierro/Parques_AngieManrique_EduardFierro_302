@@ -6,7 +6,11 @@
 package parques_juego;
 
 import java.awt.Image;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
+import javax.swing.table.DefaultTableModel;
+import logica_parques.Repositorio;
+import static parques_juego.Historial.table_model_personas;
 import static parques_juego.Parques.tablero;
 
 /**
@@ -21,15 +25,18 @@ public class MejorPuntaje extends javax.swing.JFrame {
     public MejorPuntaje() {
         initComponents();
         configComponents();
+        configComponents1();
+        configComponents2();
+        configComponents3();
     }
-    
+
     public void configComponents() {
         ImageIcon fondo = new ImageIcon(getClass().getResource("/images/wallpaper.jpg"));
         ImageIcon icon = new ImageIcon(fondo.getImage().getScaledInstance(labelfondo.getWidth(), labelfondo.getHeight(), Image.SCALE_DEFAULT));
         labelfondo.setIcon(icon);
 
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -150,9 +157,11 @@ public class MejorPuntaje extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
+    
+    public static DefaultTableModel table_model_personas;
+    public static DefaultTableModel table_model_personas1;
+    public static DefaultTableModel table_model_personas2;
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -185,6 +194,55 @@ public class MejorPuntaje extends javax.swing.JFrame {
         });
     }
 
+    public void setTableModel(DefaultTableModel table_model_personas) {
+        this.table_model_personas = table_model_personas;
+    }
+
+    public void setTableModel1(DefaultTableModel table_model_personas1) {
+        this.table_model_personas1 = table_model_personas1;
+    }
+
+    public void setTableModel2(DefaultTableModel table_model_personas2) {
+        this.table_model_personas2 = table_model_personas2;
+    }
+
+    public void refreshTableModel() {
+        ArrayList<HistorialJuegos> lista_personas = Repositorio.obtenerTodos();
+        while (table_model_personas.getRowCount() > 0) {
+            table_model_personas.removeRow(0);
+        }
+
+        for (HistorialJuegos p : lista_personas) {
+
+            String[] data = {Integer.toString(p.getCedula()), Integer.toString(p.getPuntaje())};
+            table_model_personas.addRow(data);
+        }
+    }
+
+    public void refreshTableModel1() {
+        ArrayList<HistorialJuegos> lista_personas1 = Repositorio.obtenerTodos();
+        while (table_model_personas1.getRowCount() > 0) {
+            table_model_personas1.removeRow(0);
+        }
+
+        for (HistorialJuegos p : lista_personas1) {
+
+            String[] data = {Integer.toString(p.getCedula()), Integer.toString(p.getPuntaje())};
+            table_model_personas1.addRow(data);
+        }
+    }
+    public void refreshTableModel2() {
+        ArrayList<HistorialJuegos> lista_personas2 = Repositorio.obtenerTodos();
+        while (table_model_personas2.getRowCount() > 0) {
+            table_model_personas2.removeRow(0);
+        }
+
+        for (HistorialJuegos p : lista_personas2) {
+
+            String[] data = {Integer.toString(p.getCedula()), Integer.toString(p.getPuntaje())};
+            table_model_personas2.addRow(data);
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -198,4 +256,42 @@ public class MejorPuntaje extends javax.swing.JFrame {
     private javax.swing.JTable jTable3;
     private javax.swing.JLabel labelfondo;
     // End of variables declaration//GEN-END:variables
+private void configComponents1() {
+        DefaultTableModel table_model_personas = new DefaultTableModel();
+
+        table_model_personas.addColumn("Cedula");
+        table_model_personas.addColumn("Puntaje");
+        table_model_personas.addColumn("Edad");
+
+        jTable1.setModel(table_model_personas);
+
+        setTableModel(table_model_personas);
+        refreshTableModel();
+    }
+
+    private void configComponents2() {
+        DefaultTableModel table_model_personas1 = new DefaultTableModel();
+
+        table_model_personas1.addColumn("Cedula");
+        table_model_personas1.addColumn("Puntaje");
+        table_model_personas1.addColumn("Edad");
+
+        jTable2.setModel(table_model_personas1);
+
+        setTableModel1(table_model_personas1);
+        refreshTableModel1();
+    }
+
+    private void configComponents3() {
+        DefaultTableModel table_model_personas2 = new DefaultTableModel();
+
+        table_model_personas2.addColumn("Cedula");
+        table_model_personas2.addColumn("Puntaje");
+        table_model_personas2.addColumn("Edad");
+
+        jTable3.setModel(table_model_personas2);
+
+        setTableModel2(table_model_personas2);
+        refreshTableModel2();
+    }
 }

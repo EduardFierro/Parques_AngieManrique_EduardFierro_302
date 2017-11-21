@@ -27,8 +27,6 @@ public class Repositorio {
             sentenciaP.setString(1, String.valueOf(historial.getCedula()));
             sentenciaP.setString(2, String.valueOf(historial.getPuntaje()));
             
-            
-
             sentenciaP.executeUpdate();
             sentenciaP.close();
             database.close();
@@ -61,4 +59,26 @@ public class Repositorio {
 
         return historial;
     }
+     /*public static ArrayList<HistorialJuegos> obtenerTodos1() {
+        ArrayList<HistorialJuegos> historial = new ArrayList<HistorialJuegos>();
+
+        try {
+            String query = "SELECT * FROM personas WHERE edad;";
+            PreparedStatement sentenciaP = database.open().prepareStatement(query);
+            ResultSet resultado = sentenciaP.executeQuery();
+
+            while (resultado.next()) {
+                historial.add(HistorialJuegos.crear(Integer.parseInt(resultado.getString("cedula")),resultado.getString("puntaje"));
+            }
+
+            sentenciaP.close();
+            database.close();
+
+            return historial;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return historial;
+    }*/
 }
