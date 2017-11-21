@@ -30,8 +30,8 @@ public class Parques extends javax.swing.JFrame {
     /**
      * Creates new form Parquest
      */
-    public static int val1, val2, num1Rojo = 1, num2Rojo = 1, num1Ama = 1, num2Ama = 0, num1Az = 1, num2Az = 1, num1Ve = 1, num2Ve = 1, moverd1 = 0, moverd2 = 0;
-    int contAm = 0, contAz = 0, contVer = 0, contRoj = 0, valorRandom, c = 1;
+    public static int val1, val2, num1Rojo = 1, num2Rojo = 1, num1Ama = 1, num2Ama = 0,moverd1 = 0, moverd2 = 0;
+    int valorRandom, c = 1;
 
     public Parques() {
         initComponents();
