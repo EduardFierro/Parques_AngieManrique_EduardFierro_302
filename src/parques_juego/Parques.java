@@ -19,7 +19,6 @@ import static parques_juego.Parques.tablero;
 import static parques_juego.Parques.verde1;
 import static parques_juego.Parques.verde2;
 import logica_parques.LanzamientoDados;
-import logica_parques.MoverCasilla;
 import logica_parques.MoverPiedra;
 
 /**

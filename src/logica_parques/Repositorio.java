@@ -18,7 +18,7 @@ import parques_juego.database.BaseC;
  * @author Pavilion 15
  */
 public class Repositorio {
-    //metodo que inserta los datos del jugador a la base de datos
+    //metodo que inserta los datos del historial de juegos a la base de datos
     private static BaseC database = new BaseC();
     public static void crear (HistorialJuegos historial) {
         try {
@@ -38,7 +38,7 @@ public class Repositorio {
         }
 
     }
-    //metodo que optiene la informacion de la base de datos pra agregarlo a las tabals de informacion por categorias
+    //metodo que optiene la informacion de la base de datos pra agregarlo a las tablas de informacion por categorias
      public static ArrayList<HistorialJuegos> obtenerTodos() {
         ArrayList<HistorialJuegos> historial = new ArrayList<HistorialJuegos>();
 
