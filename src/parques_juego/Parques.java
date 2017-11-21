@@ -135,6 +135,7 @@ public class Parques extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        azul2 = new javax.swing.JLabel();
         titulo = new javax.swing.JLabel();
         r1sal1 = new javax.swing.JLabel();
         r2sal1 = new javax.swing.JLabel();
@@ -737,10 +738,12 @@ public class Parques extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         verde1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
+        verde1.setVisible(false);
         jPanel1.add(verde1);
         verde1.setBounds(465, 160, 20, 20);
 
         verde2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
+        verde2.setVisible(false);
         jPanel1.add(verde2);
         verde2.setBounds(545, 85, 20, 20);
 
@@ -753,10 +756,12 @@ public class Parques extends javax.swing.JFrame {
         amarilla2.setBounds(115, 580, 20, 20);
 
         azul1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
+        azul1.setVisible(false);
         jPanel1.add(azul1);
         azul1.setBounds(467, 587, 20, 20);
 
         azul2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
+        azul2.setVisible(false);
         jPanel1.add(azul2);
         azul2.setBounds(548, 510, 20, 20);
 
@@ -3946,7 +3951,7 @@ public class Parques extends javax.swing.JFrame {
     public static final javax.swing.JLabel amarilla1 = new javax.swing.JLabel();
     public static final javax.swing.JLabel amarilla2 = new javax.swing.JLabel();
     public static final javax.swing.JLabel azul1 = new javax.swing.JLabel();
-    public static final javax.swing.JLabel azul2 = new javax.swing.JLabel();
+    public static javax.swing.JLabel azul2;
     public static javax.swing.JLabel b1cas1;
     public static javax.swing.JLabel b1cas10;
     public static javax.swing.JLabel b1cas11;

@@ -17,7 +17,8 @@ public class JugadoresPartida extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
-    public static int ced1=0,ced2=0;
+    public static int ced1 = 0, ced2 = 0;
+
     public JugadoresPartida() {
         initComponents();
     }
@@ -36,24 +37,20 @@ public class JugadoresPartida extends javax.swing.JFrame {
         cedula1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         cedula2 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        cedula3 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        cedula4 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         Jugar = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("RegistroJugadores");
-        setMinimumSize(new java.awt.Dimension(460, 390));
+        setMaximumSize(new java.awt.Dimension(440, 370));
+        setMinimumSize(new java.awt.Dimension(440, 370));
+        setPreferredSize(new java.awt.Dimension(440, 370));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 255));
@@ -71,10 +68,6 @@ public class JugadoresPartida extends javax.swing.JFrame {
 
         jLabel2.setText("Jugador 2");
 
-        jLabel3.setText("Jugador 3");
-
-        jLabel4.setText("Jugador 4");
-
         jLabel5.setText("Jugador");
 
         jLabel6.setText("Documento");
@@ -88,10 +81,6 @@ public class JugadoresPartida extends javax.swing.JFrame {
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ficharoja.png"))); // NOI18N
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaverde.png"))); // NOI18N
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fichaazul.png"))); // NOI18N
-
         jLabel11.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         jLabel11.setText("JUGADORES PARTIDA");
 
@@ -103,10 +92,6 @@ public class JugadoresPartida extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addComponent(jLabel11)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -117,68 +102,56 @@ public class JugadoresPartida extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel5)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
+                            .addComponent(jLabel2))
                         .addGap(45, 45, 45)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cedula4)
                             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
                             .addComponent(cedula2)
-                            .addComponent(cedula3)
                             .addComponent(cedula1))
                         .addGap(55, 55, 55)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel13)
                             .addComponent(jLabel8)
                             .addComponent(jLabel7)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel10)
                             .addComponent(jLabel12))))
                 .addGap(41, 41, 41))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel11)
+                .addGap(73, 73, 73))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
                 .addComponent(jLabel11)
-                .addGap(28, 28, 28)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
                     .addComponent(jLabel6)
+                    .addComponent(jLabel5)
                     .addComponent(jLabel13))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(34, 34, 34)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel1)
-                        .addComponent(cedula1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cedula1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1))
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
+                .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel2)
-                        .addComponent(cedula2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel9))
-                .addGap(11, 11, 11)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel3)
-                        .addComponent(cedula3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel10))
-                .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel12)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel4)
-                        .addComponent(cedula4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(cedula2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(43, 43, 43)
                 .addComponent(Jugar)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 440, 350);
+        jPanel1.setBounds(0, 0, 440, 340);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -188,17 +161,16 @@ public class JugadoresPartida extends javax.swing.JFrame {
     }//GEN-LAST:event_cedula1ActionPerformed
 
     private void JugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JugarActionPerformed
-        try{
+        try {
             //verificacion de que la cedula ingresada se encuentre registrada en la base de datos
-            if(Insertar.validarcedula(Integer.parseInt(cedula1.getText()))==1 && Insertar.validarcedula(Integer.parseInt(cedula2.getText()))==1 
-                    && Insertar.validarcedula(Integer.parseInt(cedula3.getText()))==1 && Insertar.validarcedula(Integer.parseInt(cedula4.getText()))==1){
-                ced1=Integer.parseInt(cedula1.getText());
-                ced2=Integer.parseInt(cedula2.getText());
+            if (Insertar.validarcedula(Integer.parseInt(cedula1.getText())) == 1 && Insertar.validarcedula(Integer.parseInt(cedula2.getText())) == 1) {
+                ced1 = Integer.parseInt(cedula1.getText());
+                ced2 = Integer.parseInt(cedula2.getText());
                 JOptionPane.showMessageDialog(this, "Bienvenidos, Buen juego", "Panel Ingreso", JOptionPane.INFORMATION_MESSAGE);
-                TipoJuego tipo = new TipoJuego();
-                tipo.setVisible(true);
+                Parques par = new Parques();
+                par.setVisible(true);
                 dispose();
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(this, "Verifica documento", "Verificar datos", JOptionPane.ERROR_MESSAGE);
             }
         } catch (NumberFormatException e) {
@@ -246,21 +218,15 @@ public class JugadoresPartida extends javax.swing.JFrame {
     private javax.swing.JButton Jugar;
     private javax.swing.JTextField cedula1;
     private javax.swing.JTextField cedula2;
-    private javax.swing.JTextField cedula3;
-    private javax.swing.JTextField cedula4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
