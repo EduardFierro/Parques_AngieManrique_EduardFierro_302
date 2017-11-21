@@ -19,6 +19,8 @@ import static parques_juego.Parques.tablero;
 import static parques_juego.Parques.verde1;
 import static parques_juego.Parques.verde2;
 import logica_parques.LanzamientoDados;
+import logica_parques.MoverCasilla;
+import logica_parques.MoverPiedra;
 
 /**
  *
@@ -29,10 +31,10 @@ public class Parques extends javax.swing.JFrame {
     /**
      * Creates new form Parquest
      */
-    public static int val1, val2, num1 = 1, num2 = 1;
+    public static int val1, val2, num1 = 1, num2 = 1,moverd1=0,moverd2=0;
     int contAm = 0, contAz = 0, contVer = 0, contRoj = 0, valorRandom, c = 1;
 
-    ;
+    
     public Parques() {
         initComponents();
         configComponents();
@@ -3367,18 +3369,38 @@ public class Parques extends javax.swing.JFrame {
         lanzar.setBounds(739, 50, 90, 23);
 
         Dado1F1.setText("F1");
+        Dado1F1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Dado1F1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(Dado1F1);
         Dado1F1.setBounds(600, 280, 50, 23);
 
         Dado1F2.setText("F2");
+        Dado1F2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Dado1F2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(Dado1F2);
         Dado1F2.setBounds(650, 280, 50, 23);
 
         Dado2F1.setText("F1");
+        Dado2F1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Dado2F1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(Dado2F1);
         Dado2F1.setBounds(730, 280, 50, 23);
 
         Dado2F2.setText("F2");
+        Dado2F2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Dado2F2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(Dado2F2);
         Dado2F2.setBounds(780, 280, 50, 23);
 
@@ -3532,8 +3554,14 @@ public class Parques extends javax.swing.JFrame {
                         //funcion moverFicha
 
                     }
-
+                    if(TipoJuego.modo ==1){
+                        MoverCasilla.moverFichas();
+                    }
+                    if(TipoJuego.modo ==2){
+                        MoverPiedra.moverFichas();
+                    }
                     c++;
+                    
                 } else {
                     JOptionPane.showMessageDialog(this, "Limite de lanzamientos alcanzado");
                 }
@@ -3557,7 +3585,12 @@ public class Parques extends javax.swing.JFrame {
                         //funcion moverFicha
 
                     }
-
+                     if(TipoJuego.modo ==1){
+                        MoverCasilla.moverFichas();
+                    }
+                    if(TipoJuego.modo ==2){
+                        MoverPiedra.moverFichas();
+                    }
                     c=c+2;
                 } else {
                     JOptionPane.showMessageDialog(this, "Limite de lanzamientos alcanzado");
@@ -3581,7 +3614,12 @@ public class Parques extends javax.swing.JFrame {
                         //funcion moverFicha
 
                     }
-
+                     if(TipoJuego.modo ==1){
+                        MoverCasilla.moverFichas();
+                    }
+                    if(TipoJuego.modo ==2){
+                        MoverPiedra.moverFichas();
+                    }
                     c=c+3;
                 } else {
                     JOptionPane.showMessageDialog(this, "Limite de lanzamientos alcanzado");
@@ -3606,7 +3644,12 @@ public class Parques extends javax.swing.JFrame {
                         //funcion moverFicha
 
                     }
-                    
+                     if(TipoJuego.modo ==1){
+                        MoverCasilla.moverFichas();
+                    }
+                    if(TipoJuego.modo ==2){
+                        MoverPiedra.moverFichas();
+                    }
                 } else {
                     JOptionPane.showMessageDialog(this, "Limite de lanzamientos alcanzado");
                 }
@@ -3615,6 +3658,22 @@ public class Parques extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_lanzarActionPerformed
+
+    private void Dado1F1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Dado1F1ActionPerformed
+         moverd1 = 1;
+    }//GEN-LAST:event_Dado1F1ActionPerformed
+
+    private void Dado1F2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Dado1F2ActionPerformed
+        moverd1=2;
+    }//GEN-LAST:event_Dado1F2ActionPerformed
+
+    private void Dado2F1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Dado2F1ActionPerformed
+       moverd2=1;
+    }//GEN-LAST:event_Dado2F1ActionPerformed
+
+    private void Dado2F2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Dado2F2ActionPerformed
+         moverd2=2;
+    }//GEN-LAST:event_Dado2F2ActionPerformed
 
     /**
      * @param args the command line arguments

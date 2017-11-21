@@ -389,6 +389,7 @@ public class Agregar extends javax.swing.JFrame {
                 //agregar los datos del panel al metodo crear de la clase jugador
                 jugador = Jugador.crear(0, rutatext.getText(), Integer.parseInt(cedulatext.getText()), nombretext.getText(), apellidotext.getText(), Integer.parseInt(edadtext.getText()), fecha1, ahora12);
                 Insertar.crear(jugador);
+                limpiar();
                 JOptionPane.showMessageDialog(this, "Persona creada satisfactoriamente", "Bien", JOptionPane.INFORMATION_MESSAGE);
 
             }
@@ -398,7 +399,17 @@ public class Agregar extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_agrusuarioActionPerformed
-
+private void limpiar(){
+    fechanactext.setText("");
+    cedulatext.setText("");
+    nombretext.setText("");
+    apellidotext.setText("");
+    edadtext.setText("");
+    cedulatext.setText("");
+    rutatext.setText("");
+    mes.setText("");
+    dia.setText("");
+}
     private void rutatextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rutatextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rutatextActionPerformed

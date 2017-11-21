@@ -14,6 +14,7 @@ public class TipoJuego extends javax.swing.JFrame {
     /**
      * Creates new form TipoJuego
      */
+    public static int modo=0;
     public TipoJuego() {
         initComponents();
     }
@@ -98,12 +99,14 @@ public class TipoJuego extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void casillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casillaActionPerformed
+        modo=1;
         Parques par = new Parques();
         par.setVisible(true);
         dispose();
     }//GEN-LAST:event_casillaActionPerformed
 
     private void piedraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_piedraActionPerformed
+        modo=2;
         Parques par = new Parques();
         par.setVisible(true);
         dispose();

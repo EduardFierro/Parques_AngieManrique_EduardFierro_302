@@ -10,5 +10,8 @@ package logica_parques;
  * @author Angie
  */
 public class MoverCasilla {
+    public static void moverFichas(){
+        
+    }
     
 }
